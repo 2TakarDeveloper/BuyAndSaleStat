@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeInfoSearchApp", "TradeInfoSearchApp\TradeInfoSearchApp.csproj", "{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{D329E631-0BF9-4CC6-8F40-E95462354ED0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}.Release|x86.ActiveCfg = Release|x86
 		{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}.Release|x86.Build.0 = Release|x86
+		{D329E631-0BF9-4CC6-8F40-E95462354ED0}.Debug|Any CPU.ActiveCfg = Debug
+		{D329E631-0BF9-4CC6-8F40-E95462354ED0}.Debug|x86.ActiveCfg = Debug
+		{D329E631-0BF9-4CC6-8F40-E95462354ED0}.Release|Any CPU.ActiveCfg = Release
+		{D329E631-0BF9-4CC6-8F40-E95462354ED0}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

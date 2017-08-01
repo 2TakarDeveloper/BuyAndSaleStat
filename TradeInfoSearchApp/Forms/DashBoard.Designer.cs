@@ -78,6 +78,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.GroupByChecker = new MetroFramework.Controls.MetroCheckBox();
+            this.GroupBox = new System.Windows.Forms.ComboBox();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -148,7 +150,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(998, 365);
-            this.splitContainer1.SplitterDistance = 42;
+            this.splitContainer1.SplitterDistance = 58;
             this.splitContainer1.TabIndex = 2;
             // 
             // metroPanel3
@@ -162,7 +164,7 @@
             this.metroPanel3.Location = new System.Drawing.Point(0, 0);
             this.metroPanel3.Margin = new System.Windows.Forms.Padding(5);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(998, 42);
+            this.metroPanel3.Size = new System.Drawing.Size(998, 58);
             this.metroPanel3.TabIndex = 0;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
@@ -179,11 +181,13 @@
             this.flowLayoutPanel1.Controls.Add(this.startDateTime);
             this.flowLayoutPanel1.Controls.Add(this.EndDateLable);
             this.flowLayoutPanel1.Controls.Add(this.EndDateTime);
+            this.flowLayoutPanel1.Controls.Add(this.GroupByChecker);
+            this.flowLayoutPanel1.Controls.Add(this.GroupBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(994, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(994, 54);
             this.flowLayoutPanel1.TabIndex = 16;
             // 
             // Searchlable
@@ -342,7 +346,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.SellingGrid);
             this.splitContainer2.Panel2.Controls.Add(this.panel4);
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
-            this.splitContainer2.Size = new System.Drawing.Size(998, 319);
+            this.splitContainer2.Size = new System.Drawing.Size(998, 303);
             this.splitContainer2.SplitterDistance = 484;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -392,7 +396,7 @@
             this.buyingGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.buyingGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.buyingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.buyingGrid.Size = new System.Drawing.Size(484, 270);
+            this.buyingGrid.Size = new System.Drawing.Size(484, 254);
             this.buyingGrid.TabIndex = 10;
             this.buyingGrid.UseCustomBackColor = true;
             this.buyingGrid.UseCustomForeColor = true;
@@ -401,7 +405,7 @@
             // 
             this.panel3.Controls.Add(this.buyersTotalLable);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 293);
+            this.panel3.Location = new System.Drawing.Point(0, 277);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(484, 26);
             this.panel3.TabIndex = 8;
@@ -527,7 +531,7 @@
             this.SellingGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.SellingGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.SellingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SellingGrid.Size = new System.Drawing.Size(510, 271);
+            this.SellingGrid.Size = new System.Drawing.Size(510, 255);
             this.SellingGrid.TabIndex = 11;
             this.SellingGrid.UseCustomBackColor = true;
             this.SellingGrid.UseCustomForeColor = true;
@@ -537,7 +541,7 @@
             // 
             this.panel4.Controls.Add(this.SellerrsTotalLable);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 293);
+            this.panel4.Location = new System.Drawing.Point(0, 277);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(510, 26);
             this.panel4.TabIndex = 9;
@@ -623,7 +627,7 @@
             this.TablesComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TablesComboBox.FormattingEnabled = true;
             this.TablesComboBox.ItemHeight = 23;
-            this.TablesComboBox.Location = new System.Drawing.Point(790, 25);
+            this.TablesComboBox.Location = new System.Drawing.Point(838, 25);
             this.TablesComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.TablesComboBox.Name = "TablesComboBox";
             this.TablesComboBox.Size = new System.Drawing.Size(178, 29);
@@ -712,6 +716,31 @@
             this.metroProgressBar1.Size = new System.Drawing.Size(269, 10);
             this.metroProgressBar1.TabIndex = 5;
             // 
+            // GroupByChecker
+            // 
+            this.GroupByChecker.AutoSize = true;
+            this.GroupByChecker.Location = new System.Drawing.Point(3, 38);
+            this.GroupByChecker.Name = "GroupByChecker";
+            this.GroupByChecker.Size = new System.Drawing.Size(72, 15);
+            this.GroupByChecker.TabIndex = 16;
+            this.GroupByChecker.Text = "Group By";
+            this.GroupByChecker.UseCustomBackColor = true;
+            this.GroupByChecker.UseSelectable = true;
+            this.GroupByChecker.CheckedChanged += new System.EventHandler(this.Search_initate);
+            // 
+            // GroupBox
+            // 
+            this.GroupBox.FormattingEnabled = true;
+            this.GroupBox.Items.AddRange(new object[] {
+            "Customer",
+            "Item"});
+            this.GroupBox.Location = new System.Drawing.Point(81, 38);
+            this.GroupBox.Name = "GroupBox";
+            this.GroupBox.Size = new System.Drawing.Size(121, 21);
+            this.GroupBox.TabIndex = 17;
+            this.GroupBox.Text = "Customer";
+            this.GroupBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -724,6 +753,7 @@
             this.Controls.Add(this.TablesComboBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashBoard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -798,6 +828,8 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private MetroFramework.Controls.MetroCheckBox GroupByChecker;
+        private System.Windows.Forms.ComboBox GroupBox;
     }
 }
 

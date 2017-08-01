@@ -24,13 +24,27 @@ namespace TradeInfoSearchApp.Core
         }
 
 
-        public static List<ItemGroup> GroupByBuyerName(string buyerName, DateTime startDateTime, DateTime endDateTime, List<Buyers> buyerList, int rowCount)
+        public static List<ItemGroup> GroupByBuyerName(string buyerName, DateTime startDateTime, DateTime endDateTime, List<BuyerSheet> buyerSheets, int rowCount)
         {
-            var returnData = buyerList.Where(r => r.Buyer.ToLower().Contains(buyerName.ToLower()) && r.TRADEDT >= startDateTime && r.TRADEDT <= endDateTime).ToList();
-
+            var returnData=new List<Buyers>();
+            foreach (var buyerSheet in buyerSheets)
+            {
+                try
+                {
+                    returnData.AddRange(buyerSheet.ListOfBuyers
+                        .Where(r => r.Buyer.ToLower().Contains(buyerName.ToLower()) && r.TRADEDT >= startDateTime &&
+                                    r.TRADEDT <= endDateTime).ToList());
+                }
+                catch (Exception)
+                {
+                    //
+                }
+               
+            }
             return returnData.GroupBy(x => x.ItemName)
                 .Select(cl => new ItemGroup()
                 {
+                    CustomerName = cl.First().Buyer,
                     ItemName = cl.First().ItemName,
                     Total = cl.Sum(c => c.Total)
                 }).Take(rowCount).ToList();
@@ -38,10 +52,23 @@ namespace TradeInfoSearchApp.Core
         }
 
 
-        public static List<CustomerGroup> GroupByItemNameBuyer(string itemName, DateTime startDateTime, DateTime endDateTime, List<Buyers> buyerList, int rowCount)
+        public static List<CustomerGroup> GroupByItemNameBuyer(string itemName, DateTime startDateTime, DateTime endDateTime, List<BuyerSheet> buyerSheets, int rowCount)
         {
-            var returnData = buyerList.Where(r => r.ItemName.ToLower().Contains(itemName.ToLower()) && r.TRADEDT >= startDateTime && r.TRADEDT <= endDateTime).ToList();
+            var returnData = new List<Buyers>();
+            foreach (var buyerSheet in buyerSheets)
+            {
+                try
+                {
+                    returnData.AddRange(buyerSheet.ListOfBuyers
+                        .Where(r => r.ItemName.ToLower().Contains(itemName.ToLower()) && r.TRADEDT >= startDateTime &&
+                                    r.TRADEDT <= endDateTime).ToList());
+                }
+                catch (Exception)
+                {
+                    //
+                }
 
+            }
             return returnData.GroupBy(x => x.Buyer)
                 .Select(cl => new CustomerGroup()
                 {
@@ -76,13 +103,27 @@ namespace TradeInfoSearchApp.Core
         }
 
 
-        public static List<ItemGroup> GroupBySellerName(string sellerName, DateTime startDateTime, DateTime endDateTime, List<Sellers> sellerList, int rowCount)
+        public static List<ItemGroup> GroupBySellerName(string sellerName, DateTime startDateTime, DateTime endDateTime, List<SellersSheet> sellersSheets, int rowCount)
         {
-            var returnData = sellerList.Where(r => r.Seller.ToLower().Contains(sellerName.ToLower()) && r.TRADEDT >= startDateTime && r.TRADEDT <= endDateTime).ToList();
+            var returnData = new List<Sellers>();
+
+            foreach (var sellerSheet in sellersSheets)
+            {
+                try
+                {
+                    returnData.AddRange(sellerSheet.SellersList.Where(r => r.Seller.ToLower().Contains(sellerName.ToLower())  && r.TRADEDT >= startDateTime && r.TRADEDT <= endDateTime).ToList());
+
+                }
+                catch (Exception e)
+                {
+                    //
+                }
+            }
 
             return returnData.GroupBy(x => x.ItemName)
                 .Select(cl => new ItemGroup
                 {
+                    CustomerName = cl.First().Seller,
                     ItemName = cl.First().ItemName,
                     Total = cl.Sum(c => c.Total)
                 }).Take(rowCount).ToList();
@@ -91,10 +132,22 @@ namespace TradeInfoSearchApp.Core
 
         }
 
-        public static List<CustomerGroup> GroupByItemNameSeller(string itemName, DateTime startDateTime, DateTime endDateTime, List<Sellers> sellerList, int rowCount)
+        public static List<CustomerGroup> GroupByItemNameSeller(string itemName, DateTime startDateTime, DateTime endDateTime, List<SellersSheet> sellersSheets, int rowCount)
         {
-            var returnData = sellerList.Where(r => r.ItemName.ToLower().Contains(itemName.ToLower()) && r.TRADEDT >= startDateTime && r.TRADEDT <= endDateTime).ToList();
+            var returnData = new List<Sellers>();
 
+            foreach (var sellerSheet in sellersSheets)
+            {
+                try
+                {
+                    returnData.AddRange(sellerSheet.SellersList.Where(r => r.ItemName.ToLower().Contains(itemName.ToLower()) && r.TRADEDT >= startDateTime && r.TRADEDT <= endDateTime).ToList());
+
+                }
+                catch (Exception e)
+                {
+                    //
+                }
+            }
             return returnData.GroupBy(x => x.Seller)
                 .Select(cl => new CustomerGroup()
                 {

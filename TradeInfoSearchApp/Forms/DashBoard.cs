@@ -206,68 +206,83 @@ namespace TradeInfoSearchApp.Forms
 
         private void Search_initate(object sender, EventArgs e)
         {
-
-
+            var groupBy = GroupByChecker.Checked;
+            buyingGrid.DataSource = null;
+            SellingGrid.DataSource = null;
             try
-            {       
-                   List<Buyers> buyers= SearchInfo.SearchWithBuyerName(SearchBox.Text, itemBox.Text, startDateTime.Value,
-                       EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
-                   
-                    List<Sellers> sellers= SearchInfo.SearchWithSellerName(SearchBox.Text, itemBox.Text, startDateTime.Value,
-                        EndDateTime.Value, SpreadSheet.SellersSheets, (int)sellerRow.Value);
-
-                buyingGrid.DataSource = buyers;
-
-                SellingGrid.DataSource = sellers;
-
-                 buyingTotal=0;
-                foreach (var buyer in buyers)
+            {
+                if (groupBy)
                 {
-                    buyingTotal += buyer.Total;
-                }
-                buyersTotalLable.Text = @"Total:" + buyingTotal;
-
-                 sellingTotal = 0;
-                foreach (var seller in sellers)
-                {
-                    sellingTotal += seller.Total;
-                }
-                SellerrsTotalLable.Text = @"Total:" + sellingTotal;
-
-                Buyers matchchingBuyer = (Buyers)buyingGrid.Rows[0].DataBoundItem;
-                bool colorSwitch=true;
-                for (int i = 0; i < buyingGrid.RowCount; i++)
-                {
-                    Buyers cellValue = (Buyers)buyingGrid.Rows[i].DataBoundItem;
-                    if (matchchingBuyer.TRADEDT != cellValue.TRADEDT)
+                    if (GroupBox.Text=="Customer")
                     {
-                        matchchingBuyer = cellValue;
-                        colorSwitch = !colorSwitch;
-                    }
-                    buyingGrid.Rows[i].DefaultCellStyle.ForeColor = colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+                        buyingGrid.DataSource = SearchInfo.GroupByBuyerName(SearchBox.Text, startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
 
-                }
-
-
-                Sellers matchingSeller = (Sellers)SellingGrid.Rows[0].DataBoundItem;
-                colorSwitch = true;
-                for (int i = 0; i < SellingGrid.RowCount; i++)
-                {
-                    Sellers cellValue = (Sellers)SellingGrid.Rows[i].DataBoundItem;
-                    if (matchingSeller.TRADEDT != cellValue.TRADEDT)
+                        SellingGrid.DataSource= SearchInfo.GroupBySellerName(SearchBox.Text, startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.SellersSheets, (int)sellerRow.Value);
+                    }else if (GroupBox.Text == "Item")
                     {
-                        matchingSeller = cellValue;
-                        colorSwitch = !colorSwitch;
+                        buyingGrid.DataSource = SearchInfo.GroupByItemNameBuyer(SearchBox.Text, startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
+
+                        SellingGrid.DataSource = SearchInfo.GroupByItemNameSeller(SearchBox.Text, startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.SellersSheets, (int)sellerRow.Value);
                     }
-                    SellingGrid.Rows[i].DefaultCellStyle.ForeColor = colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
 
                 }
+                else
+                {
+                    var buyers = SearchInfo.SearchWithBuyerName(SearchBox.Text, itemBox.Text, startDateTime.Value,
+                        EndDateTime.Value, SpreadSheet.BuyersSheets, (int) buyerRow.Value);
+
+                    var sellers = SearchInfo.SearchWithSellerName(SearchBox.Text, itemBox.Text, startDateTime.Value,
+                        EndDateTime.Value, SpreadSheet.SellersSheets, (int) sellerRow.Value);
+
+                    buyingGrid.DataSource = buyers;
+
+                    SellingGrid.DataSource = sellers;
+
+                    buyingTotal = 0;
+                    foreach (var buyer in buyers)
+                        buyingTotal += buyer.Total;
+                    buyersTotalLable.Text = @"Total:" + buyingTotal;
+
+                    sellingTotal = 0;
+                    foreach (var seller in sellers)
+                        sellingTotal += seller.Total;
+                    SellerrsTotalLable.Text = @"Total:" + sellingTotal;
+
+                    var matchchingBuyer = (Buyers) buyingGrid.Rows[0].DataBoundItem;
+                    var colorSwitch = true;
+                    for (var i = 0; i < buyingGrid.RowCount; i++)
+                    {
+                        var cellValue = (Buyers) buyingGrid.Rows[i].DataBoundItem;
+                        if (matchchingBuyer.TRADEDT != cellValue.TRADEDT)
+                        {
+                            matchchingBuyer = cellValue;
+                            colorSwitch = !colorSwitch;
+                        }
+                        buyingGrid.Rows[i].DefaultCellStyle.ForeColor =
+                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+                    }
 
 
-
-
+                    var matchingSeller = (Sellers) SellingGrid.Rows[0].DataBoundItem;
+                    colorSwitch = true;
+                    for (var i = 0; i < SellingGrid.RowCount; i++)
+                    {
+                        var cellValue = (Sellers) SellingGrid.Rows[i].DataBoundItem;
+                        if (matchingSeller.TRADEDT != cellValue.TRADEDT)
+                        {
+                            matchingSeller = cellValue;
+                            colorSwitch = !colorSwitch;
+                        }
+                        SellingGrid.Rows[i].DefaultCellStyle.ForeColor =
+                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+                    }
+                }
             }
-            catch (Exception )
+            catch (Exception exception)
             {
                 //MetroMessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
