@@ -26,8 +26,26 @@ namespace TradeInfoSearchApp.Forms
         {
             InitializeComponent();
             SpreadSheet=new SpreadSheet();
-            LoadLocalData();
             UserSettings.LoadSettings();
+            if (UserSettings.Enabled)
+            {
+                LoadLocalData();
+            }
+            else
+            {
+                LicenceDialague ld= new LicenceDialague();
+                if (ld.ShowDialog() == DialogResult.OK)
+                {
+                  
+                    LoadLocalData();
+                }
+                else
+                {
+                    Close();
+                }
+            }
+           
+           
 
         }
 
@@ -141,6 +159,8 @@ namespace TradeInfoSearchApp.Forms
             {
                 if (groupBy)
                 {
+                    SellerrsTotalLable.Text = "";
+                    buyersTotalLable.Text = "";
                     switch (GroupBox.Text)
                     {
                         case @"Customer":

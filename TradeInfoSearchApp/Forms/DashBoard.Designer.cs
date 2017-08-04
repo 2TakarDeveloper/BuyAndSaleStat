@@ -432,12 +432,12 @@
             // 
             // BuyersExport
             // 
+            this.BuyersExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BuyersExport.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.BuyersExport.Dock = System.Windows.Forms.DockStyle.Right;
             this.BuyersExport.ForeColor = System.Drawing.Color.MediumBlue;
-            this.BuyersExport.Location = new System.Drawing.Point(236, 0);
+            this.BuyersExport.Location = new System.Drawing.Point(161, 0);
             this.BuyersExport.Name = "BuyersExport";
-            this.BuyersExport.Size = new System.Drawing.Size(94, 23);
+            this.BuyersExport.Size = new System.Drawing.Size(94, 20);
             this.BuyersExport.TabIndex = 6;
             this.BuyersExport.Text = "Export";
             this.BuyersExport.UseCustomBackColor = true;
@@ -487,6 +487,7 @@
             this.SellingGrid.AllowUserToDeleteRows = false;
             this.SellingGrid.AllowUserToOrderColumns = true;
             this.SellingGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             this.SellingGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.SellingGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -504,12 +505,12 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.SellingGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.SellingGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.SellingGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.SellingGrid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -530,6 +531,8 @@
             this.SellingGrid.RowHeadersWidth = 5;
             this.SellingGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
             this.SellingGrid.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.SellingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SellingGrid.Size = new System.Drawing.Size(510, 255);
@@ -570,13 +573,13 @@
             // 
             // sellersExport
             // 
+            this.sellersExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.sellersExport.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.sellersExport.Dock = System.Windows.Forms.DockStyle.Right;
             this.sellersExport.ForeColor = System.Drawing.Color.MediumBlue;
-            this.sellersExport.Location = new System.Drawing.Point(246, 0);
+            this.sellersExport.Location = new System.Drawing.Point(185, 2);
             this.sellersExport.Margin = new System.Windows.Forms.Padding(5);
             this.sellersExport.Name = "sellersExport";
-            this.sellersExport.Size = new System.Drawing.Size(110, 22);
+            this.sellersExport.Size = new System.Drawing.Size(110, 19);
             this.sellersExport.TabIndex = 7;
             this.sellersExport.Text = "Export";
             this.sellersExport.UseCustomBackColor = true;
@@ -813,10 +816,10 @@
         private MetroFramework.Controls.MetroCheckBox GroupByChecker;
         private System.Windows.Forms.ComboBox GroupBox;
         private MetroFramework.Controls.MetroGrid BuyingGrid;
-        private MetroFramework.Controls.MetroGrid SellingGrid;
         private MetroFramework.Controls.MetroLabel statusTextLabel;
         private System.Windows.Forms.ComboBox itemBox;
         private System.Windows.Forms.ComboBox SearchBox;
+        private MetroFramework.Controls.MetroGrid SellingGrid;
     }
 }
 
