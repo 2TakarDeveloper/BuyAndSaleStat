@@ -40,10 +40,14 @@ namespace TradeInfoSearchApp.Forms
             }
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+     
+      
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
             UserSettings.SaveSettings();
-            DialogResult=DialogResult.OK;
+            DialogResult = DialogResult.OK;
+            base.OnFormClosing(e);
         }
 
         private void ClearMemoryButton_Click(object sender, EventArgs e)

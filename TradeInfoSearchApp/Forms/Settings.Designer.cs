@@ -40,7 +40,6 @@
             this.ExportMemoryButton = new MetroFramework.Controls.MetroTile();
             this.ImportMemoryButton = new MetroFramework.Controls.MetroTile();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.BackButton = new MetroFramework.Controls.MetroLink();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.metroTabControl1.SuspendLayout();
@@ -200,16 +199,6 @@
             this.colorDialog1.AnyColor = true;
             this.colorDialog1.ShowHelp = true;
             // 
-            // BackButton
-            // 
-            this.BackButton.Location = new System.Drawing.Point(506, 31);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 1;
-            this.BackButton.Text = "< Back";
-            this.BackButton.UseSelectable = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.DefaultExt = "json";
@@ -223,11 +212,9 @@
             // 
             // Settings
             // 
-            this.AcceptButton = this.BackButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 430);
-            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "Settings";
             this.Text = "Settings";
@@ -245,7 +232,6 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private MetroFramework.Controls.MetroLink BackButton;
         private MetroFramework.Controls.MetroTile TableColorShower2;
         private MetroFramework.Controls.MetroTile TableColorShower1;
         private MetroFramework.Controls.MetroLabel metroLabel2;

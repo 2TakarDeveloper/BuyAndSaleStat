@@ -17,7 +17,21 @@ namespace TradeInfoSearchApp.Core
 
             foreach (var buyerSheet in buyerSheets)
             {
-                returnData.AddRange( buyerSheet.ListOfBuyers.Where(r => r.Buyer.ToLower().Contains(buyerName.ToLower())&& r.ItemName.ToLower().Contains(itemName.ToLower()) && r.TRADEDT>=startDateTime && r.TRADEDT<=endDateTime ).Take( rowCount).ToList());
+                try
+                {
+                    List<Buyers> x = buyerSheet.ListOfBuyers
+                        .Where(r => r.Buyer.ToLower().Contains(buyerName.ToLower())
+                                    && r.TRADEDT >= startDateTime &&
+                                    r.TRADEDT <= endDateTime).ToList();
+
+                    x = x.Where(r => r.ItemName.ToLower().Contains(itemName.ToLower())).Take(rowCount).ToList();
+
+                    returnData.AddRange(x);
+                }
+                catch (Exception e)
+                {
+                   //
+                }
             }
 
             return returnData;
@@ -47,7 +61,7 @@ namespace TradeInfoSearchApp.Core
                     CustomerName = cl.First().Buyer,
                     ItemName = cl.First().ItemName,
                     Total = cl.Sum(c => c.Total)
-                }).Take(rowCount).ToList();
+                }).OrderByDescending(e=>e.Total).Take(rowCount).ToList();
 
         }
 
@@ -72,9 +86,10 @@ namespace TradeInfoSearchApp.Core
             return returnData.GroupBy(x => x.Buyer)
                 .Select(cl => new CustomerGroup()
                 {
+                    ItemName = cl.First().ItemName,
                     CustomerName = cl.First().Buyer,
                     Total = cl.Sum(c => c.Total)
-                }).Take(rowCount).ToList();
+                }).OrderByDescending( e=>e.Total).Take(rowCount).ToList();
 
 
 
@@ -96,7 +111,22 @@ namespace TradeInfoSearchApp.Core
 
             foreach (var sellerSheet in sellersSheets)
             {
-                returnData.AddRange( sellerSheet.SellersList.Where(r => r.Seller.ToLower().Contains(sellerName.ToLower()) && r.ItemName.ToLower().Contains(itemName.ToLower()) && r.TRADEDT >= startDateTime && r.TRADEDT <= endDateTime).Take(rowCount).ToList());
+                try
+                {
+                    List<Sellers> x = sellerSheet.SellersList
+                        .Where(r => r.Seller.ToLower().Contains(sellerName.ToLower())
+                                    && r.TRADEDT >= startDateTime &&
+                                    r.TRADEDT <= endDateTime).ToList();
+
+                    x = x.Where(r => r.ItemName.ToLower().Contains(itemName.ToLower())).Take(rowCount).ToList();
+
+                    returnData.AddRange(x);
+                }
+                catch (Exception e)
+                {
+                    //
+                }
+
             }
 
             return returnData;
@@ -126,7 +156,7 @@ namespace TradeInfoSearchApp.Core
                     CustomerName = cl.First().Seller,
                     ItemName = cl.First().ItemName,
                     Total = cl.Sum(c => c.Total)
-                }).Take(rowCount).ToList();
+                }).OrderByDescending(e=>e.Total).Take(rowCount).ToList();
 
 
 
@@ -151,13 +181,46 @@ namespace TradeInfoSearchApp.Core
             return returnData.GroupBy(x => x.Seller)
                 .Select(cl => new CustomerGroup()
                 {
+                    ItemName = cl.First().ItemName,
                     CustomerName = cl.First().Seller,
                     Total = cl.Sum(c => c.Total)
-                }).Take(rowCount).ToList();
+                }).OrderByDescending(e => e.Total).Take(rowCount).ToList();
 
 
 
         }
+
+        #endregion
+
+        #region Unique
+
+        public static List<string> GetUniqueCustomer(List<BuyerSheet> buyerSheets)
+        {
+            var returnData = new List<Buyers>();
+
+            foreach (var buyerSheet in buyerSheets)
+            {
+                returnData.AddRange(buyerSheet.ListOfBuyers.ToList());
+            }
+
+            return returnData.GroupBy(e => e.Buyer).OrderBy(e=>e.Key).Select(cl=>cl.Key).ToList();
+
+        }
+
+
+        public static List<string> GetUniqueItem(List<BuyerSheet> buyerSheets)
+        {
+            var returnData = new List<Buyers>();
+
+            foreach (var buyerSheet in buyerSheets)
+            {
+                returnData.AddRange(buyerSheet.ListOfBuyers.ToList());
+            }
+
+            return returnData.GroupBy(e => e.ItemName).OrderBy(e=>e.Key).Select(cl => cl.Key).ToList();
+
+        }
+
 
         #endregion
 

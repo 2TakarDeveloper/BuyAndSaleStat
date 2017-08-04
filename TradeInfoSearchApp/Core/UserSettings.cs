@@ -11,8 +11,8 @@ namespace TradeInfoSearchApp.Core
 {
     public static class UserSettings
     {
-        public static Color RowColor1= Color.BlueViolet;
-        public static Color RowColor2= Color.CornflowerBlue;
+        public static Color RowColor1= Color.Blue;
+        public static Color RowColor2= Color.OrangeRed;
 
         public static void SaveSettings()
         {

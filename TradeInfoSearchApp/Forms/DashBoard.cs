@@ -31,85 +31,7 @@ namespace TradeInfoSearchApp.Forms
 
         }
 
-        void ExcelReader(string path)
-        {
-            int b = 0;
-            string filePath=path;
-            using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
-            {
-
-
-                using (var reader = ExcelReaderFactory.CreateOpenXmlReader(stream))
-                {
-                  
-
-                    do
-                    {
-                        reader.Read();
-
-                        if (Regex.IsMatch(reader.Name, "[BB]")) //buyer
-                        {
-                            var buyerSheet = new BuyerSheet {SheetName = reader.Name};
-                            while (reader.Read())
-                            {
-                                Buyers buyer = new Buyers
-                                {
-                                    TRADEDT = DateTime.Parse(reader.GetValue(0).ToString()),
-                                    Buyer = reader.GetValue(1).ToString(),
-                                    ItemName = reader.GetValue(2).ToString(),
-                                    Total = Double.Parse(reader.GetValue(3).ToString())
-                                };
-
-                                buyerSheet.ListOfBuyers.Add(buyer);
-                            }
-                            if (!SpreadSheet.BuyersSheets.Contains(buyerSheet))
-                            {
-                                SpreadSheet.BuyersSheets.Add(buyerSheet);
-                            }
-                            
-                            
-                        }
-
-
-                        if (Regex.IsMatch(reader.Name, "[SS]")) //buyer
-                        {
-                            var sellersSheet = new SellersSheet() {SheetName = reader.Name};
-
-                            while (reader.Read())
-                            {
-                                Sellers seller = new Sellers
-                                {
-                                    TRADEDT = reader.GetDateTime(0),
-                                    Seller = reader.GetString(1),
-                                    ItemName = reader.GetString(2),
-                                    Total = reader.GetDouble(3)
-                                };
-                                sellersSheet.SellersList.Add(seller);
-                            }
-                            if (!SpreadSheet.SellersSheets.Contains(sellersSheet))
-                            {
-                                SpreadSheet.SellersSheets.Add(sellersSheet);
-                            }
-                   
-
-                        }
-
-                        var a = reader.ResultsCount;
-                        var progress = b++ * 100 / a;
-                        backgroundWorker.ReportProgress(progress);
-                    } while (reader.NextResult());
-
-                    backgroundWorker.ReportProgress(100);
-
-
-
-                }
-            }
-
-
-
-
-        }
+        
 
 
         void LoadData()
@@ -129,6 +51,9 @@ namespace TradeInfoSearchApp.Forms
             if(TablesComboBox.Items.Count<=0)return;
             TablesComboBox.SelectedIndex = 0;
 
+            itemBox.DataSource = SearchInfo.GetUniqueItem(SpreadSheet.BuyersSheets);
+            SearchBox.DataSource = SearchInfo.GetUniqueCustomer(SpreadSheet.BuyersSheets);
+
         }
 
         
@@ -138,7 +63,7 @@ namespace TradeInfoSearchApp.Forms
             {
 
                 BuyerSheet buyerSheet = (BuyerSheet) TablesComboBox.SelectedItem;
-                buyingGrid.DataSource = buyerSheet.ListOfBuyers;
+                BuyingGrid.DataSource = buyerSheet.ListOfBuyers;
 
             }
 
@@ -167,12 +92,15 @@ namespace TradeInfoSearchApp.Forms
         private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             metroProgressBar1.Value = e.ProgressPercentage;
+            statusTextLabel.Text = e.ProgressPercentage + @"%";
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             LoadData();
             SaveLocalData();
+            statusTextLabel.Visible = false;
+            metroProgressBar1.Visible = false;
         }
 
         private void LoadLocalData()
@@ -207,28 +135,29 @@ namespace TradeInfoSearchApp.Forms
         private void Search_initate(object sender, EventArgs e)
         {
             var groupBy = GroupByChecker.Checked;
-            buyingGrid.DataSource = null;
+            BuyingGrid.DataSource = null;
             SellingGrid.DataSource = null;
             try
             {
                 if (groupBy)
                 {
-                    if (GroupBox.Text=="Customer")
+                    switch (GroupBox.Text)
                     {
-                        buyingGrid.DataSource = SearchInfo.GroupByBuyerName(SearchBox.Text, startDateTime.Value,
-                            EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
+                        case @"Customer":
+                            BuyingGrid.DataSource = SearchInfo.GroupByBuyerName(SearchBox.Text, startDateTime.Value,
+                                EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
 
-                        SellingGrid.DataSource= SearchInfo.GroupBySellerName(SearchBox.Text, startDateTime.Value,
-                            EndDateTime.Value, SpreadSheet.SellersSheets, (int)sellerRow.Value);
-                    }else if (GroupBox.Text == "Item")
-                    {
-                        buyingGrid.DataSource = SearchInfo.GroupByItemNameBuyer(SearchBox.Text, startDateTime.Value,
-                            EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
+                            SellingGrid.DataSource= SearchInfo.GroupBySellerName(SearchBox.Text, startDateTime.Value,
+                                EndDateTime.Value, SpreadSheet.SellersSheets, (int)sellerRow.Value);
+                            break;
+                        case @"Item":
+                            BuyingGrid.DataSource = SearchInfo.GroupByItemNameBuyer(itemBox.Text, startDateTime.Value,
+                                EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
 
-                        SellingGrid.DataSource = SearchInfo.GroupByItemNameSeller(SearchBox.Text, startDateTime.Value,
-                            EndDateTime.Value, SpreadSheet.SellersSheets, (int)sellerRow.Value);
+                            SellingGrid.DataSource = SearchInfo.GroupByItemNameSeller(itemBox.Text, startDateTime.Value,
+                                EndDateTime.Value, SpreadSheet.SellersSheets, (int)sellerRow.Value);
+                            break;
                     }
-
                 }
                 else
                 {
@@ -238,7 +167,7 @@ namespace TradeInfoSearchApp.Forms
                     var sellers = SearchInfo.SearchWithSellerName(SearchBox.Text, itemBox.Text, startDateTime.Value,
                         EndDateTime.Value, SpreadSheet.SellersSheets, (int) sellerRow.Value);
 
-                    buyingGrid.DataSource = buyers;
+                    BuyingGrid.DataSource = buyers;
 
                     SellingGrid.DataSource = sellers;
 
@@ -252,40 +181,136 @@ namespace TradeInfoSearchApp.Forms
                         sellingTotal += seller.Total;
                     SellerrsTotalLable.Text = @"Total:" + sellingTotal;
 
-                    var matchchingBuyer = (Buyers) buyingGrid.Rows[0].DataBoundItem;
+
+                    #region DataCell Style
+
+
                     var colorSwitch = true;
-                    for (var i = 0; i < buyingGrid.RowCount; i++)
+                    var counter = 0;
+                    foreach (DataGridViewRow row in BuyingGrid.Rows)
                     {
-                        var cellValue = (Buyers) buyingGrid.Rows[i].DataBoundItem;
-                        if (matchchingBuyer.TRADEDT != cellValue.TRADEDT)
+                       
+                        if (counter < (int) buyerRow.Value)
                         {
-                            matchchingBuyer = cellValue;
+                            counter++;
+                        }
+                        else
+                        {
+                            counter = 0;
                             colorSwitch = !colorSwitch;
                         }
-                        buyingGrid.Rows[i].DefaultCellStyle.ForeColor =
+                        row.DefaultCellStyle.ForeColor =
                             colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
                     }
 
-
-                    var matchingSeller = (Sellers) SellingGrid.Rows[0].DataBoundItem;
+                 
                     colorSwitch = true;
-                    for (var i = 0; i < SellingGrid.RowCount; i++)
+                    counter = 0;
+                    foreach (DataGridViewRow row in SellingGrid.Rows)
                     {
-                        var cellValue = (Sellers) SellingGrid.Rows[i].DataBoundItem;
-                        if (matchingSeller.TRADEDT != cellValue.TRADEDT)
+                        
+                        if (counter < (int)sellerRow.Value)
                         {
-                            matchingSeller = cellValue;
+                            counter++;
+                        }
+                        else
+                        {
+                            counter = 0;
                             colorSwitch = !colorSwitch;
                         }
-                        SellingGrid.Rows[i].DefaultCellStyle.ForeColor =
+                        row.DefaultCellStyle.ForeColor =
                             colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
                     }
+                    
+
+                    #endregion
+                   
                 }
             }
             catch (Exception exception)
             {
-                //MetroMessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MetroMessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        void ExcelReader(string path)
+        {
+            int b = 0;
+            string filePath = path;
+            using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
+            {
+
+
+                using (var reader = ExcelReaderFactory.CreateOpenXmlReader(stream))
+                {
+
+
+                    do
+                    {
+                        reader.Read();
+
+                        if (Regex.IsMatch(reader.Name, "[BB]")) //buyer
+                        {
+                            var buyerSheet = new BuyerSheet { SheetName = reader.Name };
+                            while (reader.Read())
+                            {
+                                Buyers buyer = new Buyers
+                                {
+                                    TRADEDT = DateTime.Parse(reader.GetValue(0).ToString()),
+                                    Buyer = reader.GetValue(1).ToString(),
+                                    ItemName = reader.GetValue(2).ToString(),
+                                    Total = Double.Parse(reader.GetValue(3).ToString())
+                                };
+
+                                buyerSheet.ListOfBuyers.Add(buyer);
+                            }
+                            if (!SpreadSheet.BuyersSheets.Contains(buyerSheet))
+                            {
+                                SpreadSheet.BuyersSheets.Add(buyerSheet);
+                            }
+
+
+                        }
+
+
+                        if (Regex.IsMatch(reader.Name, "[SS]")) //buyer
+                        {
+                            var sellersSheet = new SellersSheet() { SheetName = reader.Name };
+
+                            while (reader.Read())
+                            {
+                                Sellers seller = new Sellers
+                                {
+                                    TRADEDT = reader.GetDateTime(0),
+                                    Seller = reader.GetString(1),
+                                    ItemName = reader.GetString(2),
+                                    Total = reader.GetDouble(3)
+                                };
+                                sellersSheet.SellersList.Add(seller);
+                            }
+                            if (!SpreadSheet.SellersSheets.Contains(sellersSheet))
+                            {
+                                SpreadSheet.SellersSheets.Add(sellersSheet);
+                            }
+
+
+                        }
+
+                        var a = reader.ResultsCount;
+                        var progress = b++ * 100 / a;
+                        backgroundWorker.ReportProgress(progress);
+                    } while (reader.NextResult());
+
+                    backgroundWorker.ReportProgress(100);
+
+
+
+                }
+            }
+
+
+
+
         }
 
         private void BuyersExport_Click(object sender, EventArgs e)
@@ -295,21 +320,58 @@ namespace TradeInfoSearchApp.Forms
             var workbook = new XLWorkbook();
             workbook.AddWorksheet("BB_SearchResult");
             var ws = workbook.Worksheet("BB_SearchResult");
-            List<Buyers> buyersSheet = SearchInfo.SearchWithBuyerName(SearchBox.Text, itemBox.Text,
-                startDateTime.Value,
-                EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
-            int row = 1;
-            foreach (Buyers item in buyersSheet)
-            {
-                ws.Cell("A"+ row).Value = item.TRADEDT;
-                ws.Cell("B" + row).Value = item.Buyer;
-                ws.Cell("C" + row).Value = item.ItemName;
-                ws.Cell("D" + row).Value = item.Total;
 
-                row++;
+            if (!GroupByChecker.Checked)
+            {
+                List<Buyers> buyers = SearchInfo.SearchWithBuyerName(SearchBox.Text, itemBox.Text,
+                    startDateTime.Value,
+                    EndDateTime.Value, SpreadSheet.BuyersSheets, (int) buyerRow.Value);
+                int row = 1;
+                foreach (Buyers item in buyers)
+                {
+                    ws.Cell("A" + row).Value = item.TRADEDT;
+                    ws.Cell("B" + row).Value = item.Buyer;
+                    ws.Cell("C" + row).Value = item.ItemName;
+                    ws.Cell("D" + row).Value = item.Total;
+
+                    row++;
+                }
+                ws.Cell("C" + row).Value = "Total=";
+                ws.Cell("D" + row).Value = buyingTotal;
             }
-            ws.Cell("C" + row).Value = "Total=";
-            ws.Cell("D" + row).Value = buyingTotal;
+            else
+            {
+                switch (GroupBox.Text)
+                {
+                    case @"Item":
+                        List<CustomerGroup> Customers = SearchInfo.GroupByItemNameBuyer( itemBox.Text,
+                            startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
+                        int row = 1;
+                        foreach (CustomerGroup item in Customers)
+                        {
+                            ws.Cell("A" + row).Value = item.ItemName;
+                            ws.Cell("B" + row).Value = item.CustomerName;
+                            ws.Cell("C" + row).Value = item.Total;
+                            row++;
+                        }
+                        break;
+                    case @"Customer":
+                        List<ItemGroup> items = SearchInfo.GroupByBuyerName(SearchBox.Text,
+                            startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.BuyersSheets, (int)buyerRow.Value);
+                        row = 1;
+                        foreach (ItemGroup item in items)
+                        {
+                            ws.Cell("A" + row).Value = item.CustomerName;
+                            ws.Cell("B" + row).Value = item.ItemName;
+                            ws.Cell("C" + row).Value = item.Total;
+                            row++;
+                        }
+                        break;
+                }
+
+            }
 
             workbook.SaveAs(saveFileDialog1.FileName);
         }
@@ -321,24 +383,59 @@ namespace TradeInfoSearchApp.Forms
             workbook.AddWorksheet("SS_SearchResult");
             var ws = workbook.Worksheet("SS_SearchResult");
 
-            int row = 1;
-
-            List<Sellers> sellersSheet = SearchInfo.SearchWithSellerName(SearchBox.Text, itemBox.Text,
-                startDateTime.Value,
-                EndDateTime.Value, SpreadSheet.SellersSheets, (int)buyerRow.Value);
-
-            foreach (Sellers item in sellersSheet)
+            if (!GroupByChecker.Checked)
             {
-                ws.Cell("A" + row).Value = item.TRADEDT;
-                ws.Cell("B" + row).Value = item.Seller;
-                ws.Cell("C" + row).Value = item.ItemName;
-                ws.Cell("D" + row).Value = item.Total;
+                int row = 1;
 
-                row++;
+                List<Sellers> sellers = SearchInfo.SearchWithSellerName(SearchBox.Text, itemBox.Text,
+                    startDateTime.Value,
+                    EndDateTime.Value, SpreadSheet.SellersSheets, (int) buyerRow.Value);
+
+                foreach (Sellers item in sellers)
+                {
+                    ws.Cell("A" + row).Value = item.TRADEDT;
+                    ws.Cell("B" + row).Value = item.Seller;
+                    ws.Cell("C" + row).Value = item.ItemName;
+                    ws.Cell("D" + row).Value = item.Total;
+
+                    row++;
+                }
+
+                ws.Cell("C" + row).Value = "Total=";
+                ws.Cell("D" + row).Value = sellingTotal;
             }
-
-            ws.Cell("C" + row).Value = "Total=";
-            ws.Cell("D" + row).Value = sellingTotal;
+            else
+            {
+                switch (GroupBox.Text)
+                {
+                    case @"Item":
+                        List<CustomerGroup> Customers = SearchInfo.GroupByItemNameSeller(itemBox.Text,
+                            startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.SellersSheets, (int)buyerRow.Value);
+                        int row = 1;
+                        foreach (CustomerGroup item in Customers)
+                        {
+                            ws.Cell("A" + row).Value = item.ItemName;
+                            ws.Cell("B" + row).Value = item.CustomerName;
+                            ws.Cell("C" + row).Value = item.Total;
+                            row++;
+                        }
+                        break;
+                    case @"Customer":
+                        List<ItemGroup> items = SearchInfo.GroupBySellerName(SearchBox.Text,
+                            startDateTime.Value,
+                            EndDateTime.Value, SpreadSheet.SellersSheets, (int)buyerRow.Value);
+                        row = 1;
+                        foreach (ItemGroup item in items)
+                        {
+                            ws.Cell("A" + row).Value = item.CustomerName;
+                            ws.Cell("B" + row).Value = item.ItemName;
+                            ws.Cell("C" + row).Value = item.Total;
+                            row++;
+                        }
+                        break;
+                }
+            }
 
             workbook.SaveAs(saveFileDialog1.FileName);
         }
@@ -356,24 +453,25 @@ namespace TradeInfoSearchApp.Forms
             }
         }
 
-        private void metroLink1_Click(object sender, EventArgs e)
+        private void MenuClick(object sender, EventArgs e)
         {
             MenuStrip.Show(metroLink1.PointToScreen(metroLink1.Location));
         }
 
-        private void loadNewFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LoadNewFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() != DialogResult.OK) return;
-
+            statusTextLabel.Visible = true;
+            metroProgressBar1.Visible = true;
             backgroundWorker.RunWorkerAsync();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
            Application.Exit();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox aboutBox = new AboutBox();
             aboutBox.ShowDialog();
