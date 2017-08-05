@@ -17,14 +17,9 @@ namespace TradeInfoSearchApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            try
-            {
-                Application.Run(new DashBoard());
-            }
-            catch (Exception)
-            {
-                //
-            }
+            
+             Application.Run(new DashBoard());
+           
            
         }
     }

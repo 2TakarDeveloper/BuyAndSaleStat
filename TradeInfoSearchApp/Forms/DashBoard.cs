@@ -26,6 +26,7 @@ namespace TradeInfoSearchApp.Forms
         {
             InitializeComponent();
             SpreadSheet=new SpreadSheet();
+            
             UserSettings.LoadSettings();
             if (UserSettings.Enabled)
             {
@@ -33,10 +34,10 @@ namespace TradeInfoSearchApp.Forms
             }
             else
             {
-                LicenceDialague ld= new LicenceDialague();
+                LicenceDialague ld = new LicenceDialague();
                 if (ld.ShowDialog() == DialogResult.OK)
                 {
-                  
+
                     LoadLocalData();
                 }
                 else
@@ -44,8 +45,8 @@ namespace TradeInfoSearchApp.Forms
                     Close();
                 }
             }
-           
-           
+
+
 
         }
 
@@ -209,42 +210,41 @@ namespace TradeInfoSearchApp.Forms
                     var counter = 0;
                     foreach (DataGridViewRow row in BuyingGrid.Rows)
                     {
-                       
-                        if (counter < (int) buyerRow.Value)
-                        {
-                            counter++;
-                        }
-                        else
+                        row.DefaultCellStyle.ForeColor =
+                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+
+                        counter++;
+                        if (counter == (int)buyerRow.Value)
                         {
                             counter = 0;
                             colorSwitch = !colorSwitch;
                         }
-                        row.DefaultCellStyle.ForeColor =
-                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+                        
+                      
+
                     }
 
-                 
+
                     colorSwitch = true;
                     counter = 0;
                     foreach (DataGridViewRow row in SellingGrid.Rows)
                     {
-                        
-                        if (counter < (int)sellerRow.Value)
-                        {
-                            counter++;
-                        }
-                        else
+                        row.DefaultCellStyle.ForeColor =
+                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+                        counter++;
+                        if (counter == (int)sellerRow.Value)
                         {
                             counter = 0;
                             colorSwitch = !colorSwitch;
                         }
-                        row.DefaultCellStyle.ForeColor =
-                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+                        
+                       
                     }
-                    
+
+
 
                     #endregion
-                   
+
                 }
             }
             catch (Exception exception)
