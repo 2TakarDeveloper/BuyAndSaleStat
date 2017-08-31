@@ -46,8 +46,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::TradeInfoSearchApp.Properties.Resources.Banner;
-            this.pictureBox1.InitialImage = global::TradeInfoSearchApp.Properties.Resources.Banner;
+            this.pictureBox1.Image = global::BNSS.Application.Properties.Resources.Banner;
+            this.pictureBox1.InitialImage = global::BNSS.Application.Properties.Resources.Banner;
             this.pictureBox1.Location = new System.Drawing.Point(20, 60);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(625, 295);

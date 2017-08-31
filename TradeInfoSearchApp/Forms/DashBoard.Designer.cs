@@ -655,7 +655,7 @@
             // 
             // metroLink1
             // 
-            this.metroLink1.Image = global::TradeInfoSearchApp.Properties.Resources.MenuIcon;
+            this.metroLink1.Image = global::BNSS.Application.Properties.Resources.MenuIcon;
             this.metroLink1.Location = new System.Drawing.Point(20, 25);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(39, 34);

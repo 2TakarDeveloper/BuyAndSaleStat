@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TradeInfoSearchApp")]
+[assembly: AssemblyTitle("Buy And Sale Stat")]
 [assembly: AssemblyDescription("A Private software developed for DSE Trade info searching from Excel files and showing the result set and allowing to export as Excel")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("2TakarDeveloper")]

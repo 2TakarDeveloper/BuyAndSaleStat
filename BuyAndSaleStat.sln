@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeInfoSearchApp", "TradeInfoSearchApp\TradeInfoSearchApp.csproj", "{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.Application", "TradeInfoSearchApp\BNSS.Application.csproj", "{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.Entity", "BNSS.Entity\BNSS.Entity.csproj", "{2113AF8E-F0D9-45A6-8AFB-C68209A987AD}"
 EndProject
