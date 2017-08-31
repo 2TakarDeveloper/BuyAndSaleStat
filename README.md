@@ -1,4 +1,4 @@
-# TradeInfoSearchApp
+# BuyAndSaleStat
 A Private software developed for DSE Trade info searching from Excel files and showing the result set and allowing to export.
 
 1)Import Specific Excel DataSet.
