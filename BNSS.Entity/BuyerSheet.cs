@@ -1,16 +1,18 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 
-namespace TradeInfoSearchApp.Classes
+
+namespace BNSS.Entity
 {
-    public class BuyerSheet
+    public  class BuyerSheet
     {
         public string SheetName { get; set; }
-        public List<Buyers> ListOfBuyers { get; set; }
+        public List<Customer> ListOfCustomers { get; set; }
 
 
         public BuyerSheet()
         {
-            ListOfBuyers= new List<Buyers>();
+            ListOfCustomers = new List<Customer>();
         }
 
         public override string ToString()

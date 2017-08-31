@@ -8,11 +8,12 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BNSS.Globals;
+using BNSS.Local;
 using ImapX;
 using ImapX.Collections;
 using MetroFramework;
 
-using TradeInfoSearchApp.Core;
 using Message = ImapX.Message;
 
 namespace TradeInfoSearchApp.Forms
@@ -104,7 +105,7 @@ namespace TradeInfoSearchApp.Forms
             if (Valid)
             {
                 UserSettings.Enabled = true;
-                UserSettings.SaveSettings();
+                SaveData.SaveSettings();
                 Halted = false;
                 DialogResult = DialogResult.OK;
             }

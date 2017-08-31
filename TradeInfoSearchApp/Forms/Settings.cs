@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BNSS.Globals;
+using BNSS.Local;
 using MetroFramework;
-using TradeInfoSearchApp.Core;
+
 
 namespace TradeInfoSearchApp.Forms
 {
@@ -45,7 +47,7 @@ namespace TradeInfoSearchApp.Forms
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            UserSettings.SaveSettings();
+            SaveData.SaveSettings();
             DialogResult = DialogResult.OK;
             base.OnFormClosing(e);
         }

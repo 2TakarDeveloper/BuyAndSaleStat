@@ -1,6 +1,4 @@
-﻿
-
-namespace TradeInfoSearchApp.Classes
+﻿namespace BNSS.Entity.ResultSet
 {
     public class ItemGroup
     {

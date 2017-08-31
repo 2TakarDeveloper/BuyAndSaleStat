@@ -1,13 +1,17 @@
-﻿using System;
+﻿
 
-namespace TradeInfoSearchApp.Classes
+using System;
+
+namespace BNSS.Entity
 {
-    public class Buyers
+    public class Customer
     {
         public DateTime TRADEDT { get; set; }
-        public string Buyer { get; set; }
+        public string CustomerName { get; set; }
         public string ItemName { get; set; }
         public double Total { get; set; }
+
+       
 
     }
 }
