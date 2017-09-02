@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace BNSS.Local
 {
-    public class LoadData
+    public static class LoadData
     {
         public static void LoadLocalData(string path)
         {
@@ -21,20 +21,17 @@ namespace BNSS.Local
         }
 
 
-        public static void LoadSettings()
+        public static void LoadSettings(string path)
         {
-            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json")) return;
-            //using (StreamReader file = File.OpenText(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json"))
-            //{
-            //JsonSerializer serializer = new JsonSerializer();
+            if (!File.Exists(path)) return;
+        
             string json = Encryption.Decrypt(File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json"));
-            // UsersettingsSaveData usersettings = (UsersettingsSaveData)serializer.Deserialize(file, typeof(UsersettingsSaveData));
-
+           
             UsersettingsSaveData usersettings = JsonConvert.DeserializeObject<UsersettingsSaveData>(json);
             UserSettings.RowColor1 = usersettings.RowColor1;
             UserSettings.RowColor2 = usersettings.RowColor2;
             UserSettings.Enabled = usersettings.Enabled;
-            //}
+           
 
         }
 

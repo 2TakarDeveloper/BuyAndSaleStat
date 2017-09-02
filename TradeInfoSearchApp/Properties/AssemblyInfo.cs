@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("A Private software developed for DSE Trade info searching from Excel files and showing the result set and allowing to export as Excel")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("2TakarDeveloper")]
-[assembly: AssemblyProduct("TradeInfoSearchApp")]
+[assembly: AssemblyProduct("Buy And Sale Stat")]
 [assembly: AssemblyCopyright("Copyright (c) 2017, 2TakarDeveloper All rights reserved.")]
 [assembly: AssemblyTrademark("2TakarDeveloper")]
 [assembly: AssemblyCulture("")]

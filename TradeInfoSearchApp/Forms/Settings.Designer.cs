@@ -1,4 +1,4 @@
-﻿namespace TradeInfoSearchApp.Forms
+﻿namespace BNSS.Application.Forms
 {
     partial class Settings
     {

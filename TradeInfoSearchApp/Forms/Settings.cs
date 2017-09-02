@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BNSS.Globals;
 using BNSS.Local;
 using MetroFramework;
 
-
-namespace TradeInfoSearchApp.Forms
+namespace BNSS.Application.Forms
 {
     public partial class Settings : MetroFramework.Forms.MetroForm
     {
@@ -47,7 +39,7 @@ namespace TradeInfoSearchApp.Forms
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            SaveData.SaveSettings();
+            SaveData.SaveSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
             DialogResult = DialogResult.OK;
             base.OnFormClosing(e);
         }

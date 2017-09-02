@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BNSS.Globals;
 using BNSS.Local;
 using ImapX;
-using ImapX.Collections;
 using MetroFramework;
-
 using Message = ImapX.Message;
 
-namespace TradeInfoSearchApp.Forms
+namespace BNSS.Application.Forms
 {
     public partial class LicenceDialague : MetroFramework.Forms.MetroForm
     {
@@ -105,7 +96,7 @@ namespace TradeInfoSearchApp.Forms
             if (Valid)
             {
                 UserSettings.Enabled = true;
-                SaveData.SaveSettings();
+                SaveData.SaveSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
                 Halted = false;
                 DialogResult = DialogResult.OK;
             }

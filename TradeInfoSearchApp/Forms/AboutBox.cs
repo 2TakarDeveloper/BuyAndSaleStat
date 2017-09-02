@@ -1,10 +1,8 @@
 ﻿using System;
-
 using System.Reflection;
-
 using System.Windows.Forms;
 
-namespace TradeInfoSearchApp.Forms
+namespace BNSS.Application.Forms
 {
     public partial class AboutBox : MetroFramework.Forms.MetroForm
     {

@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using BNSS.Globals;
 using Newtonsoft.Json;
 
@@ -16,27 +15,16 @@ namespace BNSS.Local
             }
         }
 
-
-        public static void SaveSettings()
+        public static void SaveSettings(string path)
         {
+            var usersettings = new UsersettingsSaveData
+            {
+                RowColor1 = UserSettings.RowColor1,
+                RowColor2 = UserSettings.RowColor2,
+                Enabled = UserSettings.Enabled
+            };
 
-            //using (StreamWriter file = File.CreateText(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json"))
-            //{
-            UsersettingsSaveData usersettings = new UsersettingsSaveData();
-            usersettings.RowColor1 = UserSettings.RowColor1;
-            usersettings.RowColor2 = UserSettings.RowColor2;
-            usersettings.Enabled = UserSettings.Enabled;
-            //JsonSerializer serializer = new JsonSerializer();
-            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json", Encryption.Encrypt(JsonConvert.SerializeObject(usersettings)));
-            //serializer.Serialize(file, usersettings);
-            //}
-
+            File.WriteAllText(path, Encryption.Encrypt(JsonConvert.SerializeObject(usersettings)));
         }
-
-       
-
-
-
-
     }
 }

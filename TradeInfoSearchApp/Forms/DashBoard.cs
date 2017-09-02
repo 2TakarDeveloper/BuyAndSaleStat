@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-
-using MetroFramework;
-
-using BNSS.Globals;
 using BNSS.Entity;
 using BNSS.Entity.ResultSet;
-using BNSS.Search;
-using BNSS.Parser;
 using BNSS.Export;
+using BNSS.Globals;
 using BNSS.Local;
+using BNSS.Parser;
+using BNSS.Search;
 
 
-namespace TradeInfoSearchApp.Forms
+namespace BNSS.Application.Forms
 {
     public partial class DashBoard : MetroFramework.Forms.MetroForm
     {
@@ -25,42 +22,65 @@ namespace TradeInfoSearchApp.Forms
         private double _buyingTotal;
         private double _sellingTotal;
 
+        #region SearchData
+
+        //SearchResults
+        private List<ItemGroup> ItemsB { get; set; }
+        private List<CustomerGroup> CustomersGroupB { get; set; }
+        private List<ItemGroup> ItemsS { get; set; }
+        private List<CustomerGroup> CustomersGroupS { get; set; }
+        private List<Customer> Buyers { get; set; }
+        private List<Customer> Sellers { get; set; }
+
+        #endregion
+
+
         public DashBoard()
         {
             InitializeComponent();
+
+
+
             StaticVariables.SpreadSheet = new SpreadSheet();
 
-            //UserSettings.LoadSettings();
-            //if (UserSettings.Enabled)
-            //{
-            //    LoadLocalData();
-            //}
-            //else
-            //{
-            //    LicenceDialague ld = new LicenceDialague();
-            //    if (ld.ShowDialog() == DialogResult.OK)
-            //    {
+            Local.LoadData.LoadSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
+            CheckLicence();
 
-            //        LoadLocalData();
-            //    }
-            //    else
-            //    {
-            //        Close();
-            //    }
-            //}
-
-            LoadLocalData();
+            //LoadLocalData();
 
 
         }
 
 
+        void CheckLicence()
+        {
 
+            if (UserSettings.Enabled)
+            {
+                LoadLocalData();
+            }
+            else
+            {
+                LicenceDialague ld = new LicenceDialague();
+                if (ld.ShowDialog() == DialogResult.OK)
+                {
+
+                    LoadLocalData();
+                }
+                else
+                {
+                    Close();
+                }
+            }
+        }
 
         void LoadData()
         {
 
 
+
+
+            TablesComboBox.Items.Clear();
             foreach (BuyerSheet sheet in StaticVariables.SpreadSheet.BuyerSheets)
             {
                 TablesComboBox.Items.Add(sheet);
@@ -73,6 +93,9 @@ namespace TradeInfoSearchApp.Forms
 
             if (TablesComboBox.Items.Count <= 0) return;
             TablesComboBox.SelectedIndex = 0;
+
+
+
 
             itemBox.DataSource = BuyerSearch.GetUniqueItem(StaticVariables.SpreadSheet.BuyerSheets);
 
@@ -89,30 +112,36 @@ namespace TradeInfoSearchApp.Forms
                 BuyerSheet buyerSheet = (BuyerSheet)TablesComboBox.SelectedItem;
                 BuyingGrid.DataSource = buyerSheet.ListOfCustomers;
 
+                BuyingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
+                BuyingGrid.Columns[0].DefaultCellStyle.Format = "M";
+                BuyingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+
             }
 
             if (Regex.IsMatch(TablesComboBox.SelectedItem.ToString(), "[SS]")) //buyer
             {
                 SellerSheet sellersSheet = (SellerSheet)TablesComboBox.SelectedItem;
                 SellingGrid.DataSource = sellersSheet.SellersList;
+                SellingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
+                SellingGrid.Columns[0].DefaultCellStyle.Format = "M";
+                SellingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+
             }
+
+
+
+
+
+
+
+
 
         }
 
 
-
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            //try
-            //{
-                ExcelParser.ExcelReader(openFileDialog.FileName);
-            //}
-            //catch (Exception exception)
-            //{
-            //    MetroMessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            //}
-
-
+            ExcelParser.ExcelReader(openFileDialog.FileName);
         }
 
         private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -131,7 +160,7 @@ namespace TradeInfoSearchApp.Forms
 
         private void LoadLocalData()
         {
-            BNSS.Local.LoadData.LoadLocalData(AppDomain.CurrentDomain.BaseDirectory + @"\memory.json");
+            Local.LoadData.LoadLocalData(AppDomain.CurrentDomain.BaseDirectory + @"\memory.json");
 
             LoadData();
         }
@@ -156,81 +185,115 @@ namespace TradeInfoSearchApp.Forms
                     switch (GroupBox.Text)
                     {
                         case @"Customer":
-                            BuyingGrid.DataSource = BuyerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
+                            ItemsB = BuyerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
                                 EndDateTime.Value, StaticVariables.SpreadSheet.BuyerSheets, (int)buyerRow.Value);
 
-                            SellingGrid.DataSource = SellerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
+                            ItemsS = SellerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
                                 EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
+
+                            BuyingGrid.DataSource = ItemsB;
+                            SellingGrid.DataSource = ItemsS;
+
+
+
+
                             break;
                         case @"Item":
-                            BuyingGrid.DataSource = BuyerSearch.GroupByItemName(itemBox.Text, startDateTime.Value,
+                            CustomersGroupB = BuyerSearch.GroupByItemName(itemBox.Text, startDateTime.Value,
                                 EndDateTime.Value, StaticVariables.SpreadSheet.BuyerSheets, (int)buyerRow.Value);
 
-                            SellingGrid.DataSource = SellerSearch.GroupByItemName(itemBox.Text, startDateTime.Value,
+                            CustomersGroupS = SellerSearch.GroupByItemName(itemBox.Text, startDateTime.Value,
                                 EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
+
+                            BuyingGrid.DataSource = CustomersGroupB;
+                            SellingGrid.DataSource = CustomersGroupS;
                             break;
+
+
+
+
+
                     }
+
+                    BuyingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
+                    SellingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
+
+                    BuyingGrid.Columns[2].DefaultCellStyle.Format = "N2";
+                    SellingGrid.Columns[2].DefaultCellStyle.Format = "N2";
+
+
+
                 }
                 else
                 {
-                    var buyers = BuyerSearch.SearchCustomers(SearchBox.Text, itemBox.Text, startDateTime.Value,
+                    Buyers = BuyerSearch.SearchCustomers(SearchBox.Text, itemBox.Text, startDateTime.Value,
                         EndDateTime.Value, StaticVariables.SpreadSheet.BuyerSheets, (int)buyerRow.Value);
 
-                    var sellers = SellerSearch.SearchCustomers(SearchBox.Text, itemBox.Text, startDateTime.Value,
+                    Sellers = SellerSearch.SearchCustomers(SearchBox.Text, itemBox.Text, startDateTime.Value,
                         EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
 
-                    BuyingGrid.DataSource = buyers;
+                    BuyingGrid.DataSource = Buyers;
+                    SellingGrid.DataSource = Sellers;
 
-                    SellingGrid.DataSource = sellers;
+                    _buyingTotal = Buyers.Sum(x => x.Total);
+                    _sellingTotal = Sellers.Sum(x => x.Total);
 
-                    _buyingTotal = 0;
-                    foreach (var buyer in buyers)
-                        _buyingTotal += buyer.Total;
                     buyersTotalLable.Text = @"Total:" + _buyingTotal;
-
-                    _sellingTotal = 0;
-                    foreach (var seller in sellers)
-                        _sellingTotal += seller.Total;
                     SellerrsTotalLable.Text = @"Total:" + _sellingTotal;
 
 
                     #region DataCell Style
 
+                    #region ColorSwitch
 
                     var colorSwitch = true;
-                    var counter = 0;
+
+                    var customer = (Customer)BuyingGrid.Rows[0].DataBoundItem;
+
+                    BuyingGrid.Columns[0].DefaultCellStyle.Format = "M";
+                    BuyingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+
                     foreach (DataGridViewRow row in BuyingGrid.Rows)
                     {
-                        row.DefaultCellStyle.ForeColor =
-                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
+                        var customer2 = (Customer)row.DataBoundItem;
 
-                        counter++;
-                        if (counter == (int)buyerRow.Value)
+                        if (customer.TRADEDT != customer2.TRADEDT)
                         {
-                            counter = 0;
                             colorSwitch = !colorSwitch;
+                            customer = customer2;
                         }
 
-
-
+                        row.DefaultCellStyle.ForeColor =
+                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
                     }
 
 
                     colorSwitch = true;
-                    counter = 0;
+                    customer = (Customer)SellingGrid.Rows[0].DataBoundItem;
+
+                    SellingGrid.Columns[0].DefaultCellStyle.Format = "M";
+                    SellingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+
+
                     foreach (DataGridViewRow row in SellingGrid.Rows)
                     {
-                        row.DefaultCellStyle.ForeColor =
-                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
-                        counter++;
-                        if (counter == (int)sellerRow.Value)
+                        var customer2 = (Customer)row.DataBoundItem;
+
+                        if (customer.TRADEDT != customer2.TRADEDT)
                         {
-                            counter = 0;
                             colorSwitch = !colorSwitch;
+                            customer = customer2;
                         }
 
-
+                        row.DefaultCellStyle.ForeColor =
+                            colorSwitch ? UserSettings.RowColor1 : UserSettings.RowColor2;
                     }
+
+
+                    #endregion
+
+
+
 
 
 
@@ -240,79 +303,52 @@ namespace TradeInfoSearchApp.Forms
             }
             catch (Exception exception)
             {
-                MetroMessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                // MetroMessageBox.Show(this, exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
-
 
 
         private void BuyersExport_Click(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
-            DataExport dataExport = new DataExport(saveFileDialog1.FileName);
+            var dataExport = new DataExport(saveFileDialog1.FileName);
 
 
             if (!GroupByChecker.Checked)
-            {
-                List<Customer> buyers = BuyerSearch.SearchCustomers(SearchBox.Text, itemBox.Text, startDateTime.Value,
-                    EndDateTime.Value, StaticVariables.SpreadSheet.BuyerSheets, (int)buyerRow.Value);
-                dataExport.ExportCustomerData(buyers, _sellingTotal);
-
-            }
+                dataExport.ExportCustomerData(Buyers, _sellingTotal);
             else
-            {
                 switch (GroupBox.Text)
                 {
                     case @"Item":
-                        List<CustomerGroup> Customers = BuyerSearch.GroupByItemName(itemBox.Text, startDateTime.Value,
-                            EndDateTime.Value, StaticVariables.SpreadSheet.BuyerSheets, (int)buyerRow.Value);
-                        dataExport.GroupByItemExport(Customers);
+
+                        dataExport.GroupByItemExport(CustomersGroupB);
 
                         break;
                     case @"Customer":
-                        List<ItemGroup> items = BuyerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
-                            EndDateTime.Value, StaticVariables.SpreadSheet.BuyerSheets, (int)buyerRow.Value);
-                        dataExport.GroupByCustomerExport(items);
+
+                        dataExport.GroupByCustomerExport(ItemsB);
                         break;
                 }
-
-            }
-
-
         }
 
         private void sellersExport_Click(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
-            DataExport dataExport = new DataExport(saveFileDialog1.FileName);
+            var dataExport = new DataExport(saveFileDialog1.FileName);
 
 
             if (!GroupByChecker.Checked)
-            {
-                List<Customer> sellers = SellerSearch.SearchCustomers(SearchBox.Text, itemBox.Text, startDateTime.Value,
-                    EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
-                dataExport.ExportCustomerData(sellers, _sellingTotal);
-
-            }
+                dataExport.ExportCustomerData(Sellers, _sellingTotal);
             else
-            {
                 switch (GroupBox.Text)
                 {
                     case @"Item":
-                        List<CustomerGroup> customers = SellerSearch.GroupByItemName(itemBox.Text, startDateTime.Value,
-                            EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
-                        dataExport.GroupByItemExport(customers);
+                        dataExport.GroupByItemExport(CustomersGroupS);
                         break;
                     case @"Customer":
-                        List<ItemGroup> items = SellerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
-                            EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)buyerRow.Value);
-                        dataExport.GroupByCustomerExport(items);
+                        dataExport.GroupByCustomerExport(ItemsS);
                         break;
                 }
-
-            }
-
-
         }
 
 
@@ -343,7 +379,7 @@ namespace TradeInfoSearchApp.Forms
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
