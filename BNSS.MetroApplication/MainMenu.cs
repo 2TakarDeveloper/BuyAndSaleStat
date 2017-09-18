@@ -1,14 +1,9 @@
 ﻿using BNSS.MetroApplication.Panel;
 using MetroFramework.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using BNSS.Entity;
+using BNSS.Globals;
+using BNSS.Local;
 
 namespace BNSS.MetroApplication
 {
@@ -17,14 +12,17 @@ namespace BNSS.MetroApplication
         public MainMenu()
         {
             InitializeComponent();
+            StaticVariables.SpreadSheet = new SpreadSheet();
+            LoadData.LoadSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
+            LoadData.LoadLocalData(AppDomain.CurrentDomain.BaseDirectory + @"\memory.json");
         }
 
 
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            Settings Setting = new Settings(this, this.Width, this.Height);
-            Setting.swipe();
+            Settings setting = new Settings(this, this.Width, this.Height);
+            setting.swipe();
 
         }
 

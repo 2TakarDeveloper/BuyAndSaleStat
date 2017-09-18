@@ -134,9 +134,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BNSS.Entity\BNSS.Entity.csproj">
+      <Project>{2113af8e-f0d9-45a6-8afb-c68209a987ad}</Project>
+      <Name>BNSS.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BNSS.Export\BNSS.Export.csproj">
       <Project>{01fb41e5-e7f7-4fb5-a2e9-4341d9bbc82d}</Project>
       <Name>BNSS.Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BNSS.Globals\BNSS.Globals.csproj">
+      <Project>{c353357c-4c9e-44d5-9d7e-ffdd18dce81c}</Project>
+      <Name>BNSS.Globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BNSS.Local\BNSS.Local.csproj">
+      <Project>{3d5c94fe-2d4e-4b4f-ac60-114e5f23b53b}</Project>
+      <Name>BNSS.Local</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BNSS.Parser\BNSS.Parser.csproj">
+      <Project>{45300ac7-0cd2-4ef4-9778-6b81640945bf}</Project>
+      <Name>BNSS.Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BNSS.Search\BNSS.Search.csproj">
+      <Project>{694b662a-d9e6-4a7a-9df6-a9d3c3d0f1e6}</Project>
+      <Name>BNSS.Search</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
