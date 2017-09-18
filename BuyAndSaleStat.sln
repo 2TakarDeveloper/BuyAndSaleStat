@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.Application", "TradeInfoSearchApp\BNSS.Application.csproj", "{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.Search", "BNSS.Search\BNSS.Search.csproj", "{694B662A-D9E6-4A7A-9DF6-A9D3C3D0F1E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.Parser", "BNSS.Parser\BNSS.Parser.csproj", "{45300AC7-0CD2-4EF4-9778-6B81640945BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.MetroApplication", "BNSS.MetroApplication\BNSS.MetroApplication.csproj", "{58491984-6C68-4DC0-AEB1-155B6E614143}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,14 @@ Global
 		{45300AC7-0CD2-4EF4-9778-6B81640945BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45300AC7-0CD2-4EF4-9778-6B81640945BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{45300AC7-0CD2-4EF4-9778-6B81640945BF}.Release|x86.Build.0 = Release|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Debug|x86.Build.0 = Debug|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Release|x86.ActiveCfg = Release|Any CPU
+		{58491984-6C68-4DC0-AEB1-155B6E614143}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
