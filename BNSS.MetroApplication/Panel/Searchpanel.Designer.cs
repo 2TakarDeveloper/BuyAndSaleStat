@@ -1,6 +1,6 @@
 ﻿namespace BNSS.MetroApplication.Panel
 {
-    partial class Search
+    partial class Searchpanel
     {
         /// <summary> 
         /// Required designer variable.

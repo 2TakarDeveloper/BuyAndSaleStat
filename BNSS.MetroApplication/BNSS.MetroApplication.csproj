@@ -69,17 +69,23 @@
     <Compile Include="Panel\AdvancedSearch.Designer.cs">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\ImportExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\ImportExport.Designer.cs">
+      <DependentUpon>ImportExport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\PanelSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Panel\PanelSlider.Designer.cs">
       <DependentUpon>PanelSlider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\Search.cs">
+    <Compile Include="Panel\Searchpanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\Search.Designer.cs">
-      <DependentUpon>Search.cs</DependentUpon>
+    <Compile Include="Panel\Searchpanel.Designer.cs">
+      <DependentUpon>Searchpanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\Settings.cs">
       <SubType>UserControl</SubType>
@@ -95,8 +101,11 @@
     <EmbeddedResource Include="Panel\AdvancedSearch.resx">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\Search.resx">
-      <DependentUpon>Search.cs</DependentUpon>
+    <EmbeddedResource Include="Panel\ImportExport.resx">
+      <DependentUpon>ImportExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\Searchpanel.resx">
+      <DependentUpon>Searchpanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -124,6 +133,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BNSS.Export\BNSS.Export.csproj">
+      <Project>{01fb41e5-e7f7-4fb5-a2e9-4341d9bbc82d}</Project>
+      <Name>BNSS.Export</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,7 +30,7 @@ namespace BNSS.MetroApplication
 
         private void Search_Click(object sender, EventArgs e)
         {
-            Search Search = new Search(this, this.Width, this.Height);
+            Searchpanel Search = new Searchpanel(this, this.Width, this.Height);
             Search.swipe();
         }
 
@@ -47,7 +47,8 @@ namespace BNSS.MetroApplication
 
         private void ImportOrExport_Click(object sender, EventArgs e)
         {
-
+            ImportExport ImportExport = new ImportExport(this, this.Width, this.Height);
+            ImportExport.swipe();
         }
     }
 }

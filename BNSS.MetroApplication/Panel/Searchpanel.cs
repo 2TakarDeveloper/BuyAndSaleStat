@@ -11,9 +11,9 @@ using Transitions;
 
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class Search : PanelSlider
+    public partial class Searchpanel : PanelSlider
     {
-        public Search(Form Owner, int width, int height) :base(Owner)
+        public Searchpanel(Form Owner, int width, int height) :base(Owner)
         {
             InitializeComponent();
             this.Width = width;
