@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.Back = new MetroFramework.Controls.MetroLink();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.labelCompanyName = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -40,6 +38,8 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.labelVersion = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Back = new MetroFramework.Controls.MetroLink();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,16 +60,6 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(3, 3);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 2;
-            this.Back.Text = "Back";
-            this.Back.UseSelectable = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click_1);
             // 
             // metroPanel2
             // 
@@ -93,20 +83,6 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::BNSS.MetroApplication.Properties.Resources.Banner;
-            this.pictureBox1.InitialImage = global::BNSS.MetroApplication.Properties.Resources.Banner;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(767, 279);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // metroLabel7
             // 
             this.metroLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -117,6 +93,7 @@
             this.metroLabel7.Size = new System.Drawing.Size(113, 19);
             this.metroLabel7.TabIndex = 16;
             this.metroLabel7.Text = "CompanyName";
+            this.metroLabel7.UseCustomBackColor = true;
             // 
             // labelCompanyName
             // 
@@ -138,6 +115,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(106, 19);
             this.metroLabel1.TabIndex = 10;
             this.metroLabel1.Text = "Product Name";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // labelCopyright
             // 
@@ -169,6 +147,7 @@
             this.metroLabel5.Size = new System.Drawing.Size(76, 19);
             this.metroLabel5.TabIndex = 14;
             this.metroLabel5.Text = "Copyright";
+            this.metroLabel5.UseCustomBackColor = true;
             // 
             // metroLabel3
             // 
@@ -180,6 +159,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(58, 19);
             this.metroLabel3.TabIndex = 12;
             this.metroLabel3.Text = "Version";
+            this.metroLabel3.UseCustomBackColor = true;
             // 
             // labelVersion
             // 
@@ -190,6 +170,30 @@
             this.labelVersion.Size = new System.Drawing.Size(83, 19);
             this.labelVersion.TabIndex = 13;
             this.labelVersion.Text = "metroLabel4";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::BNSS.MetroApplication.Properties.Resources.Banner;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = global::BNSS.MetroApplication.Properties.Resources.Banner;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(767, 432);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(3, 3);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 2;
+            this.Back.Text = "Back";
+            this.Back.UseSelectable = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click_1);
             // 
             // About
             // 

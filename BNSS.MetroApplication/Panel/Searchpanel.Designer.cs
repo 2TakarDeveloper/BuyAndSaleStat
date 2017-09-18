@@ -35,16 +35,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.SellertotalLable = new MetroFramework.Controls.MetroLabel();
-            this.BuyerTotalLable = new MetroFramework.Controls.MetroLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.BuyerTotalLable = new MetroFramework.Controls.MetroLabel();
             this.buyerRow = new System.Windows.Forms.NumericUpDown();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.BuyerExport = new MetroFramework.Controls.MetroButton();
             this.BuyerGrid = new MetroFramework.Controls.MetroGrid();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.SellertotalLable = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.sellerRow = new System.Windows.Forms.NumericUpDown();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
@@ -92,32 +92,6 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // SellertotalLable
-            // 
-            this.SellertotalLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SellertotalLable.AutoSize = true;
-            this.SellertotalLable.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.SellertotalLable.Location = new System.Drawing.Point(349, 332);
-            this.SellertotalLable.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-            this.SellertotalLable.Name = "SellertotalLable";
-            this.SellertotalLable.Size = new System.Drawing.Size(38, 19);
-            this.SellertotalLable.TabIndex = 15;
-            this.SellertotalLable.Text = "Total";
-            this.SellertotalLable.UseCustomBackColor = true;
-            // 
-            // BuyerTotalLable
-            // 
-            this.BuyerTotalLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BuyerTotalLable.AutoSize = true;
-            this.BuyerTotalLable.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.BuyerTotalLable.Location = new System.Drawing.Point(340, 332);
-            this.BuyerTotalLable.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-            this.BuyerTotalLable.Name = "BuyerTotalLable";
-            this.BuyerTotalLable.Size = new System.Drawing.Size(38, 19);
-            this.BuyerTotalLable.TabIndex = 14;
-            this.BuyerTotalLable.Text = "Total";
-            this.BuyerTotalLable.UseCustomBackColor = true;
             // 
             // splitContainer1
             // 
@@ -182,13 +156,36 @@
             this.metroLabel5.Text = "Rows";
             this.metroLabel5.UseCustomBackColor = true;
             // 
+            // BuyerTotalLable
+            // 
+            this.BuyerTotalLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BuyerTotalLable.AutoSize = true;
+            this.BuyerTotalLable.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.BuyerTotalLable.Location = new System.Drawing.Point(258, 332);
+            this.BuyerTotalLable.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.BuyerTotalLable.Name = "BuyerTotalLable";
+            this.BuyerTotalLable.Size = new System.Drawing.Size(38, 19);
+            this.BuyerTotalLable.TabIndex = 14;
+            this.BuyerTotalLable.Text = "Total";
+            this.BuyerTotalLable.UseCustomBackColor = true;
+            // 
             // buyerRow
             // 
             this.buyerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buyerRow.Location = new System.Drawing.Point(258, 21);
+            this.buyerRow.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
             this.buyerRow.Name = "buyerRow";
             this.buyerRow.Size = new System.Drawing.Size(120, 20);
             this.buyerRow.TabIndex = 11;
+            this.buyerRow.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.buyerRow.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel6
@@ -220,8 +217,10 @@
             this.BuyerGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.BuyerGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BuyerGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.BuyerGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BuyerGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BuyerGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.BuyerGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.BuyerGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -278,7 +277,7 @@
             this.metroPanel3.Location = new System.Drawing.Point(3, 3);
             this.metroPanel3.Name = "metroPanel3";
             this.metroPanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel3.Size = new System.Drawing.Size(396, 356);
+            this.metroPanel3.Size = new System.Drawing.Size(408, 356);
             this.metroPanel3.TabIndex = 12;
             this.metroPanel3.UseCustomBackColor = true;
             this.metroPanel3.UseCustomForeColor = true;
@@ -286,12 +285,25 @@
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
             // 
+            // SellertotalLable
+            // 
+            this.SellertotalLable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SellertotalLable.AutoSize = true;
+            this.SellertotalLable.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.SellertotalLable.Location = new System.Drawing.Point(265, 337);
+            this.SellertotalLable.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.SellertotalLable.Name = "SellertotalLable";
+            this.SellertotalLable.Size = new System.Drawing.Size(38, 19);
+            this.SellertotalLable.TabIndex = 15;
+            this.SellertotalLable.Text = "Total";
+            this.SellertotalLable.UseCustomBackColor = true;
+            // 
             // metroLabel7
             // 
             this.metroLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(220, 23);
+            this.metroLabel7.Location = new System.Drawing.Point(223, 21);
             this.metroLabel7.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(41, 19);
@@ -302,10 +314,20 @@
             // sellerRow
             // 
             this.sellerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sellerRow.Location = new System.Drawing.Point(267, 21);
+            this.sellerRow.Location = new System.Drawing.Point(270, 21);
+            this.sellerRow.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
             this.sellerRow.Name = "sellerRow";
             this.sellerRow.Size = new System.Drawing.Size(120, 20);
             this.sellerRow.TabIndex = 11;
+            this.sellerRow.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.sellerRow.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel8
@@ -336,9 +358,11 @@
             this.Sellergrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sellergrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Sellergrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.Sellergrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Sellergrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Sellergrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Sellergrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Sellergrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.Sellergrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -373,7 +397,7 @@
             this.Sellergrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Sellergrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Sellergrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Sellergrid.Size = new System.Drawing.Size(380, 288);
+            this.Sellergrid.Size = new System.Drawing.Size(392, 288);
             this.Sellergrid.TabIndex = 8;
             // 
             // Back
@@ -408,24 +432,26 @@
             this.SearchBox.FormattingEnabled = true;
             this.SearchBox.Location = new System.Drawing.Point(3, 3);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(121, 21);
+            this.SearchBox.Size = new System.Drawing.Size(184, 21);
             this.SearchBox.TabIndex = 6;
+            this.SearchBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
             // 
             // itemBox
             // 
             this.itemBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.itemBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.itemBox.FormattingEnabled = true;
-            this.itemBox.Location = new System.Drawing.Point(130, 3);
+            this.itemBox.Location = new System.Drawing.Point(193, 3);
             this.itemBox.Name = "itemBox";
-            this.itemBox.Size = new System.Drawing.Size(121, 21);
+            this.itemBox.Size = new System.Drawing.Size(201, 21);
             this.itemBox.TabIndex = 7;
+            this.itemBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(257, 8);
+            this.metroLabel3.Location = new System.Drawing.Point(400, 8);
             this.metroLabel3.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(41, 19);
@@ -434,18 +460,19 @@
             // 
             // startDateTime
             // 
-            this.startDateTime.Location = new System.Drawing.Point(304, 3);
+            this.startDateTime.Location = new System.Drawing.Point(447, 3);
             this.startDateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.startDateTime.Name = "startDateTime";
             this.startDateTime.Size = new System.Drawing.Size(200, 29);
             this.startDateTime.TabIndex = 2;
+            this.startDateTime.Value = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
             this.startDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(510, 8);
+            this.metroLabel4.Location = new System.Drawing.Point(653, 8);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(23, 19);
@@ -454,8 +481,8 @@
             // 
             // EndDateTime
             // 
-            this.EndDateTime.Location = new System.Drawing.Point(539, 3);
-            this.EndDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.EndDateTime.Location = new System.Drawing.Point(3, 38);
+            this.EndDateTime.MinimumSize = new System.Drawing.Size(4, 29);
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(200, 29);
             this.EndDateTime.TabIndex = 3;

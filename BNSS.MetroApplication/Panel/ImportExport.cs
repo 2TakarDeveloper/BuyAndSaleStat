@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BNSS.Globals;
 using BNSS.Local;
 using BNSS.Parser;
 using MetroFramework;
@@ -24,6 +25,7 @@ namespace BNSS.MetroApplication.Panel
             InitializeComponent();
             Width = width;
             Height = height;
+            ShowDatabase();
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -53,6 +55,11 @@ namespace BNSS.MetroApplication.Panel
             SaveData.SaveLocalData(AppDomain.CurrentDomain.BaseDirectory + @"\memory.json");
         }
 
+        private void ShowDatabase()
+        {
+            BuyerGrid.DataSource = StaticVariables.SpreadSheet.BuyerSheets;
+            SellerGrid.DataSource = StaticVariables.SpreadSheet.SellerSheets;
+        }
 
     }
 }

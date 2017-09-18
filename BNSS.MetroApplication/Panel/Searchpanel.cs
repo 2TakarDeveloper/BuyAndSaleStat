@@ -8,8 +8,7 @@ using BNSS.Entity;
 using BNSS.Export;
 using BNSS.Globals;
 using BNSS.Search;
-using MetroFramework;
-using Transitions;
+
 
 namespace BNSS.MetroApplication.Panel
 {
@@ -25,8 +24,9 @@ namespace BNSS.MetroApplication.Panel
         public Searchpanel(Form Owner, int width, int height) :base(Owner)
         {
             InitializeComponent();
-            this.Width = width;
-            this.Height = height;
+            Width = width;
+            Height = height;
+            LoadData();
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace BNSS.MetroApplication.Panel
                     var customer = (Customer)BuyerGrid.Rows[0].DataBoundItem;
 
                     BuyerGrid.Columns[0].DefaultCellStyle.Format = "M";
-                    BuyerGrid.Columns[3].DefaultCellStyle.Format = "N2";
+                    BuyerGrid.Columns[3].DefaultCellStyle.Format = "N0";
 
                     foreach (DataGridViewRow row in BuyerGrid.Rows)
                     {
@@ -87,7 +87,7 @@ namespace BNSS.MetroApplication.Panel
                     customer = (Customer)Sellergrid.Rows[0].DataBoundItem;
 
                     Sellergrid.Columns[0].DefaultCellStyle.Format = "M";
-                    Sellergrid.Columns[3].DefaultCellStyle.Format = "N2";
+                    Sellergrid.Columns[3].DefaultCellStyle.Format = "N0";
 
 
                     foreach (DataGridViewRow row in Sellergrid.Rows)
