@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class AdvancedSearch : UserControl
+    public partial class AdvancedSearch : PanelSlider
     {
-        public AdvancedSearch()
+
+        public AdvancedSearch(MainMenu mainMenu, int width, int height):base(mainMenu)
         {
             InitializeComponent();
+            Width = width;
+            Height = height;
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.swipe(false);
         }
     }
 }

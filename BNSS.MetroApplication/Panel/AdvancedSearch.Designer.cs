@@ -54,8 +54,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.sellerRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel3.SuspendLayout();
@@ -75,7 +75,7 @@
             this.metroLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(214, 23);
+            this.metroLabel7.Location = new System.Drawing.Point(217, 23);
             this.metroLabel7.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(41, 19);
@@ -86,7 +86,7 @@
             // sellerRow
             // 
             this.sellerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sellerRow.Location = new System.Drawing.Point(261, 21);
+            this.sellerRow.Location = new System.Drawing.Point(264, 21);
             this.sellerRow.Name = "sellerRow";
             this.sellerRow.Size = new System.Drawing.Size(120, 20);
             this.sellerRow.TabIndex = 11;
@@ -146,7 +146,7 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(374, 305);
+            this.metroGrid1.Size = new System.Drawing.Size(377, 305);
             this.metroGrid1.TabIndex = 8;
             // 
             // metroPanel3
@@ -166,7 +166,7 @@
             this.metroPanel3.Location = new System.Drawing.Point(3, 3);
             this.metroPanel3.Name = "metroPanel3";
             this.metroPanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel3.Size = new System.Drawing.Size(390, 358);
+            this.metroPanel3.Size = new System.Drawing.Size(393, 358);
             this.metroPanel3.TabIndex = 12;
             this.metroPanel3.UseCustomBackColor = true;
             this.metroPanel3.UseCustomForeColor = true;
@@ -328,6 +328,7 @@
             this.Back.TabIndex = 6;
             this.Back.Text = "Back";
             this.Back.UseSelectable = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // SearchBox
             // 
@@ -401,19 +402,6 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLabel3
-            // 
-            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(342, 458);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(38, 19);
-            this.metroLabel3.TabIndex = 12;
-            this.metroLabel3.Text = "Total";
-            this.metroLabel3.UseCustomBackColor = true;
-            // 
             // metroLabel4
             // 
             this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -426,6 +414,19 @@
             this.metroLabel4.TabIndex = 13;
             this.metroLabel4.Text = "Total";
             this.metroLabel4.UseCustomBackColor = true;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(342, 458);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel3.TabIndex = 12;
+            this.metroLabel3.Text = "Total";
+            this.metroLabel3.UseCustomBackColor = true;
             // 
             // AdvancedSearch
             // 

@@ -24,5 +24,6 @@ namespace BNSS.MetroApplication.Panel
         {
             this.swipe(false);
         }
+
     }
 }

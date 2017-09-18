@@ -36,7 +36,8 @@ namespace BNSS.MetroApplication
 
         private void AdvanceSearch_Click(object sender, EventArgs e)
         {
-
+            AdvancedSearch AdvancedSearch = new AdvancedSearch(this, this.Width, this.Height);
+            AdvancedSearch.swipe();
         }
 
         private void About_Click(object sender, EventArgs e)
