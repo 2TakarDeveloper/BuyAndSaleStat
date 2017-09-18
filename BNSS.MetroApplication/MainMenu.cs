@@ -4,6 +4,7 @@ using System;
 using BNSS.Entity;
 using BNSS.Globals;
 using BNSS.Local;
+using System.Windows.Forms;
 
 namespace BNSS.MetroApplication
 {
@@ -40,13 +41,43 @@ namespace BNSS.MetroApplication
 
         private void About_Click(object sender, EventArgs e)
         {
-
+            About About = new About(this, this.Width, this.Height);
+            About.swipe();
         }
 
         private void ImportOrExport_Click(object sender, EventArgs e)
         {
             ImportExport ImportExport = new ImportExport(this, this.Width, this.Height);
             ImportExport.swipe();
+        }
+
+        private void Nameless_Click(object sender, EventArgs e)
+        {
+            Nameless Nameless = new Nameless(this, this.Width, this.Height);
+            Nameless.swipe();
+            
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Maximize_Click(object sender, EventArgs e)
+        {
+            //normalises window
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.CenterToScreen();
+            }
+
+            //maximises window
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.CenterToScreen();
+            }
         }
     }
 }

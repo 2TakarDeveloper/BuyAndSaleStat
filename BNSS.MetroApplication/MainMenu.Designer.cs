@@ -34,22 +34,29 @@
             this.Settings = new MetroFramework.Controls.MetroTile();
             this.About = new MetroFramework.Controls.MetroTile();
             this.ImportOrExport = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
+            this.Nameless = new MetroFramework.Controls.MetroTile();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.Close = new MetroFramework.Controls.MetroLink();
+            this.Maximize = new MetroFramework.Controls.MetroLink();
+            this.HeaderText = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel1.SuspendLayout();
+            this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.Search);
             this.flowLayoutPanel1.Controls.Add(this.AdvanceSearch);
             this.flowLayoutPanel1.Controls.Add(this.Settings);
             this.flowLayoutPanel1.Controls.Add(this.About);
             this.flowLayoutPanel1.Controls.Add(this.ImportOrExport);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(74, 125);
+            this.flowLayoutPanel1.Controls.Add(this.Nameless);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(112, 129);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(546, 257);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(543, 257);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // Search
@@ -107,25 +114,108 @@
             this.ImportOrExport.UseSelectable = true;
             this.ImportOrExport.Click += new System.EventHandler(this.ImportOrExport_Click);
             // 
-            // metroTile6
+            // Nameless
             // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(346, 131);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(194, 122);
-            this.metroTile6.TabIndex = 7;
-            this.metroTile6.Text = "NameLess";
-            this.metroTile6.UseSelectable = true;
+            this.Nameless.ActiveControl = null;
+            this.Nameless.Location = new System.Drawing.Point(346, 131);
+            this.Nameless.Name = "Nameless";
+            this.Nameless.Size = new System.Drawing.Size(194, 122);
+            this.Nameless.TabIndex = 7;
+            this.Nameless.Text = "NameLess";
+            this.Nameless.UseSelectable = true;
+            this.Nameless.Click += new System.EventHandler(this.Nameless_Click);
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(-1, 484);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(769, 29);
+            this.metroPanel1.TabIndex = 1;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.UseCustomForeColor = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.metroPanel2.Controls.Add(this.HeaderText);
+            this.metroPanel2.Controls.Add(this.Maximize);
+            this.metroPanel2.Controls.Add(this.Close);
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(-1, -2);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(769, 50);
+            this.metroPanel2.TabIndex = 2;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.UseCustomForeColor = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // Close
+            // 
+            this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Close.Location = new System.Drawing.Point(743, 3);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(23, 23);
+            this.Close.TabIndex = 2;
+            this.Close.Text = "X";
+            this.Close.UseCustomBackColor = true;
+            this.Close.UseSelectable = true;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            // 
+            // Maximize
+            // 
+            this.Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Maximize.Location = new System.Drawing.Point(714, 3);
+            this.Maximize.Name = "Maximize";
+            this.Maximize.Size = new System.Drawing.Size(23, 23);
+            this.Maximize.TabIndex = 3;
+            this.Maximize.Text = "[ ]";
+            this.Maximize.UseCustomBackColor = true;
+            this.Maximize.UseSelectable = true;
+            this.Maximize.Click += new System.EventHandler(this.Maximize_Click);
+            // 
+            // HeaderText
+            // 
+            this.HeaderText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.HeaderText.AutoSize = true;
+            this.HeaderText.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.HeaderText.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.HeaderText.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.HeaderText.Location = new System.Drawing.Point(319, 15);
+            this.HeaderText.Name = "HeaderText";
+            this.HeaderText.Size = new System.Drawing.Size(104, 25);
+            this.HeaderText.TabIndex = 4;
+            this.HeaderText.Text = "Dashboard";
+            this.HeaderText.UseCustomBackColor = true;
+            this.HeaderText.UseCustomForeColor = true;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 513);
+            this.ControlBox = false;
+            this.Controls.Add(this.metroPanel2);
+            this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainMenu";
-            this.Text = "MainMenu";
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -138,6 +228,11 @@
         private MetroFramework.Controls.MetroTile Settings;
         private MetroFramework.Controls.MetroTile About;
         private MetroFramework.Controls.MetroTile ImportOrExport;
-        private MetroFramework.Controls.MetroTile metroTile6;
+        private MetroFramework.Controls.MetroTile Nameless;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroLink Maximize;
+        private MetroFramework.Controls.MetroLink Close;
+        private MetroFramework.Controls.MetroLabel HeaderText;
     }
 }

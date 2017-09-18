@@ -63,6 +63,12 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\AdvancedSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="Panel\ImportExport.Designer.cs">
       <DependentUpon>ImportExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\Nameless.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\Nameless.Designer.cs">
+      <DependentUpon>Nameless.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\PanelSlider.cs">
       <SubType>UserControl</SubType>
@@ -98,11 +110,17 @@
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel\AdvancedSearch.resx">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\ImportExport.resx">
       <DependentUpon>ImportExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\Nameless.resx">
+      <DependentUpon>Nameless.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Searchpanel.resx">
       <DependentUpon>Searchpanel.cs</DependentUpon>
@@ -118,6 +136,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -158,6 +177,12 @@
       <Project>{694b662a-d9e6-4a7a-9df6-a9d3c3d0f1e6}</Project>
       <Name>BNSS.Search</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56763.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
