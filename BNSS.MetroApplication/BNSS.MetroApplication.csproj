@@ -109,6 +109,12 @@
     <Compile Include="Panel\CompanySummary.Designer.cs">
       <DependentUpon>CompanySummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel\Keypanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\Keypanel.Designer.cs">
+      <DependentUpon>Keypanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel\PanelSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\CompanySummary.resx">
       <DependentUpon>CompanySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\Keypanel.resx">
+      <DependentUpon>Keypanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Searchpanel.resx">
       <DependentUpon>Searchpanel.cs</DependentUpon>
