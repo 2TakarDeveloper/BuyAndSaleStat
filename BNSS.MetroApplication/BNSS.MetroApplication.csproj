@@ -103,11 +103,11 @@
     <Compile Include="Panel\ImportExport.Designer.cs">
       <DependentUpon>ImportExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\CompanySummary.cs">
+    <Compile Include="Panel\CompanySummaryPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\CompanySummary.Designer.cs">
-      <DependentUpon>CompanySummary.cs</DependentUpon>
+    <Compile Include="Panel\CompanySummaryPanel.Designer.cs">
+      <DependentUpon>CompanySummaryPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\Keypanel.cs">
       <SubType>UserControl</SubType>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="Panel\ImportExport.resx">
       <DependentUpon>ImportExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\CompanySummary.resx">
-      <DependentUpon>CompanySummary.cs</DependentUpon>
+    <EmbeddedResource Include="Panel\CompanySummaryPanel.resx">
+      <DependentUpon>CompanySummaryPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Keypanel.resx">
       <DependentUpon>Keypanel.cs</DependentUpon>

@@ -54,7 +54,7 @@ namespace BNSS.MetroApplication
 
         private void Nameless_Click(object sender, EventArgs e)
         {
-            CompanySummary Nameless = new CompanySummary(this, this.Width, this.Height);
+            CompanySummaryPanel Nameless = new CompanySummaryPanel(this, this.Width, this.Height);
             Nameless.swipe();
             
         }

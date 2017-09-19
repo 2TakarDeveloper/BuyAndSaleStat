@@ -111,6 +111,7 @@ namespace BNSS.MetroApplication.Panel
             {
                 ModifyData.RemoveBuyerSheetList(SelectedBuyerSheet);
                 ShowDatabase();
+                SaveData.SaveLocalData();
             }
            
         }
@@ -127,6 +128,7 @@ namespace BNSS.MetroApplication.Panel
             {
                 ModifyData.RemoveSellerSheetList(SelectedSellerSheet);
                 ShowDatabase();
+                SaveData.SaveLocalData();
             }
 
           

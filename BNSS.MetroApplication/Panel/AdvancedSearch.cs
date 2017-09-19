@@ -66,8 +66,7 @@ namespace BNSS.MetroApplication.Panel
                         break;
                 }
 
-                BuyersGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
-                SellersGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
+         
 
                 BuyersGrid.Columns[2].DefaultCellStyle.Format = "N0";
                 SellersGrid.Columns[2].DefaultCellStyle.Format = "N0";
