@@ -14,8 +14,9 @@ namespace BNSS.MetroApplication
         {
             InitializeComponent();
             StaticVariables.SpreadSheet = new SpreadSheet();
-            LoadData.LoadSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
-            LoadData.LoadLocalData(AppDomain.CurrentDomain.BaseDirectory + @"\memory.json");
+            
+            LoadData.LoadSettings();
+            LoadData.LoadLocalData();
         }
 
 
@@ -53,7 +54,7 @@ namespace BNSS.MetroApplication
 
         private void Nameless_Click(object sender, EventArgs e)
         {
-            Nameless Nameless = new Nameless(this, this.Width, this.Height);
+            CompanySummary Nameless = new CompanySummary(this, this.Width, this.Height);
             Nameless.swipe();
             
         }

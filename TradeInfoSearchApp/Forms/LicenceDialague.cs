@@ -96,7 +96,7 @@ namespace BNSS.Application.Forms
             if (Valid)
             {
                 UserSettings.Enabled = true;
-                SaveData.SaveSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
+                SaveData.SaveSettings();
                 Halted = false;
                 DialogResult = DialogResult.OK;
             }

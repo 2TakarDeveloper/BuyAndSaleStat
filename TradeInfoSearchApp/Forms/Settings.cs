@@ -39,7 +39,7 @@ namespace BNSS.Application.Forms
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            SaveData.SaveSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
+            SaveData.SaveSettings();
             DialogResult = DialogResult.OK;
             base.OnFormClosing(e);
         }

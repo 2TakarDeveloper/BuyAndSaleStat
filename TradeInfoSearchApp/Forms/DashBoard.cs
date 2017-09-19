@@ -43,7 +43,7 @@ namespace BNSS.Application.Forms
 
             StaticVariables.SpreadSheet = new SpreadSheet();
 
-            Local.LoadData.LoadSettings(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json");
+            Local.LoadData.LoadSettings();
             CheckLicence();
 
             //LoadLocalData();
@@ -160,14 +160,14 @@ namespace BNSS.Application.Forms
 
         private void LoadLocalData()
         {
-            Local.LoadData.LoadLocalData(AppDomain.CurrentDomain.BaseDirectory + @"\memory.json");
+            Local.LoadData.LoadLocalData();
 
             LoadData();
         }
 
         private void SaveLocalData()
         {
-            SaveData.SaveLocalData(AppDomain.CurrentDomain.BaseDirectory + @"\memory.json");
+            SaveData.SaveLocalData();
         }
 
 

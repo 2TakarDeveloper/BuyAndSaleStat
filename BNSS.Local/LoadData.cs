@@ -8,11 +8,11 @@ namespace BNSS.Local
 {
     public static class LoadData
     {
-        public static void LoadLocalData(string path)
+        public static void LoadLocalData()
         {
-            if (File.Exists(path))
+            if (File.Exists(StaticVariables.LocalDatapath))
             {
-                using (StreamReader file = File.OpenText(path))
+                using (StreamReader file = File.OpenText(StaticVariables.LocalDatapath))
                 {
                     JsonSerializer serializer = new JsonSerializer();
                     StaticVariables.SpreadSheet = (SpreadSheet)serializer.Deserialize(file, typeof(SpreadSheet));
@@ -21,11 +21,11 @@ namespace BNSS.Local
         }
 
 
-        public static void LoadSettings(string path)
+        public static void LoadSettings()
         {
-            if (!File.Exists(path)) return;
+            if (!File.Exists(StaticVariables.LocalSettingsPath)) return;
         
-            string json = Encryption.Decrypt(File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\settings.json"));
+            string json = Encryption.Decrypt(File.ReadAllText(StaticVariables.LocalSettingsPath));
            
             UsersettingsSaveData usersettings = JsonConvert.DeserializeObject<UsersettingsSaveData>(json);
             UserSettings.RowColor1 = usersettings.RowColor1;

@@ -6,16 +6,16 @@ namespace BNSS.Local
 {
     public static class SaveData
     {
-        public static void SaveLocalData(string path)
+        public static void SaveLocalData()
         {
-            using (StreamWriter file = File.CreateText(path))
+            using (StreamWriter file = File.CreateText(StaticVariables.LocalDatapath))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, StaticVariables.SpreadSheet);
             }
         }
 
-        public static void SaveSettings(string path)
+        public static void SaveSettings()
         {
             var usersettings = new UsersettingsSaveData
             {
@@ -24,7 +24,11 @@ namespace BNSS.Local
                 Enabled = UserSettings.Enabled
             };
 
-            File.WriteAllText(path, Encryption.Encrypt(JsonConvert.SerializeObject(usersettings)));
+            File.WriteAllText(StaticVariables.LocalSettingsPath, Encryption.Encrypt(JsonConvert.SerializeObject(usersettings)));
         }
+
+        
+
+
     }
 }

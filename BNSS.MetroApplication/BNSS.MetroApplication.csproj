@@ -103,11 +103,11 @@
     <Compile Include="Panel\ImportExport.Designer.cs">
       <DependentUpon>ImportExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\Nameless.cs">
+    <Compile Include="Panel\CompanySummary.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\Nameless.Designer.cs">
-      <DependentUpon>Nameless.cs</DependentUpon>
+    <Compile Include="Panel\CompanySummary.Designer.cs">
+      <DependentUpon>CompanySummary.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\PanelSlider.cs">
       <SubType>UserControl</SubType>
@@ -141,8 +141,8 @@
     <EmbeddedResource Include="Panel\ImportExport.resx">
       <DependentUpon>ImportExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\Nameless.resx">
-      <DependentUpon>Nameless.cs</DependentUpon>
+    <EmbeddedResource Include="Panel\CompanySummary.resx">
+      <DependentUpon>CompanySummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Searchpanel.resx">
       <DependentUpon>Searchpanel.cs</DependentUpon>

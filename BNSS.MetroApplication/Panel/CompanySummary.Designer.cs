@@ -1,6 +1,6 @@
 ﻿namespace BNSS.MetroApplication.Panel
 {
-    partial class Nameless
+    partial class CompanySummary
     {
         /// <summary> 
         /// Required designer variable.
@@ -58,12 +58,12 @@
             this.Back.UseSelectable = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // Nameless
+            // CompanySummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel1);
-            this.Name = "Nameless";
+            this.Name = "CompanySummary";
             this.Size = new System.Drawing.Size(800, 400);
             this.metroPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

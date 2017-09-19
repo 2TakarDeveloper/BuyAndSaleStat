@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BNSS.Globals;
+using BNSS.Local;
 
 namespace BNSS.MetroApplication.Panel
 {
@@ -36,6 +37,7 @@ namespace BNSS.MetroApplication.Panel
             {
                 UserSettings.RowColor1 = colorDialog1.Color;
                 RowColor1.BackColor = UserSettings.RowColor1;
+                SaveData.SaveSettings();
             }
         }
 
@@ -46,6 +48,7 @@ namespace BNSS.MetroApplication.Panel
             {
                 UserSettings.RowColor2 = colorDialog1.Color;
                 RowColor2.BackColor = UserSettings.RowColor2;
+                SaveData.SaveSettings();
             }
         }
     }

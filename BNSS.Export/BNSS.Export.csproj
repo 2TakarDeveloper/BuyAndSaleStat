@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataExport.cs" />
+    <Compile Include="Memory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +61,10 @@
     <ProjectReference Include="..\BNSS.Entity\BNSS.Entity.csproj">
       <Project>{2113af8e-f0d9-45a6-8afb-c68209a987ad}</Project>
       <Name>BNSS.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BNSS.Globals\BNSS.Globals.csproj">
+      <Project>{c353357c-4c9e-44d5-9d7e-ffdd18dce81c}</Project>
+      <Name>BNSS.Globals</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

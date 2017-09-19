@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class Nameless : PanelSlider
+    public partial class CompanySummary : PanelSlider
     {
-        public Nameless(MainMenu mainMenu, int width, int height):base(mainMenu)
+        public CompanySummary(MainMenu mainMenu, int width, int height):base(mainMenu)
         {
             InitializeComponent();
             Width = width;

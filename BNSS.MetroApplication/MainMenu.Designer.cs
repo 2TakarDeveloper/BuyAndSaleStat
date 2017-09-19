@@ -37,9 +37,9 @@
             this.Nameless = new MetroFramework.Controls.MetroTile();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.Close = new MetroFramework.Controls.MetroLink();
-            this.Maximize = new MetroFramework.Controls.MetroLink();
             this.HeaderText = new MetroFramework.Controls.MetroLabel();
+            this.Maximize = new MetroFramework.Controls.MetroLink();
+            this.Close = new MetroFramework.Controls.MetroLink();
             this.flowLayoutPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -121,7 +121,7 @@
             this.Nameless.Name = "Nameless";
             this.Nameless.Size = new System.Drawing.Size(194, 122);
             this.Nameless.TabIndex = 7;
-            this.Nameless.Text = "NameLess";
+            this.Nameless.Text = "Company Summary";
             this.Nameless.UseSelectable = true;
             this.Nameless.Click += new System.EventHandler(this.Nameless_Click);
             // 
@@ -164,30 +164,6 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // Close
-            // 
-            this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Close.Location = new System.Drawing.Point(743, 3);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(23, 23);
-            this.Close.TabIndex = 2;
-            this.Close.Text = "X";
-            this.Close.UseCustomBackColor = true;
-            this.Close.UseSelectable = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
-            // Maximize
-            // 
-            this.Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Maximize.Location = new System.Drawing.Point(714, 3);
-            this.Maximize.Name = "Maximize";
-            this.Maximize.Size = new System.Drawing.Size(23, 23);
-            this.Maximize.TabIndex = 3;
-            this.Maximize.Text = "[ ]";
-            this.Maximize.UseCustomBackColor = true;
-            this.Maximize.UseSelectable = true;
-            this.Maximize.Click += new System.EventHandler(this.Maximize_Click);
-            // 
             // HeaderText
             // 
             this.HeaderText.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -202,6 +178,30 @@
             this.HeaderText.Text = "Dashboard";
             this.HeaderText.UseCustomBackColor = true;
             this.HeaderText.UseCustomForeColor = true;
+            // 
+            // Maximize
+            // 
+            this.Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Maximize.Location = new System.Drawing.Point(714, 3);
+            this.Maximize.Name = "Maximize";
+            this.Maximize.Size = new System.Drawing.Size(23, 23);
+            this.Maximize.TabIndex = 3;
+            this.Maximize.Text = "[ ]";
+            this.Maximize.UseCustomBackColor = true;
+            this.Maximize.UseSelectable = true;
+            this.Maximize.Click += new System.EventHandler(this.Maximize_Click);
+            // 
+            // Close
+            // 
+            this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Close.Location = new System.Drawing.Point(743, 3);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(23, 23);
+            this.Close.TabIndex = 2;
+            this.Close.Text = "X";
+            this.Close.UseCustomBackColor = true;
+            this.Close.UseSelectable = true;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // MainMenu
             // 

@@ -24,6 +24,7 @@ namespace BNSS.MetroApplication.Panel
             InitializeComponent();
             Width = width;
             Height = height;
+            EndDateTime.Value=DateTime.Now;
             LoadData();
         }
 
