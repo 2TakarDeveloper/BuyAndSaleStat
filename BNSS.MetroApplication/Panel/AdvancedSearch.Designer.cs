@@ -77,7 +77,7 @@
             this.metroLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(211, 23);
+            this.metroLabel5.Location = new System.Drawing.Point(271, 23);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(41, 19);
@@ -88,7 +88,7 @@
             // buyerRow
             // 
             this.buyerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buyerRow.Location = new System.Drawing.Point(258, 21);
+            this.buyerRow.Location = new System.Drawing.Point(318, 21);
             this.buyerRow.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -171,7 +171,7 @@
             this.BuyersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.BuyersGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.BuyersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BuyersGrid.Size = new System.Drawing.Size(371, 283);
+            this.BuyersGrid.Size = new System.Drawing.Size(431, 283);
             this.BuyersGrid.TabIndex = 8;
             // 
             // metroPanel2
@@ -191,7 +191,7 @@
             this.metroPanel2.Location = new System.Drawing.Point(7, 3);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel2.Size = new System.Drawing.Size(387, 358);
+            this.metroPanel2.Size = new System.Drawing.Size(447, 358);
             this.metroPanel2.TabIndex = 11;
             this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.UseCustomForeColor = true;
@@ -218,8 +218,8 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel2.Controls.Add(this.metroPanel3);
-            this.splitContainer1.Size = new System.Drawing.Size(794, 364);
-            this.splitContainer1.SplitterDistance = 400;
+            this.splitContainer1.Size = new System.Drawing.Size(914, 364);
+            this.splitContainer1.SplitterDistance = 460;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 11;
             // 
@@ -240,7 +240,7 @@
             this.metroPanel3.Location = new System.Drawing.Point(3, 3);
             this.metroPanel3.Name = "metroPanel3";
             this.metroPanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel3.Size = new System.Drawing.Size(417, 358);
+            this.metroPanel3.Size = new System.Drawing.Size(480, 358);
             this.metroPanel3.TabIndex = 12;
             this.metroPanel3.UseCustomBackColor = true;
             this.metroPanel3.UseCustomForeColor = true;
@@ -253,7 +253,7 @@
             this.metroLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(241, 23);
+            this.metroLabel7.Location = new System.Drawing.Point(304, 23);
             this.metroLabel7.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(41, 19);
@@ -264,7 +264,7 @@
             // sellerRow
             // 
             this.sellerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sellerRow.Location = new System.Drawing.Point(288, 21);
+            this.sellerRow.Location = new System.Drawing.Point(351, 21);
             this.sellerRow.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -347,7 +347,7 @@
             this.SellersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.SellersGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.SellersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SellersGrid.Size = new System.Drawing.Size(401, 283);
+            this.SellersGrid.Size = new System.Drawing.Size(464, 283);
             this.SellersGrid.TabIndex = 8;
             // 
             // Back
@@ -372,7 +372,7 @@
             this.flowLayoutPanel1.Controls.Add(this.EndDateTime);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(922, 38);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // TypePicker
@@ -427,8 +427,8 @@
             // 
             // EndDateTime
             // 
-            this.EndDateTime.Location = new System.Drawing.Point(3, 38);
-            this.EndDateTime.MinimumSize = new System.Drawing.Size(4, 29);
+            this.EndDateTime.Location = new System.Drawing.Point(659, 3);
+            this.EndDateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(210, 29);
             this.EndDateTime.TabIndex = 5;
@@ -465,7 +465,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(811, 485);
+            this.metroPanel1.Size = new System.Drawing.Size(931, 485);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -477,7 +477,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel1);
             this.Name = "AdvancedSearch";
-            this.Size = new System.Drawing.Size(811, 485);
+            this.Size = new System.Drawing.Size(931, 485);
             ((System.ComponentModel.ISupportInitialize)(this.buyerRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuyersGrid)).EndInit();
             this.metroPanel2.ResumeLayout(false);
