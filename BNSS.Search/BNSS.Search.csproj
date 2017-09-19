@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuyerSearch.cs" />
+    <Compile Include="CompanySummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SellerSearch.cs" />
   </ItemGroup>

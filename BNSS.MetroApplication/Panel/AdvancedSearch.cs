@@ -126,7 +126,6 @@ namespace BNSS.MetroApplication.Panel
             {
                 case @"Customer":
                     SearchBox.DataSource = BuyerSearch.GetUniqueCustomer(StaticVariables.SpreadSheet.BuyerSheets);
-          
 
 
                     break;
