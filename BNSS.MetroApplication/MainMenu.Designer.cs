@@ -232,7 +232,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLink Maximize;
-        private MetroFramework.Controls.MetroLink Close;
+        private new MetroFramework.Controls.MetroLink Close;
         private MetroFramework.Controls.MetroLabel HeaderText;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.Application", "TradeInfoSearchApp\BNSS.Application.csproj", "{D96CCC5E-06BA-4418-B05F-FA1EDEE6A7A9}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.Parser", "BNSS.Parser\BNSS.Parser.csproj", "{45300AC7-0CD2-4EF4-9778-6B81640945BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.MetroApplication", "BNSS.MetroApplication\BNSS.MetroApplication.csproj", "{58491984-6C68-4DC0-AEB1-155B6E614143}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{3117C942-3990-4EBE-AC65-7FB43B2720FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,10 @@ Global
 		{58491984-6C68-4DC0-AEB1-155B6E614143}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58491984-6C68-4DC0-AEB1-155B6E614143}.Release|x86.ActiveCfg = Release|Any CPU
 		{58491984-6C68-4DC0-AEB1-155B6E614143}.Release|x86.Build.0 = Release|Any CPU
+		{3117C942-3990-4EBE-AC65-7FB43B2720FF}.Debug|Any CPU.ActiveCfg = Debug
+		{3117C942-3990-4EBE-AC65-7FB43B2720FF}.Debug|x86.ActiveCfg = Debug
+		{3117C942-3990-4EBE-AC65-7FB43B2720FF}.Release|Any CPU.ActiveCfg = Release
+		{3117C942-3990-4EBE-AC65-7FB43B2720FF}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
