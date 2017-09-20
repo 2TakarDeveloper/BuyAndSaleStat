@@ -31,12 +31,14 @@ namespace BNSS.MetroApplication.Panel
             InitializeComponent();
             Width = width;
             Height = height;
+       
             ShowDatabase();
             
         }
 
         private void Back_Click(object sender, EventArgs e)
         {
+         
             swipe(false);
         }
 

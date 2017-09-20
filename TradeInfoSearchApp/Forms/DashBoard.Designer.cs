@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -83,6 +84,11 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.statusTextLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.newFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -103,7 +109,7 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sellerRow)).BeginInit();
-            this.MenuStrip.SuspendLayout();
+            this.metroContextMenu1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -184,6 +190,7 @@
             this.flowLayoutPanel1.Controls.Add(this.startDateTime);
             this.flowLayoutPanel1.Controls.Add(this.EndDateLable);
             this.flowLayoutPanel1.Controls.Add(this.EndDateTime);
+            this.flowLayoutPanel1.Controls.Add(this.SummaryCheck);
             this.flowLayoutPanel1.Controls.Add(this.GroupByChecker);
             this.flowLayoutPanel1.Controls.Add(this.GroupBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -293,7 +300,7 @@
             // GroupByChecker
             // 
             this.GroupByChecker.AutoSize = true;
-            this.GroupByChecker.Location = new System.Drawing.Point(240, 38);
+            this.GroupByChecker.Location = new System.Drawing.Point(320, 38);
             this.GroupByChecker.Name = "GroupByChecker";
             this.GroupByChecker.Size = new System.Drawing.Size(72, 15);
             this.GroupByChecker.TabIndex = 16;
@@ -308,7 +315,7 @@
             this.GroupBox.Items.AddRange(new object[] {
             "Customer",
             "Item"});
-            this.GroupBox.Location = new System.Drawing.Point(318, 38);
+            this.GroupBox.Location = new System.Drawing.Point(398, 38);
             this.GroupBox.Name = "GroupBox";
             this.GroupBox.Size = new System.Drawing.Size(121, 21);
             this.GroupBox.TabIndex = 17;
@@ -661,16 +668,6 @@
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.MenuClick);
             // 
-            // MenuStrip
-            // 
-            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(117, 92);
-            // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -726,6 +723,48 @@
             this.statusTextLabel.Size = new System.Drawing.Size(0, 0);
             this.statusTextLabel.TabIndex = 6;
             // 
+            // metroContextMenu1
+            // 
+            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newFileToolStripMenuItem,
+            this.settingsToolStripMenuItem1,
+            this.aboutToolStripMenuItem1});
+            this.metroContextMenu1.Name = "metroContextMenu1";
+            this.metroContextMenu1.Size = new System.Drawing.Size(120, 70);
+            // 
+            // newFileToolStripMenuItem
+            // 
+            this.newFileToolStripMenuItem.Name = "newFileToolStripMenuItem";
+            this.newFileToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.newFileToolStripMenuItem.Text = "New File";
+            this.newFileToolStripMenuItem.Click += new System.EventHandler(this.LoadNewFileToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem1
+            // 
+            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.settingsToolStripMenuItem1.Text = "Settings";
+            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
+            // 
+            // SummaryCheck
+            // 
+            this.SummaryCheck.AutoSize = true;
+            this.SummaryCheck.Location = new System.Drawing.Point(240, 38);
+            this.SummaryCheck.Name = "SummaryCheck";
+            this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
+            this.SummaryCheck.TabIndex = 22;
+            this.SummaryCheck.Text = "Summary";
+            this.SummaryCheck.UseCustomBackColor = true;
+            this.SummaryCheck.UseSelectable = true;
+            this.SummaryCheck.CheckedChanged += new System.EventHandler(this.Search_initate);
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,7 +804,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sellerRow)).EndInit();
-            this.MenuStrip.ResumeLayout(false);
+            this.metroContextMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,7 +843,6 @@
         private System.Windows.Forms.Panel panel4;
         private MetroFramework.Controls.MetroLabel SellerrsTotalLable;
         private MetroFramework.Controls.MetroLink metroLink1;
-        private MetroFramework.Controls.MetroContextMenu MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadNewFileToolStripMenuItem;
@@ -818,6 +856,11 @@
         private System.Windows.Forms.ComboBox itemBox;
         private System.Windows.Forms.ComboBox SearchBox;
         private MetroFramework.Controls.MetroGrid SellingGrid;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
+        private System.Windows.Forms.ToolStripMenuItem newFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private MetroFramework.Controls.MetroCheckBox SummaryCheck;
     }
 }
 

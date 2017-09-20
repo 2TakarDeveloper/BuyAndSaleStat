@@ -18,7 +18,7 @@ namespace BNSS.Application.Forms
     public partial class DashBoard : MetroFramework.Forms.MetroForm
     {
 
-
+        
         private double _buyingTotal;
         private double _sellingTotal;
 
@@ -175,6 +175,7 @@ namespace BNSS.Application.Forms
         private void Search_initate(object sender, EventArgs e)
         {
             var groupBy = GroupByChecker.Checked;
+            var summary = SummaryCheck.Checked;
             BuyingGrid.DataSource = null;
             SellingGrid.DataSource = null;
             try
@@ -191,8 +192,18 @@ namespace BNSS.Application.Forms
                             ItemsS = SellerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
                                 EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
 
-                            BuyingGrid.DataSource = ItemsB;
-                            SellingGrid.DataSource = ItemsS;
+
+                            if (!summary)
+                            {
+                                BuyingGrid.DataSource = ItemsB;
+                                SellingGrid.DataSource = ItemsS;
+                            }
+                            else
+                            {
+                                BuyingGrid.DataSource= CompanySummary.CustomerSummary(ItemsB, ItemsS);
+                            }
+
+                            
 
 
 
@@ -205,8 +216,17 @@ namespace BNSS.Application.Forms
                             CustomersGroupS = SellerSearch.GroupByItemName(itemBox.Text, startDateTime.Value,
                                 EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
 
-                            BuyingGrid.DataSource = CustomersGroupB;
-                            SellingGrid.DataSource = CustomersGroupS;
+
+                            if (!summary)
+                            {
+                                BuyingGrid.DataSource = CustomersGroupB;
+                                SellingGrid.DataSource = CustomersGroupS;
+                            }
+                            else
+                            {
+                                BuyingGrid.DataSource = CompanySummary.ItemSummary(CustomersGroupB, CustomersGroupS);
+                            }
+
                             break;
 
 
@@ -218,8 +238,8 @@ namespace BNSS.Application.Forms
                     BuyingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
                     SellingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
 
-                    BuyingGrid.Columns[2].DefaultCellStyle.Format = "N2";
-                    SellingGrid.Columns[2].DefaultCellStyle.Format = "N2";
+                    BuyingGrid.Columns[2].DefaultCellStyle.Format = "N0";
+                    SellingGrid.Columns[2].DefaultCellStyle.Format = "N0";
 
 
 
@@ -251,7 +271,7 @@ namespace BNSS.Application.Forms
                     var customer = (Customer)BuyingGrid.Rows[0].DataBoundItem;
 
                     BuyingGrid.Columns[0].DefaultCellStyle.Format = "M";
-                    BuyingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+                    BuyingGrid.Columns[3].DefaultCellStyle.Format = "N0";
 
                     foreach (DataGridViewRow row in BuyingGrid.Rows)
                     {
@@ -272,7 +292,7 @@ namespace BNSS.Application.Forms
                     customer = (Customer)SellingGrid.Rows[0].DataBoundItem;
 
                     SellingGrid.Columns[0].DefaultCellStyle.Format = "M";
-                    SellingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+                    SellingGrid.Columns[3].DefaultCellStyle.Format = "N0";
 
 
                     foreach (DataGridViewRow row in SellingGrid.Rows)
@@ -366,7 +386,7 @@ namespace BNSS.Application.Forms
 
         private void MenuClick(object sender, EventArgs e)
         {
-            MenuStrip.Show(metroLink1.PointToScreen(metroLink1.Location));
+            metroContextMenu1.Show(metroLink1.PointToScreen(metroLink1.Location));
         }
 
         private void LoadNewFileToolStripMenuItem_Click(object sender, EventArgs e)

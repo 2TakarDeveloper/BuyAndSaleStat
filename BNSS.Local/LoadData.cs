@@ -20,6 +20,10 @@ namespace BNSS.Local
             }
         }
 
+        public static void UnloadData()
+        {
+            StaticVariables.SpreadSheet = null;
+        }
 
         public static void LoadSettings()
         {
