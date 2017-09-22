@@ -42,11 +42,12 @@
             // 
             // Back
             // 
+            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
+            this.Back.ImageSize = 28;
             this.Back.Location = new System.Drawing.Point(3, 3);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(30, 30);
             this.Back.TabIndex = 2;
-            this.Back.Text = "Back";
             this.Back.UseSelectable = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
@@ -67,7 +68,7 @@
             // 
             // metroPanel2
             // 
-            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.metroPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;

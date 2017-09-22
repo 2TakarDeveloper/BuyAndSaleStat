@@ -36,20 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.buyerRow = new System.Windows.Forms.NumericUpDown();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.ExportBuyersButton = new MetroFramework.Controls.MetroButton();
-            this.BuyersGrid = new MetroFramework.Controls.MetroGrid();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.sellerRow = new System.Windows.Forms.NumericUpDown();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.SellersGrid = new MetroFramework.Controls.MetroGrid();
-            this.Back = new MetroFramework.Controls.MetroLink();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TypePicker = new System.Windows.Forms.ComboBox();
             this.SearchBox = new System.Windows.Forms.ComboBox();
@@ -57,76 +44,255 @@
             this.startDateTime = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.EndDateTime = new MetroFramework.Controls.MetroDateTime();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.buyerRow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuyersGrid)).BeginInit();
-            this.metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.metroPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sellerRow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SellersGrid)).BeginInit();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.ExportBuyersButton = new MetroFramework.Controls.MetroButton();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.buyerRow = new System.Windows.Forms.NumericUpDown();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.sellerRow = new System.Windows.Forms.NumericUpDown();
+            this.BuyersGrid = new MetroFramework.Controls.MetroGrid();
+            this.SellersGrid = new MetroFramework.Controls.MetroGrid();
+            this.Back = new MetroFramework.Controls.MetroLink();
+            this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buyerRow)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sellerRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyersGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellersGrid)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.Back, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.BuyersGrid, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.SellersGrid, 1, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(886, 485);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel1, 2);
+            this.flowLayoutPanel1.Controls.Add(this.TypePicker);
+            this.flowLayoutPanel1.Controls.Add(this.SearchBox);
+            this.flowLayoutPanel1.Controls.Add(this.metroLabel3);
+            this.flowLayoutPanel1.Controls.Add(this.startDateTime);
+            this.flowLayoutPanel1.Controls.Add(this.metroLabel4);
+            this.flowLayoutPanel1.Controls.Add(this.EndDateTime);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 38);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(880, 34);
+            this.flowLayoutPanel1.TabIndex = 8;
+            // 
+            // TypePicker
+            // 
+            this.TypePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypePicker.FormattingEnabled = true;
+            this.TypePicker.Items.AddRange(new object[] {
+            "Customer",
+            "Item"});
+            this.TypePicker.Location = new System.Drawing.Point(3, 3);
+            this.TypePicker.Name = "TypePicker";
+            this.TypePicker.Size = new System.Drawing.Size(112, 28);
+            this.TypePicker.TabIndex = 2;
+            this.TypePicker.Text = "Customer";
+            // 
+            // SearchBox
+            // 
+            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBox.FormattingEnabled = true;
+            this.SearchBox.Location = new System.Drawing.Point(121, 3);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(186, 28);
+            this.SearchBox.TabIndex = 3;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(313, 7);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel3.TabIndex = 6;
+            this.metroLabel3.Text = "From";
+            // 
+            // startDateTime
+            // 
+            this.startDateTime.Location = new System.Drawing.Point(360, 3);
+            this.startDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.startDateTime.Name = "startDateTime";
+            this.startDateTime.Size = new System.Drawing.Size(230, 29);
+            this.startDateTime.TabIndex = 4;
+            this.startDateTime.Value = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(596, 7);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(22, 19);
+            this.metroLabel4.TabIndex = 7;
+            this.metroLabel4.Text = "To";
+            // 
+            // EndDateTime
+            // 
+            this.EndDateTime.Location = new System.Drawing.Point(624, 3);
+            this.EndDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.EndDateTime.Name = "EndDateTime";
+            this.EndDateTime.Size = new System.Drawing.Size(230, 29);
+            this.EndDateTime.TabIndex = 5;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.metroLabel6);
+            this.flowLayoutPanel2.Controls.Add(this.ExportBuyersButton);
+            this.flowLayoutPanel2.Controls.Add(this.metroLabel5);
+            this.flowLayoutPanel2.Controls.Add(this.buyerRow);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 78);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(437, 34);
+            this.flowLayoutPanel2.TabIndex = 9;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel6.Location = new System.Drawing.Point(3, 8);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel6.TabIndex = 14;
+            this.metroLabel6.Text = "Buyers";
+            this.metroLabel6.UseCustomBackColor = true;
+            // 
+            // ExportBuyersButton
+            // 
+            this.ExportBuyersButton.Location = new System.Drawing.Point(59, 3);
+            this.ExportBuyersButton.Name = "ExportBuyersButton";
+            this.ExportBuyersButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportBuyersButton.TabIndex = 13;
+            this.ExportBuyersButton.Text = "Export";
+            this.ExportBuyersButton.UseSelectable = true;
             // 
             // metroLabel5
             // 
             this.metroLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(211, 23);
+            this.metroLabel5.Location = new System.Drawing.Point(140, 8);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel5.TabIndex = 12;
+            this.metroLabel5.TabIndex = 16;
             this.metroLabel5.Text = "Rows";
             this.metroLabel5.UseCustomBackColor = true;
             // 
             // buyerRow
             // 
             this.buyerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buyerRow.Location = new System.Drawing.Point(258, 21);
+            this.buyerRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyerRow.Location = new System.Drawing.Point(187, 3);
             this.buyerRow.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.buyerRow.Name = "buyerRow";
-            this.buyerRow.Size = new System.Drawing.Size(120, 20);
-            this.buyerRow.TabIndex = 11;
+            this.buyerRow.Size = new System.Drawing.Size(120, 23);
+            this.buyerRow.TabIndex = 15;
             this.buyerRow.Value = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.buyerRow.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
-            // metroLabel6
+            // flowLayoutPanel3
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(7, 23);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel6.TabIndex = 10;
-            this.metroLabel6.Text = "Buyers";
-            this.metroLabel6.UseCustomBackColor = true;
+            this.flowLayoutPanel3.Controls.Add(this.metroLabel8);
+            this.flowLayoutPanel3.Controls.Add(this.metroButton1);
+            this.flowLayoutPanel3.Controls.Add(this.metroLabel7);
+            this.flowLayoutPanel3.Controls.Add(this.sellerRow);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(446, 78);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(437, 34);
+            this.flowLayoutPanel3.TabIndex = 10;
             // 
-            // ExportBuyersButton
+            // metroLabel8
             // 
-            this.ExportBuyersButton.Location = new System.Drawing.Point(63, 19);
-            this.ExportBuyersButton.Name = "ExportBuyersButton";
-            this.ExportBuyersButton.Size = new System.Drawing.Size(75, 23);
-            this.ExportBuyersButton.TabIndex = 9;
-            this.ExportBuyersButton.Text = "Export";
-            this.ExportBuyersButton.UseSelectable = true;
-            this.ExportBuyersButton.Click += new System.EventHandler(this.BuyersExport_Click);
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel8.Location = new System.Drawing.Point(3, 8);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel8.TabIndex = 14;
+            this.metroLabel8.Text = "Seller";
+            this.metroLabel8.UseCustomBackColor = true;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(50, 3);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 13;
+            this.metroButton1.Text = "Export";
+            this.metroButton1.UseSelectable = true;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel7.Location = new System.Drawing.Point(131, 8);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel7.TabIndex = 16;
+            this.metroLabel7.Text = "Rows";
+            this.metroLabel7.UseCustomBackColor = true;
+            // 
+            // sellerRow
+            // 
+            this.sellerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sellerRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellerRow.Location = new System.Drawing.Point(178, 3);
+            this.sellerRow.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.sellerRow.Name = "sellerRow";
+            this.sellerRow.Size = new System.Drawing.Size(120, 23);
+            this.sellerRow.TabIndex = 15;
+            this.sellerRow.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // BuyersGrid
             // 
@@ -144,7 +310,6 @@
             this.BuyersGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.BuyersGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
@@ -163,7 +328,7 @@
             this.BuyersGrid.EnableHeadersVisualStyles = false;
             this.BuyersGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BuyersGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BuyersGrid.Location = new System.Drawing.Point(8, 45);
+            this.BuyersGrid.Location = new System.Drawing.Point(3, 118);
             this.BuyersGrid.Name = "BuyersGrid";
             this.BuyersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -176,136 +341,8 @@
             this.BuyersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.BuyersGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.BuyersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BuyersGrid.Size = new System.Drawing.Size(371, 283);
-            this.BuyersGrid.TabIndex = 8;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.metroPanel2.Controls.Add(this.metroLabel5);
-            this.metroPanel2.Controls.Add(this.buyerRow);
-            this.metroPanel2.Controls.Add(this.metroLabel6);
-            this.metroPanel2.Controls.Add(this.ExportBuyersButton);
-            this.metroPanel2.Controls.Add(this.BuyersGrid);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(7, 3);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel2.Size = new System.Drawing.Size(387, 358);
-            this.metroPanel2.TabIndex = 11;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.UseCustomForeColor = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(6, 94);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel1.Controls.Add(this.metroPanel2);
-            this.splitContainer1.Panel1MinSize = 400;
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.metroPanel3);
-            this.splitContainer1.Size = new System.Drawing.Size(794, 364);
-            this.splitContainer1.SplitterDistance = 400;
-            this.splitContainer1.SplitterWidth = 1;
-            this.splitContainer1.TabIndex = 11;
-            // 
-            // metroPanel3
-            // 
-            this.metroPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.metroPanel3.Controls.Add(this.metroLabel7);
-            this.metroPanel3.Controls.Add(this.sellerRow);
-            this.metroPanel3.Controls.Add(this.metroLabel8);
-            this.metroPanel3.Controls.Add(this.metroButton1);
-            this.metroPanel3.Controls.Add(this.SellersGrid);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel3.Size = new System.Drawing.Size(432, 358);
-            this.metroPanel3.TabIndex = 12;
-            this.metroPanel3.UseCustomBackColor = true;
-            this.metroPanel3.UseCustomForeColor = true;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(256, 23);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel7.TabIndex = 12;
-            this.metroLabel7.Text = "Rows";
-            this.metroLabel7.UseCustomBackColor = true;
-            // 
-            // sellerRow
-            // 
-            this.sellerRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sellerRow.Location = new System.Drawing.Point(303, 21);
-            this.sellerRow.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.sellerRow.Name = "sellerRow";
-            this.sellerRow.Size = new System.Drawing.Size(120, 20);
-            this.sellerRow.TabIndex = 11;
-            this.sellerRow.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.sellerRow.ValueChanged += new System.EventHandler(this.Search_initate);
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.Location = new System.Drawing.Point(7, 23);
-            this.metroLabel8.Margin = new System.Windows.Forms.Padding(3, 8, 3, 0);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel8.TabIndex = 10;
-            this.metroLabel8.Text = "Seller";
-            this.metroLabel8.UseCustomBackColor = true;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(63, 19);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 9;
-            this.metroButton1.Text = "Export";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.sellersExport_Click);
+            this.BuyersGrid.Size = new System.Drawing.Size(437, 364);
+            this.BuyersGrid.TabIndex = 11;
             // 
             // SellersGrid
             // 
@@ -344,7 +381,7 @@
             this.SellersGrid.EnableHeadersVisualStyles = false;
             this.SellersGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SellersGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SellersGrid.Location = new System.Drawing.Point(8, 45);
+            this.SellersGrid.Location = new System.Drawing.Point(446, 118);
             this.SellersGrid.Name = "SellersGrid";
             this.SellersGrid.ReadOnly = true;
             this.SellersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -358,181 +395,64 @@
             this.SellersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.SellersGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.SellersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SellersGrid.Size = new System.Drawing.Size(382, 283);
-            this.SellersGrid.TabIndex = 8;
+            this.SellersGrid.Size = new System.Drawing.Size(437, 364);
+            this.SellersGrid.TabIndex = 12;
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(6, 4);
+            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
+            this.Back.ImageSize = 28;
+            this.Back.Location = new System.Drawing.Point(3, 3);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 6;
-            this.Back.Text = "Back";
+            this.Back.Size = new System.Drawing.Size(30, 29);
+            this.Back.TabIndex = 7;
             this.Back.UseSelectable = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.TypePicker);
-            this.flowLayoutPanel1.Controls.Add(this.SearchBox);
-            this.flowLayoutPanel1.Controls.Add(this.metroLabel3);
-            this.flowLayoutPanel1.Controls.Add(this.startDateTime);
-            this.flowLayoutPanel1.Controls.Add(this.metroLabel4);
-            this.flowLayoutPanel1.Controls.Add(this.EndDateTime);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 50);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(802, 38);
-            this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // TypePicker
-            // 
-            this.TypePicker.FormattingEnabled = true;
-            this.TypePicker.Items.AddRange(new object[] {
-            "Customer",
-            "Item"});
-            this.TypePicker.Location = new System.Drawing.Point(3, 3);
-            this.TypePicker.Name = "TypePicker";
-            this.TypePicker.Size = new System.Drawing.Size(112, 21);
-            this.TypePicker.TabIndex = 2;
-            this.TypePicker.Text = "Customer";
-            this.TypePicker.SelectedIndexChanged += new System.EventHandler(this.TypePicker_SelectedIndexChanged);
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.FormattingEnabled = true;
-            this.SearchBox.Location = new System.Drawing.Point(121, 3);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(251, 21);
-            this.SearchBox.TabIndex = 3;
-            this.SearchBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(378, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel3.TabIndex = 6;
-            this.metroLabel3.Text = "From";
-            // 
-            // startDateTime
-            // 
-            this.startDateTime.Location = new System.Drawing.Point(425, 3);
-            this.startDateTime.MinimumSize = new System.Drawing.Size(0, 29);
-            this.startDateTime.Name = "startDateTime";
-            this.startDateTime.Size = new System.Drawing.Size(200, 29);
-            this.startDateTime.TabIndex = 4;
-            this.startDateTime.Value = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
-            this.startDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(631, 0);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(22, 19);
-            this.metroLabel4.TabIndex = 7;
-            this.metroLabel4.Text = "To";
-            // 
-            // EndDateTime
-            // 
-            this.EndDateTime.Location = new System.Drawing.Point(3, 38);
-            this.EndDateTime.MinimumSize = new System.Drawing.Size(4, 29);
-            this.EndDateTime.Name = "EndDateTime";
-            this.EndDateTime.Size = new System.Drawing.Size(210, 29);
-            this.EndDateTime.TabIndex = 5;
-            this.EndDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(55, 487);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(57, 19);
-            this.metroLabel2.TabIndex = 4;
-            this.metroLabel2.Text = "99 Rows";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 487);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(46, 19);
-            this.metroLabel1.TabIndex = 3;
-            this.metroLabel1.Text = "Result:";
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Controls.Add(this.splitContainer1);
-            this.metroPanel1.Controls.Add(this.Back);
-            this.metroPanel1.Controls.Add(this.flowLayoutPanel1);
-            this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.metroLabel1);
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(811, 485);
-            this.metroPanel1.TabIndex = 1;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // AdvancedSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AdvancedSearch";
-            this.Size = new System.Drawing.Size(811, 485);
-            ((System.ComponentModel.ISupportInitialize)(this.buyerRow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuyersGrid)).EndInit();
-            this.metroPanel2.ResumeLayout(false);
-            this.metroPanel2.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.metroPanel3.ResumeLayout(false);
-            this.metroPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sellerRow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SellersGrid)).EndInit();
+            this.Size = new System.Drawing.Size(886, 485);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buyerRow)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sellerRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyersGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellersGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroLink Back;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox TypePicker;
+        private System.Windows.Forms.ComboBox SearchBox;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroDateTime startDateTime;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroDateTime EndDateTime;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.NumericUpDown buyerRow;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroButton ExportBuyersButton;
-        private MetroFramework.Controls.MetroGrid BuyersGrid;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private MetroFramework.Controls.MetroLink Back;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.ComboBox TypePicker;
-        private System.Windows.Forms.ComboBox SearchBox;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private System.Windows.Forms.NumericUpDown sellerRow;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroGrid BuyersGrid;
         private MetroFramework.Controls.MetroGrid SellersGrid;
-        private MetroFramework.Controls.MetroDateTime startDateTime;
-        private MetroFramework.Controls.MetroDateTime EndDateTime;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }

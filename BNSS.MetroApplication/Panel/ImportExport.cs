@@ -36,11 +36,6 @@ namespace BNSS.MetroApplication.Panel
             
         }
 
-        private void Back_Click(object sender, EventArgs e)
-        {
-         
-            swipe(false);
-        }
 
         private void ImportFromExcelButton_Click(object sender, EventArgs e)
         {
@@ -170,6 +165,11 @@ namespace BNSS.MetroApplication.Panel
                         MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.swipe(false);
         }
     }
 }

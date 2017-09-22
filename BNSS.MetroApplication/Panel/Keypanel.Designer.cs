@@ -68,7 +68,8 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(124, 61);
+            this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroButton1.Location = new System.Drawing.Point(268, 61);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(132, 23);
             this.metroButton1.TabIndex = 3;
@@ -77,6 +78,7 @@
             // 
             // metroTextBox1
             // 
+            this.metroTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 

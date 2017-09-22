@@ -183,20 +183,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -252,6 +252,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BuyAndSale.ico" />
+    <None Include="Resources\Import -02.png" />
+    <None Include="Resources\Upload - 02.png" />
+    <None Include="Resources\Previous.png" />
+    <None Include="Resources\Minus.png" />
+    <None Include="Resources\Maximize - 011.png" />
+    <None Include="Resources\Circle Close - 01.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Dialog-Box-About.png" />
+    <None Include="Resources\Paper.png" />
+    <None Include="Resources\Import.png" />
+    <None Include="Resources\Settings-01.png" />
+    <None Include="Resources\Data-Find.png" />
+    <None Include="Resources\Search_011.png" />
+    <None Include="Resources\Search_01.png" />
+    <None Include="Resources\Maximize - 01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

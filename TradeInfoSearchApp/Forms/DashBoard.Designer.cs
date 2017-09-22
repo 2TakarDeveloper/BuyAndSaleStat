@@ -53,6 +53,7 @@
             this.startDateTime = new MetroFramework.Controls.MetroDateTime();
             this.EndDateLable = new MetroFramework.Controls.MetroLabel();
             this.EndDateTime = new MetroFramework.Controls.MetroDateTime();
+            this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
             this.GroupByChecker = new MetroFramework.Controls.MetroCheckBox();
             this.GroupBox = new System.Windows.Forms.ComboBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -88,7 +89,6 @@
             this.newFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -266,7 +266,7 @@
             // 
             this.startDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startDateTime.Location = new System.Drawing.Point(769, 3);
-            this.startDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.startDateTime.MinimumSize = new System.Drawing.Size(4, 29);
             this.startDateTime.Name = "startDateTime";
             this.startDateTime.Size = new System.Drawing.Size(200, 29);
             this.startDateTime.TabIndex = 8;
@@ -290,12 +290,24 @@
             // 
             this.EndDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.EndDateTime.Location = new System.Drawing.Point(34, 38);
-            this.EndDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.EndDateTime.MinimumSize = new System.Drawing.Size(4, 29);
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(200, 29);
             this.EndDateTime.TabIndex = 9;
             this.EndDateTime.Value = new System.DateTime(2017, 6, 7, 0, 0, 0, 0);
             this.EndDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
+            // 
+            // SummaryCheck
+            // 
+            this.SummaryCheck.AutoSize = true;
+            this.SummaryCheck.Location = new System.Drawing.Point(240, 38);
+            this.SummaryCheck.Name = "SummaryCheck";
+            this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
+            this.SummaryCheck.TabIndex = 22;
+            this.SummaryCheck.Text = "Summary";
+            this.SummaryCheck.UseCustomBackColor = true;
+            this.SummaryCheck.UseSelectable = true;
+            this.SummaryCheck.CheckedChanged += new System.EventHandler(this.Search_initate);
             // 
             // GroupByChecker
             // 
@@ -752,18 +764,6 @@
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
-            // 
-            // SummaryCheck
-            // 
-            this.SummaryCheck.AutoSize = true;
-            this.SummaryCheck.Location = new System.Drawing.Point(240, 38);
-            this.SummaryCheck.Name = "SummaryCheck";
-            this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
-            this.SummaryCheck.TabIndex = 22;
-            this.SummaryCheck.Text = "Summary";
-            this.SummaryCheck.UseCustomBackColor = true;
-            this.SummaryCheck.UseSelectable = true;
-            this.SummaryCheck.CheckedChanged += new System.EventHandler(this.Search_initate);
             // 
             // DashBoard
             // 

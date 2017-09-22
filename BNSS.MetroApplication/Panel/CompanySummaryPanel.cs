@@ -29,10 +29,7 @@ namespace BNSS.MetroApplication.Panel
             LoadData();
         }
 
-        private void Back_Click(object sender, EventArgs e)
-        {
-            this.swipe(false);
-        }
+       
 
         private void Search_initate(object sender, EventArgs e)
         {
@@ -101,6 +98,11 @@ namespace BNSS.MetroApplication.Panel
         private void TypePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.swipe(false);
         }
     }
 }

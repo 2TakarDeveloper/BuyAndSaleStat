@@ -25,11 +25,6 @@ namespace BNSS.MetroApplication.Panel
 
         }
 
-        private void Back_Click_1(object sender, EventArgs e)
-        {
-                this.swipe(false);
-            
-        }
 
 
         #region Assembly Attribute Accessors
@@ -112,5 +107,9 @@ namespace BNSS.MetroApplication.Panel
         }
         #endregion
 
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.swipe(false);
+        }
     }
 }

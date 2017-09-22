@@ -36,144 +36,113 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DeleteBuyerSheetButton = new MetroFramework.Controls.MetroButton();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DeleteSellerSheetButton = new MetroFramework.Controls.MetroButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.importFromJsonButton = new MetroFramework.Controls.MetroLink();
+            this.BuyerGrid = new MetroFramework.Controls.MetroGrid();
+            this.SellerGrid = new MetroFramework.Controls.MetroGrid();
+            this.Back = new MetroFramework.Controls.MetroLink();
             this.ExportAsJsonButton = new MetroFramework.Controls.MetroLink();
             this.ImportFromExcelButton = new MetroFramework.Controls.MetroLink();
-            this.importFromJsonButton = new MetroFramework.Controls.MetroLink();
-            this.Back = new MetroFramework.Controls.MetroLink();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.DeleteBuyerSheetButton = new MetroFramework.Controls.MetroButton();
-            this.BuyerGrid = new MetroFramework.Controls.MetroGrid();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.DeleteSellerSheetButton = new MetroFramework.Controls.MetroButton();
-            this.SellerGrid = new MetroFramework.Controls.MetroGrid();
-            this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BuyerGrid)).BeginInit();
-            this.metroPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SellerGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroPanel1
+            // tableLayoutPanel1
             // 
-            this.metroPanel1.Controls.Add(this.ExportAsJsonButton);
-            this.metroPanel1.Controls.Add(this.ImportFromExcelButton);
-            this.metroPanel1.Controls.Add(this.importFromJsonButton);
-            this.metroPanel1.Controls.Add(this.Back);
-            this.metroPanel1.Controls.Add(this.splitContainer1);
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(900, 487);
-            this.metroPanel1.TabIndex = 0;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.Back, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.BuyerGrid, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.SellerGrid, 1, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(900, 487);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // ExportAsJsonButton
+            // flowLayoutPanel2
             // 
-            this.ExportAsJsonButton.Location = new System.Drawing.Point(240, 32);
-            this.ExportAsJsonButton.Name = "ExportAsJsonButton";
-            this.ExportAsJsonButton.Size = new System.Drawing.Size(113, 23);
-            this.ExportAsJsonButton.TabIndex = 16;
-            this.ExportAsJsonButton.Text = "Export as Json";
-            this.ExportAsJsonButton.UseSelectable = true;
-            this.ExportAsJsonButton.Click += new System.EventHandler(this.ExportAsJsonButton_Click);
-            // 
-            // ImportFromExcelButton
-            // 
-            this.ImportFromExcelButton.Location = new System.Drawing.Point(19, 32);
-            this.ImportFromExcelButton.Name = "ImportFromExcelButton";
-            this.ImportFromExcelButton.Size = new System.Drawing.Size(104, 23);
-            this.ImportFromExcelButton.TabIndex = 15;
-            this.ImportFromExcelButton.Text = "Import From Exel";
-            this.ImportFromExcelButton.UseSelectable = true;
-            this.ImportFromExcelButton.Click += new System.EventHandler(this.ImportFromExcelButton_Click);
-            // 
-            // importFromJsonButton
-            // 
-            this.importFromJsonButton.Location = new System.Drawing.Point(129, 32);
-            this.importFromJsonButton.Name = "importFromJsonButton";
-            this.importFromJsonButton.Size = new System.Drawing.Size(105, 23);
-            this.importFromJsonButton.TabIndex = 14;
-            this.importFromJsonButton.Text = "Import From Json";
-            this.importFromJsonButton.UseSelectable = true;
-            this.importFromJsonButton.Click += new System.EventHandler(this.importFromJsonButton_Click);
-            // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(3, 3);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
-            this.Back.TabIndex = 13;
-            this.Back.Text = "Back";
-            this.Back.UseSelectable = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 101);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel1.Controls.Add(this.metroPanel2);
-            this.splitContainer1.Panel1MinSize = 400;
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.metroPanel3);
-            this.splitContainer1.Size = new System.Drawing.Size(894, 383);
-            this.splitContainer1.SplitterDistance = 450;
-            this.splitContainer1.SplitterWidth = 1;
-            this.splitContainer1.TabIndex = 12;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.metroPanel2.Controls.Add(this.DeleteBuyerSheetButton);
-            this.metroPanel2.Controls.Add(this.BuyerGrid);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(7, 3);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel2.Size = new System.Drawing.Size(437, 377);
-            this.metroPanel2.TabIndex = 11;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.UseCustomForeColor = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.flowLayoutPanel2.Controls.Add(this.DeleteBuyerSheetButton);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 88);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(444, 44);
+            this.flowLayoutPanel2.TabIndex = 12;
             // 
             // DeleteBuyerSheetButton
             // 
             this.DeleteBuyerSheetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeleteBuyerSheetButton.Location = new System.Drawing.Point(354, 16);
+            this.DeleteBuyerSheetButton.Location = new System.Drawing.Point(3, 3);
             this.DeleteBuyerSheetButton.Name = "DeleteBuyerSheetButton";
             this.DeleteBuyerSheetButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteBuyerSheetButton.TabIndex = 9;
+            this.DeleteBuyerSheetButton.TabIndex = 10;
             this.DeleteBuyerSheetButton.Text = "Delete";
             this.DeleteBuyerSheetButton.UseSelectable = true;
-            this.DeleteBuyerSheetButton.Click += new System.EventHandler(this.DeleteBuyerSheetButton_Click);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.DeleteSellerSheetButton);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(453, 88);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(444, 44);
+            this.flowLayoutPanel3.TabIndex = 13;
+            // 
+            // DeleteSellerSheetButton
+            // 
+            this.DeleteSellerSheetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeleteSellerSheetButton.Location = new System.Drawing.Point(3, 3);
+            this.DeleteSellerSheetButton.Name = "DeleteSellerSheetButton";
+            this.DeleteSellerSheetButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteSellerSheetButton.TabIndex = 10;
+            this.DeleteSellerSheetButton.Text = "Delete";
+            this.DeleteSellerSheetButton.UseSelectable = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel1, 2);
+            this.flowLayoutPanel1.Controls.Add(this.ExportAsJsonButton);
+            this.flowLayoutPanel1.Controls.Add(this.ImportFromExcelButton);
+            this.flowLayoutPanel1.Controls.Add(this.importFromJsonButton);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 38);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(894, 44);
+            this.flowLayoutPanel1.TabIndex = 15;
+            // 
+            // importFromJsonButton
+            // 
+            this.importFromJsonButton.Image = global::BNSS.MetroApplication.Properties.Resources.Import__02;
+            this.importFromJsonButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.importFromJsonButton.ImageSize = 28;
+            this.importFromJsonButton.Location = new System.Drawing.Point(121, 3);
+            this.importFromJsonButton.Name = "importFromJsonButton";
+            this.importFromJsonButton.Size = new System.Drawing.Size(53, 30);
+            this.importFromJsonButton.TabIndex = 17;
+            this.importFromJsonButton.Text = "Json";
+            this.importFromJsonButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.importFromJsonButton.UseSelectable = true;
             // 
             // BuyerGrid
             // 
@@ -211,7 +180,7 @@
             this.BuyerGrid.EnableHeadersVisualStyles = false;
             this.BuyerGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BuyerGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BuyerGrid.Location = new System.Drawing.Point(8, 45);
+            this.BuyerGrid.Location = new System.Drawing.Point(3, 138);
             this.BuyerGrid.Name = "BuyerGrid";
             this.BuyerGrid.ReadOnly = true;
             this.BuyerGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -225,42 +194,8 @@
             this.BuyerGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.BuyerGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.BuyerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BuyerGrid.Size = new System.Drawing.Size(421, 324);
-            this.BuyerGrid.TabIndex = 8;
-            this.BuyerGrid.SelectionChanged += new System.EventHandler(this.BuyerGrid_SelectionChanged);
-            // 
-            // metroPanel3
-            // 
-            this.metroPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.metroPanel3.Controls.Add(this.DeleteSellerSheetButton);
-            this.metroPanel3.Controls.Add(this.SellerGrid);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.metroPanel3.Size = new System.Drawing.Size(452, 377);
-            this.metroPanel3.TabIndex = 12;
-            this.metroPanel3.UseCustomBackColor = true;
-            this.metroPanel3.UseCustomForeColor = true;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // DeleteSellerSheetButton
-            // 
-            this.DeleteSellerSheetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeleteSellerSheetButton.Location = new System.Drawing.Point(368, 16);
-            this.DeleteSellerSheetButton.Name = "DeleteSellerSheetButton";
-            this.DeleteSellerSheetButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteSellerSheetButton.TabIndex = 9;
-            this.DeleteSellerSheetButton.Text = "Delete";
-            this.DeleteSellerSheetButton.UseSelectable = true;
-            this.DeleteSellerSheetButton.Click += new System.EventHandler(this.DeleteSellerSheetButton_Click);
+            this.BuyerGrid.Size = new System.Drawing.Size(444, 346);
+            this.BuyerGrid.TabIndex = 16;
             // 
             // SellerGrid
             // 
@@ -298,7 +233,7 @@
             this.SellerGrid.EnableHeadersVisualStyles = false;
             this.SellerGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SellerGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SellerGrid.Location = new System.Drawing.Point(8, 45);
+            this.SellerGrid.Location = new System.Drawing.Point(453, 138);
             this.SellerGrid.Name = "SellerGrid";
             this.SellerGrid.ReadOnly = true;
             this.SellerGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -312,25 +247,58 @@
             this.SellerGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.SellerGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.SellerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SellerGrid.Size = new System.Drawing.Size(436, 324);
-            this.SellerGrid.TabIndex = 8;
-            this.SellerGrid.SelectionChanged += new System.EventHandler(this.SellerGrid_SelectionChanged);
+            this.SellerGrid.Size = new System.Drawing.Size(444, 346);
+            this.SellerGrid.TabIndex = 17;
+            // 
+            // Back
+            // 
+            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
+            this.Back.ImageSize = 28;
+            this.Back.Location = new System.Drawing.Point(3, 3);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(30, 29);
+            this.Back.TabIndex = 14;
+            this.Back.UseSelectable = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // ExportAsJsonButton
+            // 
+            this.ExportAsJsonButton.Image = global::BNSS.MetroApplication.Properties.Resources.Upload___02;
+            this.ExportAsJsonButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ExportAsJsonButton.ImageSize = 28;
+            this.ExportAsJsonButton.Location = new System.Drawing.Point(3, 3);
+            this.ExportAsJsonButton.Name = "ExportAsJsonButton";
+            this.ExportAsJsonButton.Size = new System.Drawing.Size(53, 30);
+            this.ExportAsJsonButton.TabIndex = 19;
+            this.ExportAsJsonButton.Text = "Json";
+            this.ExportAsJsonButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExportAsJsonButton.UseSelectable = true;
+            // 
+            // ImportFromExcelButton
+            // 
+            this.ImportFromExcelButton.Image = global::BNSS.MetroApplication.Properties.Resources.Import__02;
+            this.ImportFromExcelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ImportFromExcelButton.ImageSize = 28;
+            this.ImportFromExcelButton.Location = new System.Drawing.Point(62, 3);
+            this.ImportFromExcelButton.Name = "ImportFromExcelButton";
+            this.ImportFromExcelButton.Size = new System.Drawing.Size(53, 30);
+            this.ImportFromExcelButton.TabIndex = 18;
+            this.ImportFromExcelButton.Text = "Exel";
+            this.ImportFromExcelButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ImportFromExcelButton.UseSelectable = true;
             // 
             // ImportExport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ImportExport";
             this.Size = new System.Drawing.Size(900, 487);
-            this.metroPanel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.metroPanel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BuyerGrid)).EndInit();
-            this.metroPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SellerGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -338,17 +306,17 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroLink Back;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private MetroFramework.Controls.MetroButton DeleteBuyerSheetButton;
-        private MetroFramework.Controls.MetroGrid BuyerGrid;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
-        private MetroFramework.Controls.MetroGrid SellerGrid;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private MetroFramework.Controls.MetroButton DeleteSellerSheetButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroLink ExportAsJsonButton;
         private MetroFramework.Controls.MetroLink ImportFromExcelButton;
         private MetroFramework.Controls.MetroLink importFromJsonButton;
-        private MetroFramework.Controls.MetroLink Back;
+        private MetroFramework.Controls.MetroGrid BuyerGrid;
+        private MetroFramework.Controls.MetroGrid SellerGrid;
     }
 }
