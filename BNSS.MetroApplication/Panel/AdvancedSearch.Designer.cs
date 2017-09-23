@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Back = new MetroFramework.Controls.MetroLink();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TypePicker = new System.Windows.Forms.ComboBox();
             this.SearchBox = new System.Windows.Forms.ComboBox();
@@ -56,7 +57,6 @@
             this.sellerRow = new System.Windows.Forms.NumericUpDown();
             this.BuyersGrid = new MetroFramework.Controls.MetroGrid();
             this.SellersGrid = new MetroFramework.Controls.MetroGrid();
-            this.Back = new MetroFramework.Controls.MetroLink();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -89,6 +89,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(886, 485);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // Back
+            // 
+            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
+            this.Back.ImageSize = 28;
+            this.Back.Location = new System.Drawing.Point(3, 3);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(30, 29);
+            this.Back.TabIndex = 7;
+            this.Back.UseSelectable = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -117,6 +128,8 @@
             this.TypePicker.Size = new System.Drawing.Size(112, 28);
             this.TypePicker.TabIndex = 2;
             this.TypePicker.Text = "Customer";
+            this.TypePicker.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
+            this.TypePicker.Click += new System.EventHandler(this.TypePicker_SelectedIndexChanged);
             // 
             // SearchBox
             // 
@@ -126,6 +139,7 @@
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(186, 28);
             this.SearchBox.TabIndex = 3;
+            this.SearchBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel3
             // 
@@ -145,6 +159,7 @@
             this.startDateTime.Size = new System.Drawing.Size(230, 29);
             this.startDateTime.TabIndex = 4;
             this.startDateTime.Value = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
+            this.startDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel4
             // 
@@ -163,6 +178,7 @@
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(230, 29);
             this.EndDateTime.TabIndex = 5;
+            this.EndDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // flowLayoutPanel2
             // 
@@ -196,6 +212,7 @@
             this.ExportBuyersButton.TabIndex = 13;
             this.ExportBuyersButton.Text = "Export";
             this.ExportBuyersButton.UseSelectable = true;
+            this.ExportBuyersButton.Click += new System.EventHandler(this.BuyersExport_Click);
             // 
             // metroLabel5
             // 
@@ -228,6 +245,7 @@
             0,
             0,
             0});
+            this.buyerRow.Click += new System.EventHandler(this.Search_initate);
             // 
             // flowLayoutPanel3
             // 
@@ -261,6 +279,7 @@
             this.metroButton1.TabIndex = 13;
             this.metroButton1.Text = "Export";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.sellersExport_Click);
             // 
             // metroLabel7
             // 
@@ -293,6 +312,7 @@
             0,
             0,
             0});
+            this.sellerRow.Click += new System.EventHandler(this.Search_initate);
             // 
             // BuyersGrid
             // 
@@ -397,17 +417,6 @@
             this.SellersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SellersGrid.Size = new System.Drawing.Size(437, 364);
             this.SellersGrid.TabIndex = 12;
-            // 
-            // Back
-            // 
-            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
-            this.Back.ImageSize = 28;
-            this.Back.Location = new System.Drawing.Point(3, 3);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(30, 29);
-            this.Back.TabIndex = 7;
-            this.Back.UseSelectable = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // AdvancedSearch
             // 

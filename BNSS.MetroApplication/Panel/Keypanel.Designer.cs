@@ -1,6 +1,6 @@
 ﻿namespace BNSS.MetroApplication.Panel
 {
-    partial class Lock
+    partial class KeyPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -69,7 +69,7 @@
             // metroButton1
             // 
             this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroButton1.Location = new System.Drawing.Point(268, 61);
+            this.metroButton1.Location = new System.Drawing.Point(123, 61);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(132, 23);
             this.metroButton1.TabIndex = 3;

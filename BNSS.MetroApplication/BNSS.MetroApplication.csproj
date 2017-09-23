@@ -131,11 +131,11 @@
     <Compile Include="Panel\CompanySummaryPanel.Designer.cs">
       <DependentUpon>CompanySummaryPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\Keypanel.cs">
+    <Compile Include="Panel\KeyPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Panel\Keypanel.Designer.cs">
-      <DependentUpon>Keypanel.cs</DependentUpon>
+      <DependentUpon>KeyPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel\PanelSlider.cs">
       <SubType>UserControl</SubType>
@@ -173,7 +173,7 @@
       <DependentUpon>CompanySummaryPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Keypanel.resx">
-      <DependentUpon>Keypanel.cs</DependentUpon>
+      <DependentUpon>KeyPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Searchpanel.resx">
       <DependentUpon>Searchpanel.cs</DependentUpon>

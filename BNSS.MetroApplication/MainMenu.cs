@@ -16,6 +16,7 @@ namespace BNSS.MetroApplication
         ImportExport importExport;
         CompanySummaryPanel summeryPanel;
         About about;
+        
 
         public MainMenu()
         {
@@ -25,9 +26,16 @@ namespace BNSS.MetroApplication
             SearchPanel = new Searchpanel(this, this.Width, this.Height);
 
             LoadData.LoadSettings();
+            CheckLicence();
             LoadData.LoadLocalData();
         }
 
+        void CheckLicence()
+        {
+            if (UserSettings.Enabled) return;
+            KeyPanel ld = new KeyPanel();
+            ld.Show();
+        }
 
 
         private void Settings_Click(object sender, EventArgs e)

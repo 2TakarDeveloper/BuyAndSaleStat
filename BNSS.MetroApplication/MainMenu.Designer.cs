@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Search = new MetroFramework.Controls.MetroTile();
             this.AdvanceSearch = new MetroFramework.Controls.MetroTile();
@@ -36,12 +37,12 @@
             this.Nameless = new MetroFramework.Controls.MetroTile();
             this.ImportOrExport = new MetroFramework.Controls.MetroTile();
             this.footerPanel = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.HeaderPanel = new MetroFramework.Controls.MetroPanel();
             this.minimizeBtn = new MetroFramework.Controls.MetroLink();
             this.HeaderText = new MetroFramework.Controls.MetroLabel();
             this.Maximize = new MetroFramework.Controls.MetroLink();
             this.Close = new MetroFramework.Controls.MetroLink();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel1.SuspendLayout();
             this.footerPanel.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
@@ -190,6 +191,22 @@
             this.footerPanel.VerticalScrollbarHighlightOnWheel = false;
             this.footerPanel.VerticalScrollbarSize = 10;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel1.Location = new System.Drawing.Point(332, 8);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(264, 15);
+            this.metroLabel1.TabIndex = 5;
+            this.metroLabel1.Text = " 2TakarDeveloper©2016-2017 All Rights Reserved";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
+            // 
             // HeaderPanel
             // 
             this.HeaderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -267,21 +284,6 @@
             this.Close.UseSelectable = true;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel1.Location = new System.Drawing.Point(372, 8);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(177, 15);
-            this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = " ©2016-2017 All Rights Reserved";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +293,7 @@
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "MainMenu";
             this.flowLayoutPanel1.ResumeLayout(false);

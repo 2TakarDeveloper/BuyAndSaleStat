@@ -37,17 +37,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Back = new MetroFramework.Controls.MetroLink();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.DeleteBuyerSheetButton = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.DeleteSellerSheetButton = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ExportAsJsonButton = new MetroFramework.Controls.MetroLink();
+            this.ImportFromExcelButton = new MetroFramework.Controls.MetroLink();
             this.importFromJsonButton = new MetroFramework.Controls.MetroLink();
             this.BuyerGrid = new MetroFramework.Controls.MetroGrid();
             this.SellerGrid = new MetroFramework.Controls.MetroGrid();
-            this.Back = new MetroFramework.Controls.MetroLink();
-            this.ExportAsJsonButton = new MetroFramework.Controls.MetroLink();
-            this.ImportFromExcelButton = new MetroFramework.Controls.MetroLink();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -81,6 +81,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(900, 487);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // Back
+            // 
+            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
+            this.Back.ImageSize = 28;
+            this.Back.Location = new System.Drawing.Point(3, 3);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(30, 29);
+            this.Back.TabIndex = 14;
+            this.Back.UseSelectable = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.DeleteBuyerSheetButton);
@@ -99,6 +110,7 @@
             this.DeleteBuyerSheetButton.TabIndex = 10;
             this.DeleteBuyerSheetButton.Text = "Delete";
             this.DeleteBuyerSheetButton.UseSelectable = true;
+            this.DeleteBuyerSheetButton.Click += new System.EventHandler(this.DeleteBuyerSheetButton_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -118,31 +130,61 @@
             this.DeleteSellerSheetButton.TabIndex = 10;
             this.DeleteSellerSheetButton.Text = "Delete";
             this.DeleteSellerSheetButton.UseSelectable = true;
+            this.DeleteSellerSheetButton.Click += new System.EventHandler(this.DeleteSellerSheetButton_Click);
             // 
             // flowLayoutPanel1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel1, 2);
             this.flowLayoutPanel1.Controls.Add(this.ExportAsJsonButton);
-            this.flowLayoutPanel1.Controls.Add(this.ImportFromExcelButton);
             this.flowLayoutPanel1.Controls.Add(this.importFromJsonButton);
+            this.flowLayoutPanel1.Controls.Add(this.ImportFromExcelButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 38);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(894, 44);
             this.flowLayoutPanel1.TabIndex = 15;
             // 
+            // ExportAsJsonButton
+            // 
+            this.ExportAsJsonButton.Image = global::BNSS.MetroApplication.Properties.Resources.Upload___02;
+            this.ExportAsJsonButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ExportAsJsonButton.ImageSize = 28;
+            this.ExportAsJsonButton.Location = new System.Drawing.Point(3, 3);
+            this.ExportAsJsonButton.Name = "ExportAsJsonButton";
+            this.ExportAsJsonButton.Size = new System.Drawing.Size(53, 30);
+            this.ExportAsJsonButton.TabIndex = 19;
+            this.ExportAsJsonButton.Text = "Json";
+            this.ExportAsJsonButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExportAsJsonButton.UseSelectable = true;
+            this.ExportAsJsonButton.Click += new System.EventHandler(this.ExportAsJsonButton_Click);
+            // 
+            // ImportFromExcelButton
+            // 
+            this.ImportFromExcelButton.Image = global::BNSS.MetroApplication.Properties.Resources.Import__02;
+            this.ImportFromExcelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ImportFromExcelButton.ImageSize = 28;
+            this.ImportFromExcelButton.Location = new System.Drawing.Point(121, 3);
+            this.ImportFromExcelButton.Name = "ImportFromExcelButton";
+            this.ImportFromExcelButton.Size = new System.Drawing.Size(53, 30);
+            this.ImportFromExcelButton.TabIndex = 18;
+            this.ImportFromExcelButton.Text = "Exel";
+            this.ImportFromExcelButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ImportFromExcelButton.UseSelectable = true;
+            this.ImportFromExcelButton.Click += new System.EventHandler(this.ImportFromExcelButton_Click);
+            // 
             // importFromJsonButton
             // 
             this.importFromJsonButton.Image = global::BNSS.MetroApplication.Properties.Resources.Import__02;
             this.importFromJsonButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.importFromJsonButton.ImageSize = 28;
-            this.importFromJsonButton.Location = new System.Drawing.Point(121, 3);
+            this.importFromJsonButton.Location = new System.Drawing.Point(62, 3);
             this.importFromJsonButton.Name = "importFromJsonButton";
             this.importFromJsonButton.Size = new System.Drawing.Size(53, 30);
             this.importFromJsonButton.TabIndex = 17;
             this.importFromJsonButton.Text = "Json";
             this.importFromJsonButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.importFromJsonButton.UseSelectable = true;
+            this.importFromJsonButton.Click += new System.EventHandler(this.importFromJsonButton_Click);
             // 
             // BuyerGrid
             // 
@@ -196,6 +238,7 @@
             this.BuyerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BuyerGrid.Size = new System.Drawing.Size(444, 346);
             this.BuyerGrid.TabIndex = 16;
+            this.BuyerGrid.SelectionChanged += new System.EventHandler(this.BuyerGrid_SelectionChanged);
             // 
             // SellerGrid
             // 
@@ -249,43 +292,7 @@
             this.SellerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SellerGrid.Size = new System.Drawing.Size(444, 346);
             this.SellerGrid.TabIndex = 17;
-            // 
-            // Back
-            // 
-            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
-            this.Back.ImageSize = 28;
-            this.Back.Location = new System.Drawing.Point(3, 3);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(30, 29);
-            this.Back.TabIndex = 14;
-            this.Back.UseSelectable = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // ExportAsJsonButton
-            // 
-            this.ExportAsJsonButton.Image = global::BNSS.MetroApplication.Properties.Resources.Upload___02;
-            this.ExportAsJsonButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ExportAsJsonButton.ImageSize = 28;
-            this.ExportAsJsonButton.Location = new System.Drawing.Point(3, 3);
-            this.ExportAsJsonButton.Name = "ExportAsJsonButton";
-            this.ExportAsJsonButton.Size = new System.Drawing.Size(53, 30);
-            this.ExportAsJsonButton.TabIndex = 19;
-            this.ExportAsJsonButton.Text = "Json";
-            this.ExportAsJsonButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ExportAsJsonButton.UseSelectable = true;
-            // 
-            // ImportFromExcelButton
-            // 
-            this.ImportFromExcelButton.Image = global::BNSS.MetroApplication.Properties.Resources.Import__02;
-            this.ImportFromExcelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ImportFromExcelButton.ImageSize = 28;
-            this.ImportFromExcelButton.Location = new System.Drawing.Point(62, 3);
-            this.ImportFromExcelButton.Name = "ImportFromExcelButton";
-            this.ImportFromExcelButton.Size = new System.Drawing.Size(53, 30);
-            this.ImportFromExcelButton.TabIndex = 18;
-            this.ImportFromExcelButton.Text = "Exel";
-            this.ImportFromExcelButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ImportFromExcelButton.UseSelectable = true;
+            this.SellerGrid.SelectionChanged += new System.EventHandler(this.SellerGrid_SelectionChanged);
             // 
             // ImportExport
             // 

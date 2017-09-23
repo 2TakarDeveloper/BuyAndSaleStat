@@ -156,6 +156,7 @@
             this.TypePicker.Size = new System.Drawing.Size(112, 28);
             this.TypePicker.TabIndex = 2;
             this.TypePicker.Text = "Customer";
+            this.TypePicker.SelectedIndexChanged += new System.EventHandler(this.TypePicker_SelectedIndexChanged);
             // 
             // SearchBox
             // 
@@ -165,6 +166,7 @@
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(251, 28);
             this.SearchBox.TabIndex = 3;
+            this.SearchBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel3
             // 
@@ -184,6 +186,7 @@
             this.startDateTime.Size = new System.Drawing.Size(200, 29);
             this.startDateTime.TabIndex = 4;
             this.startDateTime.Value = new System.DateTime(2017, 2, 1, 0, 0, 0, 0);
+            this.startDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel4
             // 
@@ -202,6 +205,7 @@
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(210, 29);
             this.EndDateTime.TabIndex = 5;
+            this.EndDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // buyerRow
             // 
@@ -274,6 +278,7 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
             // metroLabel6
             // 
@@ -295,6 +300,7 @@
             this.ExportBuyersButton.TabIndex = 13;
             this.ExportBuyersButton.Text = "Export";
             this.ExportBuyersButton.UseSelectable = true;
+            this.ExportBuyersButton.Visible = false;
             // 
             // CompanySummaryPanel
             // 

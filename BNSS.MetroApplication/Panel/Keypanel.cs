@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class Lock : UserControl
+    public partial class KeyPanel : UserControl
     {
-        public Lock()
+        public KeyPanel()
         {
             InitializeComponent();
         }
