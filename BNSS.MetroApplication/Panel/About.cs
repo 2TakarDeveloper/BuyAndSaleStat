@@ -13,7 +13,8 @@ namespace BNSS.MetroApplication.Panel
 {
     public partial class About : PanelSlider
     {
-        public About(MainMenu mainMenu, int width, int height):base(mainMenu)
+        Form owner;
+        public About(Form mainMenu, int width, int height):base(mainMenu)
         {
             InitializeComponent();
             Width = width;
@@ -22,10 +23,9 @@ namespace BNSS.MetroApplication.Panel
             labelVersion.Text = $@"Version {AssemblyVersion}";
             labelCopyright.Text = AssemblyCopyright;
             labelCompanyName.Text = AssemblyCompany;
+            this.owner = mainMenu;
 
         }
-
-
 
         #region Assembly Attribute Accessors
 
@@ -109,7 +109,7 @@ namespace BNSS.MetroApplication.Panel
 
         private void Back_Click(object sender, EventArgs e)
         {
-            this.swipe(false);
+           
         }
     }
 }
