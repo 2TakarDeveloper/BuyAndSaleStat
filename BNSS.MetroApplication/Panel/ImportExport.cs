@@ -26,7 +26,7 @@ namespace BNSS.MetroApplication.Panel
 
 
 
-        public ImportExport(MainMenu mainMenu, int width, int height):base(mainMenu)
+        public ImportExport(Form mainMenu, int width, int height):base(mainMenu)
         {
             InitializeComponent();
             Width = width;

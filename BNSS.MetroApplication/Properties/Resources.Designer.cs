@@ -83,6 +83,16 @@ namespace BNSS.MetroApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circle_Info___01 {
+            get {
+                object obj = ResourceManager.GetObject("Circle Info - 01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close {
             get {
                 object obj = ResourceManager.GetObject("Close", resourceCulture);
@@ -106,6 +116,16 @@ namespace BNSS.MetroApplication.Properties {
         internal static System.Drawing.Bitmap Dialog_Box_About {
             get {
                 object obj = ResourceManager.GetObject("Dialog-Box-About", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap House_07 {
+            get {
+                object obj = ResourceManager.GetObject("House-07", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace BNSS.MetroApplication.Properties {
         internal static System.Drawing.Bitmap Maximize___011 {
             get {
                 object obj = ResourceManager.GetObject("Maximize - 011", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Message_Information {
+            get {
+                object obj = ResourceManager.GetObject("Message-Information", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
