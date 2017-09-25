@@ -190,8 +190,8 @@
             this.flowLayoutPanel1.Controls.Add(this.startDateTime);
             this.flowLayoutPanel1.Controls.Add(this.EndDateLable);
             this.flowLayoutPanel1.Controls.Add(this.EndDateTime);
-            this.flowLayoutPanel1.Controls.Add(this.SummaryCheck);
             this.flowLayoutPanel1.Controls.Add(this.GroupByChecker);
+            this.flowLayoutPanel1.Controls.Add(this.SummaryCheck);
             this.flowLayoutPanel1.Controls.Add(this.GroupBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -266,7 +266,7 @@
             // 
             this.startDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startDateTime.Location = new System.Drawing.Point(769, 3);
-            this.startDateTime.MinimumSize = new System.Drawing.Size(4, 29);
+            this.startDateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.startDateTime.Name = "startDateTime";
             this.startDateTime.Size = new System.Drawing.Size(200, 29);
             this.startDateTime.TabIndex = 8;
@@ -290,7 +290,7 @@
             // 
             this.EndDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.EndDateTime.Location = new System.Drawing.Point(34, 38);
-            this.EndDateTime.MinimumSize = new System.Drawing.Size(4, 29);
+            this.EndDateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(200, 29);
             this.EndDateTime.TabIndex = 9;
@@ -300,7 +300,7 @@
             // SummaryCheck
             // 
             this.SummaryCheck.AutoSize = true;
-            this.SummaryCheck.Location = new System.Drawing.Point(240, 38);
+            this.SummaryCheck.Location = new System.Drawing.Point(318, 38);
             this.SummaryCheck.Name = "SummaryCheck";
             this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
             this.SummaryCheck.TabIndex = 22;
@@ -312,7 +312,7 @@
             // GroupByChecker
             // 
             this.GroupByChecker.AutoSize = true;
-            this.GroupByChecker.Location = new System.Drawing.Point(320, 38);
+            this.GroupByChecker.Location = new System.Drawing.Point(240, 38);
             this.GroupByChecker.Name = "GroupByChecker";
             this.GroupByChecker.Size = new System.Drawing.Size(72, 15);
             this.GroupByChecker.TabIndex = 16;

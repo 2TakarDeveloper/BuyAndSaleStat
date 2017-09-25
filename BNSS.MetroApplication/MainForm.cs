@@ -1,13 +1,8 @@
 ﻿using BNSS.MetroApplication.Panel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using BNSS.Local;
 
 namespace BNSS.MetroApplication
 {
@@ -16,15 +11,18 @@ namespace BNSS.MetroApplication
         public MainForm()
         {
             InitializeComponent();
-
+            LoadData.LoadLocalData();
+            LoadData.LoadSettings();
             setMainMenu();
+
+
         }
         private void setMainMenu()
         {
-            this.PanelName.Text = "Home";
-            //this.PanelHolder.Controls.Clear();
-           // Searchpanel sp = new Searchpanel(this,this.Width,this.Height);
-           // this.PanelHolder.Controls.Add(sp);
+            PanelName.Text = "Search";
+            PanelHolder.Controls.Clear();
+            Searchpanel sp = new Searchpanel(){Dock = DockStyle.Fill};
+            PanelHolder.Controls.Add(sp);
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -57,30 +55,30 @@ namespace BNSS.MetroApplication
         private void IELink_Click(object sender, EventArgs e)
         {
             this.PanelName.Text = "Import/Export";
-            // this.PanelHolder.Controls.Clear();
-            // ImportExport IEp = new ImportExport(this, this.Width, this.Height);
-            // this.PanelHolder.Controls.Add(IEp);
+            this.PanelHolder.Controls.Clear();
+            ImportExport IEp = new ImportExport(){Dock = DockStyle.Fill};
+            this.PanelHolder.Controls.Add(IEp);
         }
 
         private void SettingsLink_Click(object sender, EventArgs e)
         {
             this.PanelName.Text = "Settings";
-            // this.PanelHolder.Controls.Clear();
-            // Settings sp = new Settings(this, this.Width, this.Height);
-            // this.PanelHolder.Controls.Add(sp);
+            this.PanelHolder.Controls.Clear();
+            Settings sp = new Settings() { Dock = DockStyle.Fill };
+            this.PanelHolder.Controls.Add(sp);
         }
 
         private void HomeLink_Click(object sender, EventArgs e)
         {
-            //setMainMenu();
+            setMainMenu();
         }
 
         private void AboutLink_Click(object sender, EventArgs e)
         {
             this.PanelName.Text = "About";
-            //this.PanelHolder.Controls.Clear();
-            // About sp = new About(this, this.Width, this.Height);
-            // this.PanelHolder.Controls.Add(sp);
+            this.PanelHolder.Controls.Clear();
+            About sp = new About() { Dock = DockStyle.Fill };
+            this.PanelHolder.Controls.Add(sp);
         }
     }
 }

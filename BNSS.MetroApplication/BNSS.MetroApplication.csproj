@@ -125,12 +125,6 @@
     <Compile Include="Panel\ImportExport.Designer.cs">
       <DependentUpon>ImportExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\KeyPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panel\Keypanel.Designer.cs">
-      <DependentUpon>KeyPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="Panel\PanelSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\ImportExport.resx">
       <DependentUpon>ImportExport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Panel\Keypanel.resx">
-      <DependentUpon>KeyPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel\Searchpanel.resx">
       <DependentUpon>Searchpanel.cs</DependentUpon>

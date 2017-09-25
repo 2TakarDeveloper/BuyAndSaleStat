@@ -16,11 +16,9 @@ namespace BNSS.MetroApplication.Panel
     {
       
 
-        public Settings(Form Owner,int width,int height) :base(Owner)
+        public Settings() 
         {
             InitializeComponent();
-            this.Width = width;
-            this.Height = height;
             RowColor1.BackColor = UserSettings.RowColor1;
             RowColor2.BackColor = UserSettings.RowColor2;
         }

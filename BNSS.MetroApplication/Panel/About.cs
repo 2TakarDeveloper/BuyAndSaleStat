@@ -14,16 +14,15 @@ namespace BNSS.MetroApplication.Panel
     public partial class About : PanelSlider
     {
         Form owner;
-        public About(Form mainMenu, int width, int height):base(mainMenu)
+        public About()
         {
             InitializeComponent();
-            Width = width;
-            Height = height;
+          
             labelProductName.Text = AssemblyProduct;
             labelVersion.Text = $@"Version {AssemblyVersion}";
             labelCopyright.Text = AssemblyCopyright;
             labelCompanyName.Text = AssemblyCompany;
-            this.owner = mainMenu;
+          
 
         }
 

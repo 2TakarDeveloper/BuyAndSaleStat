@@ -26,12 +26,10 @@ namespace BNSS.MetroApplication.Panel
 
 
 
-        public ImportExport(Form mainMenu, int width, int height):base(mainMenu)
+        public ImportExport()
         {
             InitializeComponent();
-            Width = width;
-            Height = height;
-       
+            
             ShowDatabase();
             
         }
@@ -62,20 +60,20 @@ namespace BNSS.MetroApplication.Panel
 
         private void ShowDatabase()
         {
-            try
-            {
+            //try
+            //{
                 BuyerGrid.DataSource = null;
                 BuyerGrid.DataSource = StaticVariables.SpreadSheet.BuyerSheets;
 
                 SellerGrid.DataSource = null;
                 SellerGrid.DataSource = StaticVariables.SpreadSheet.SellerSheets;
 
-            }
-            catch (Exception e)
-            {
-                MetroMessageBox.Show(this, e.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //catch (Exception e)
+            //{
+            //    MetroMessageBox.Show(this, e.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
-            }
+            //}
             
         }
 
