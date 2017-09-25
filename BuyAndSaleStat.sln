@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNSS.MetroApplication", "BN
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{3117C942-3990-4EBE-AC65-7FB43B2720FF}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OldSetup", "OldSetup\OldSetup.vdproj", "{47A2005D-41B3-4C03-9D8F-4F4516448D8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,10 @@ Global
 		{3117C942-3990-4EBE-AC65-7FB43B2720FF}.Debug|x86.ActiveCfg = Debug
 		{3117C942-3990-4EBE-AC65-7FB43B2720FF}.Release|Any CPU.ActiveCfg = Release
 		{3117C942-3990-4EBE-AC65-7FB43B2720FF}.Release|x86.ActiveCfg = Release
+		{47A2005D-41B3-4C03-9D8F-4F4516448D8A}.Debug|Any CPU.ActiveCfg = Debug
+		{47A2005D-41B3-4C03-9D8F-4F4516448D8A}.Debug|x86.ActiveCfg = Debug
+		{47A2005D-41B3-4C03-9D8F-4F4516448D8A}.Release|Any CPU.ActiveCfg = Release
+		{47A2005D-41B3-4C03-9D8F-4F4516448D8A}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

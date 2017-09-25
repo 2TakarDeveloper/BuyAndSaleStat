@@ -169,7 +169,8 @@ namespace BNSS.MetroApplication.Panel
 
         private void Back_Click(object sender, EventArgs e)
         {
-            this.swipe(false);
+            swipe(false);
+            Dispose();
         }
     }
 }
