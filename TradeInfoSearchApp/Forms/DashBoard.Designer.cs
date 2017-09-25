@@ -45,16 +45,14 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Searchlable = new MetroFramework.Controls.MetroLabel();
             this.SearchBox = new System.Windows.Forms.ComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.itemBox = new System.Windows.Forms.ComboBox();
             this.startDateLable = new MetroFramework.Controls.MetroLabel();
             this.startDateTime = new MetroFramework.Controls.MetroDateTime();
             this.EndDateLable = new MetroFramework.Controls.MetroLabel();
             this.EndDateTime = new MetroFramework.Controls.MetroDateTime();
-            this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
             this.GroupByChecker = new MetroFramework.Controls.MetroCheckBox();
+            this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
             this.GroupBox = new System.Windows.Forms.ComboBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.BuyingGrid = new MetroFramework.Controls.MetroGrid();
@@ -182,9 +180,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Tan;
-            this.flowLayoutPanel1.Controls.Add(this.Searchlable);
             this.flowLayoutPanel1.Controls.Add(this.SearchBox);
-            this.flowLayoutPanel1.Controls.Add(this.metroLabel1);
             this.flowLayoutPanel1.Controls.Add(this.itemBox);
             this.flowLayoutPanel1.Controls.Add(this.startDateLable);
             this.flowLayoutPanel1.Controls.Add(this.startDateTime);
@@ -200,50 +196,23 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(994, 54);
             this.flowLayoutPanel1.TabIndex = 16;
             // 
-            // Searchlable
-            // 
-            this.Searchlable.AutoSize = true;
-            this.Searchlable.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Searchlable.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Searchlable.Location = new System.Drawing.Point(3, 0);
-            this.Searchlable.Name = "Searchlable";
-            this.Searchlable.Size = new System.Drawing.Size(117, 19);
-            this.Searchlable.Style = MetroFramework.MetroColorStyle.Black;
-            this.Searchlable.TabIndex = 13;
-            this.Searchlable.Text = "Customer Name";
-            this.Searchlable.UseCustomBackColor = true;
-            this.Searchlable.UseCustomForeColor = true;
-            // 
             // SearchBox
             // 
             this.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.SearchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.SearchBox.FormattingEnabled = true;
-            this.SearchBox.Location = new System.Drawing.Point(126, 3);
+            this.SearchBox.Location = new System.Drawing.Point(3, 3);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(246, 21);
             this.SearchBox.TabIndex = 21;
             this.SearchBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.metroLabel1.Location = new System.Drawing.Point(378, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel1.TabIndex = 15;
-            this.metroLabel1.Text = "Item Name";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
             // 
             // itemBox
             // 
             this.itemBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.itemBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.itemBox.FormattingEnabled = true;
-            this.itemBox.Location = new System.Drawing.Point(467, 3);
+            this.itemBox.Location = new System.Drawing.Point(255, 3);
             this.itemBox.Name = "itemBox";
             this.itemBox.Size = new System.Drawing.Size(246, 21);
             this.itemBox.TabIndex = 20;
@@ -254,7 +223,7 @@
             this.startDateLable.AutoSize = true;
             this.startDateLable.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.startDateLable.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.startDateLable.Location = new System.Drawing.Point(719, 0);
+            this.startDateLable.Location = new System.Drawing.Point(507, 0);
             this.startDateLable.Name = "startDateLable";
             this.startDateLable.Size = new System.Drawing.Size(44, 19);
             this.startDateLable.TabIndex = 11;
@@ -265,7 +234,7 @@
             // startDateTime
             // 
             this.startDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startDateTime.Location = new System.Drawing.Point(769, 3);
+            this.startDateTime.Location = new System.Drawing.Point(557, 3);
             this.startDateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.startDateTime.Name = "startDateTime";
             this.startDateTime.Size = new System.Drawing.Size(200, 29);
@@ -278,7 +247,7 @@
             this.EndDateLable.AutoSize = true;
             this.EndDateLable.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.EndDateLable.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.EndDateLable.Location = new System.Drawing.Point(3, 35);
+            this.EndDateLable.Location = new System.Drawing.Point(763, 0);
             this.EndDateLable.Name = "EndDateLable";
             this.EndDateLable.Size = new System.Drawing.Size(25, 19);
             this.EndDateLable.TabIndex = 12;
@@ -289,7 +258,7 @@
             // EndDateTime
             // 
             this.EndDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.EndDateTime.Location = new System.Drawing.Point(34, 38);
+            this.EndDateTime.Location = new System.Drawing.Point(3, 38);
             this.EndDateTime.MinimumSize = new System.Drawing.Size(0, 29);
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(200, 29);
@@ -297,29 +266,30 @@
             this.EndDateTime.Value = new System.DateTime(2017, 6, 7, 0, 0, 0, 0);
             this.EndDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
-            // SummaryCheck
-            // 
-            this.SummaryCheck.AutoSize = true;
-            this.SummaryCheck.Location = new System.Drawing.Point(318, 38);
-            this.SummaryCheck.Name = "SummaryCheck";
-            this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
-            this.SummaryCheck.TabIndex = 22;
-            this.SummaryCheck.Text = "Summary";
-            this.SummaryCheck.UseCustomBackColor = true;
-            this.SummaryCheck.UseSelectable = true;
-            this.SummaryCheck.CheckedChanged += new System.EventHandler(this.Search_initate);
-            // 
             // GroupByChecker
             // 
             this.GroupByChecker.AutoSize = true;
-            this.GroupByChecker.Location = new System.Drawing.Point(240, 38);
+            this.GroupByChecker.Location = new System.Drawing.Point(209, 38);
             this.GroupByChecker.Name = "GroupByChecker";
             this.GroupByChecker.Size = new System.Drawing.Size(72, 15);
             this.GroupByChecker.TabIndex = 16;
             this.GroupByChecker.Text = "Group By";
             this.GroupByChecker.UseCustomBackColor = true;
             this.GroupByChecker.UseSelectable = true;
-            this.GroupByChecker.CheckedChanged += new System.EventHandler(this.Search_initate);
+            this.GroupByChecker.CheckedChanged += new System.EventHandler(this.GroupByChecker_CheckedChanged);
+            // 
+            // SummaryCheck
+            // 
+            this.SummaryCheck.AutoSize = true;
+            this.SummaryCheck.Location = new System.Drawing.Point(287, 38);
+            this.SummaryCheck.Name = "SummaryCheck";
+            this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
+            this.SummaryCheck.TabIndex = 22;
+            this.SummaryCheck.Text = "Summary";
+            this.SummaryCheck.UseCustomBackColor = true;
+            this.SummaryCheck.UseSelectable = true;
+            this.SummaryCheck.Visible = false;
+            this.SummaryCheck.CheckedChanged += new System.EventHandler(this.Search_initate);
             // 
             // GroupBox
             // 
@@ -327,12 +297,13 @@
             this.GroupBox.Items.AddRange(new object[] {
             "Customer",
             "Item"});
-            this.GroupBox.Location = new System.Drawing.Point(398, 38);
+            this.GroupBox.Location = new System.Drawing.Point(367, 38);
             this.GroupBox.Name = "GroupBox";
             this.GroupBox.Size = new System.Drawing.Size(121, 21);
             this.GroupBox.TabIndex = 17;
             this.GroupBox.Text = "Customer";
-            this.GroupBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
+            this.GroupBox.Visible = false;
+            this.GroupBox.SelectedIndexChanged += new System.EventHandler(this.GroupBox_SelectedIndexChanged);
             // 
             // splitContainer2
             // 
@@ -820,9 +791,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private MetroFramework.Controls.MetroLabel Searchlable;
         private MetroFramework.Controls.MetroDateTime startDateTime;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroDateTime EndDateTime;
         private MetroFramework.Controls.MetroLabel startDateLable;
         private MetroFramework.Controls.MetroLabel EndDateLable;

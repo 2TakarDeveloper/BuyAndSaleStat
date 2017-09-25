@@ -125,12 +125,6 @@
     <Compile Include="Panel\ImportExport.Designer.cs">
       <DependentUpon>ImportExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\PanelSlider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panel\PanelSlider.Designer.cs">
-      <DependentUpon>PanelSlider.cs</DependentUpon>
-    </Compile>
     <Compile Include="Panel\Searchpanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

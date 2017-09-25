@@ -16,7 +16,7 @@ using MetroFramework;
 
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class ImportExport : PanelSlider
+    public partial class ImportExport : MetroFramework.Controls.MetroUserControl
     {
         BackgroundWorker backgroundWorker = new BackgroundWorker();
         OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -165,10 +165,6 @@ namespace BNSS.MetroApplication.Panel
             }
         }
 
-        private void Back_Click(object sender, EventArgs e)
-        {
-            swipe(false);
-            Dispose();
-        }
+      
     }
 }

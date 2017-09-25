@@ -45,7 +45,7 @@ namespace BNSS.Application.Forms
 
             Local.LoadData.LoadSettings();
             CheckLicence();
-
+            EndDateTime.Value = DateTime.Now;
             //LoadLocalData();
 
 
@@ -407,6 +407,33 @@ namespace BNSS.Application.Forms
             AboutBox aboutBox = new AboutBox();
             aboutBox.ShowDialog();
 
+        }
+
+        private void GroupByChecker_CheckedChanged(object sender, EventArgs e)
+        {
+            SummaryCheck.Visible = !SummaryCheck.Visible;
+            GroupBox.Visible = !GroupBox.Visible;
+            if (!GroupByChecker.Checked)
+            {
+                SearchBox.Visible = true;
+                itemBox.Visible = true;
+            }
+        }
+
+        private void GroupBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (GroupBox.Text)
+            {
+                case @"Customer":
+                    SearchBox.Visible = false;
+                    itemBox.Visible = true;
+                    break;
+                case @"Item":
+                    SearchBox.Visible = true;
+                    itemBox.Visible = false;
+                    break;
+
+            }
         }
     }
 }

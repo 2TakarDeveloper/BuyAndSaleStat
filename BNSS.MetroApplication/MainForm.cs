@@ -13,7 +13,7 @@ namespace BNSS.MetroApplication
             InitializeComponent();
             LoadData.LoadLocalData();
             LoadData.LoadSettings();
-            setMainMenu();
+           // setMainMenu();
 
 
         }

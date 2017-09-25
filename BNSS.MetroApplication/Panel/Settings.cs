@@ -12,7 +12,7 @@ using BNSS.Local;
 
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class Settings : PanelSlider
+    public partial class Settings : MetroFramework.Controls.MetroUserControl
     {
       
 
@@ -23,10 +23,7 @@ namespace BNSS.MetroApplication.Panel
             RowColor2.BackColor = UserSettings.RowColor2;
         }
 
-        private void Back_Click(object sender, EventArgs e)
-        {
-            this.swipe(false);
-        }
+      
 
         private void RowColor1_Click(object sender, EventArgs e)
         {

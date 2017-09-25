@@ -13,7 +13,7 @@ using BNSS.Search;
 
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class Searchpanel : PanelSlider
+    public partial class Searchpanel : MetroFramework.Controls.MetroUserControl
     {
         private double _buyingTotal;
         private double _sellingTotal;
@@ -27,7 +27,7 @@ namespace BNSS.MetroApplication.Panel
         private List<Customer> Sellers { get; set; }
 
 
-        public Searchpanel() :base()
+        public Searchpanel() 
         {
             InitializeComponent();
             EndDateTime.Value=DateTime.Now;

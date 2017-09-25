@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Back = new MetroFramework.Controls.MetroLink();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.labelVersion = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.labelCompanyName = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -39,8 +40,6 @@
             this.labelProductName = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.labelVersion = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -50,7 +49,6 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.Back, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -62,17 +60,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(779, 473);
             this.tableLayoutPanel1.TabIndex = 19;
-            // 
-            // Back
-            // 
-            this.Back.Image = global::BNSS.MetroApplication.Properties.Resources.Previous;
-            this.Back.ImageSize = 28;
-            this.Back.Location = new System.Drawing.Point(3, 3);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(30, 30);
-            this.Back.TabIndex = 2;
-            this.Back.UseSelectable = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // pictureBox1
             // 
@@ -102,6 +89,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 144);
             this.panel1.TabIndex = 3;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 11);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(117, 19);
+            this.metroLabel2.TabIndex = 30;
+            this.metroLabel2.Text = "Company Name";
+            this.metroLabel2.UseCustomBackColor = true;
+            // 
+            // labelVersion
+            // 
+            this.labelVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.Location = new System.Drawing.Point(121, 97);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(83, 19);
+            this.labelVersion.TabIndex = 29;
+            this.labelVersion.Text = "metroLabel2";
             // 
             // metroLabel7
             // 
@@ -181,28 +190,6 @@
             this.metroLabel3.Text = "Version";
             this.metroLabel3.UseCustomBackColor = true;
             // 
-            // labelVersion
-            // 
-            this.labelVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelVersion.AutoSize = true;
-            this.labelVersion.Location = new System.Drawing.Point(121, 97);
-            this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(83, 19);
-            this.labelVersion.TabIndex = 29;
-            this.labelVersion.Text = "metroLabel2";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 11);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(117, 19);
-            this.metroLabel2.TabIndex = 30;
-            this.metroLabel2.Text = "Company Name";
-            this.metroLabel2.UseCustomBackColor = true;
-            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,7 +208,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private MetroFramework.Controls.MetroLink Back;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel metroLabel7;

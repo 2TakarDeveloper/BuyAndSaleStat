@@ -8,10 +8,10 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Transitions;
+
 namespace BNSS.MetroApplication.Panel
 {
-    public partial class About : PanelSlider
+    public partial class About : MetroFramework.Controls.MetroUserControl
     {
         Form owner;
         public About()
