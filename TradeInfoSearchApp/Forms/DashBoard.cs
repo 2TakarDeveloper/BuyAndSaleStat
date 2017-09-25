@@ -425,12 +425,12 @@ namespace BNSS.Application.Forms
             switch (GroupBox.Text)
             {
                 case @"Customer":
-                    SearchBox.Visible = false;
-                    itemBox.Visible = true;
-                    break;
-                case @"Item":
                     SearchBox.Visible = true;
                     itemBox.Visible = false;
+                    break;
+                case @"Item":
+                    SearchBox.Visible = false;
+                    itemBox.Visible = true;
                     break;
 
             }
