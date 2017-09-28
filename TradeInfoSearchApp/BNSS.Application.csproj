@@ -106,13 +106,13 @@
     <Reference Include="ImapX, Version=2.0.0.18, Culture=neutral, PublicKeyToken=5992873d65130d1f, processorArchitecture=MSIL">
       <HintPath>..\packages\ImapX.2.0.0.18\lib\net452\ImapX.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+    <Reference Include="MetroFramework">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+    <Reference Include="MetroFramework.Design">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+    <Reference Include="MetroFramework.Fonts">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -202,6 +202,24 @@
     <Content Include="BuyAndSale.ico" />
     <Content Include="Iynque-Ios7-Style-Stocks.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Upload - 02.png" />
+    <None Include="Resources\Settings-01.png" />
+    <None Include="Resources\Search_011.png" />
+    <None Include="Resources\Search_01.png" />
+    <None Include="Resources\Previous.png" />
+    <None Include="Resources\Paper.png" />
+    <None Include="Resources\Minus.png" />
+    <None Include="Resources\Message-Information.png" />
+    <None Include="Resources\Maximize - 011.png" />
+    <None Include="Resources\Maximize - 01.png" />
+    <None Include="Resources\Import.png" />
+    <None Include="Resources\Import -02.png" />
+    <None Include="Resources\House-07.png" />
+    <None Include="Resources\Dialog-Box-About.png" />
+    <None Include="Resources\Data-Find.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Circle Info - 01.png" />
+    <None Include="Resources\Circle Close - 01.png" />
     <None Include="Resources\Banner.jpg" />
     <None Include="Resources\56763.png" />
   </ItemGroup>
