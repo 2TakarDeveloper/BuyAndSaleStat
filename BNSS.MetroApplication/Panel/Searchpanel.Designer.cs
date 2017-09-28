@@ -116,8 +116,6 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.SearchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.FormattingEnabled = true;
             this.SearchBox.Location = new System.Drawing.Point(3, 3);
@@ -128,8 +126,6 @@
             // 
             // itemBox
             // 
-            this.itemBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.itemBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.itemBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemBox.FormattingEnabled = true;
             this.itemBox.Location = new System.Drawing.Point(193, 3);

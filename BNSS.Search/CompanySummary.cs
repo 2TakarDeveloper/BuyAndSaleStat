@@ -19,7 +19,7 @@ namespace BNSS.Search
                     CustomerName = x1.CustomerName,
                     ItemName = x1.ItemName,
                     Total = x1.Total - (x2?.Total ?? 0)
-                }).ToList();
+                }).OrderBy(e => e.Total).ToList();
    
             return result;
         }
@@ -36,7 +36,7 @@ namespace BNSS.Search
                     ItemName = x1.ItemName,
                     CustomerName = x1.CustomerName,
                     Total = x1.Total - (x2?.Total ?? 0)
-                }).ToList();
+                }).OrderBy(e => e.Total).ToList();
 
             return result;
         }
