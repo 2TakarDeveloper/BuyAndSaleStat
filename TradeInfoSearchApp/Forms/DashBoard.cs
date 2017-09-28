@@ -44,9 +44,9 @@ namespace BNSS.Application.Forms
             StaticVariables.SpreadSheet = new SpreadSheet();
 
             Local.LoadData.LoadSettings();
-            CheckLicence();
+            //CheckLicence();
             EndDateTime.Value = DateTime.Now;
-            //LoadLocalData();
+            LoadLocalData();
 
 
         }
