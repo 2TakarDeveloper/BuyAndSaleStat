@@ -54,6 +54,7 @@
             this.GroupByChecker = new MetroFramework.Controls.MetroCheckBox();
             this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
             this.GroupBox = new System.Windows.Forms.ComboBox();
+            this.TablesComboBox = new MetroFramework.Controls.MetroComboBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.BuyingGrid = new MetroFramework.Controls.MetroGrid();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -71,7 +72,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.sellerRow = new System.Windows.Forms.NumericUpDown();
-            this.TablesComboBox = new MetroFramework.Controls.MetroComboBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -88,17 +88,17 @@
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.footerPanel = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.HeaderPanel = new MetroFramework.Controls.MetroPanel();
             this.PanelName = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.IELink = new MetroFramework.Controls.MetroLink();
             this.SettingsLink = new MetroFramework.Controls.MetroLink();
             this.HomeLink = new MetroFramework.Controls.MetroLink();
             this.AboutLink = new MetroFramework.Controls.MetroLink();
             this.minimizeBtn = new MetroFramework.Controls.MetroLink();
             this.Maximize = new MetroFramework.Controls.MetroLink();
             this.Close = new MetroFramework.Controls.MetroLink();
-            this.IELink = new MetroFramework.Controls.MetroLink();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -320,6 +320,19 @@
             this.GroupBox.Text = "Customer";
             this.GroupBox.Visible = false;
             this.GroupBox.SelectedIndexChanged += new System.EventHandler(this.GroupBox_SelectedIndexChanged);
+            // 
+            // TablesComboBox
+            // 
+            this.TablesComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TablesComboBox.FormattingEnabled = true;
+            this.TablesComboBox.ItemHeight = 23;
+            this.TablesComboBox.Location = new System.Drawing.Point(496, 40);
+            this.TablesComboBox.Margin = new System.Windows.Forms.Padding(5);
+            this.TablesComboBox.Name = "TablesComboBox";
+            this.TablesComboBox.Size = new System.Drawing.Size(178, 29);
+            this.TablesComboBox.TabIndex = 3;
+            this.TablesComboBox.UseSelectable = true;
+            this.TablesComboBox.SelectedIndexChanged += new System.EventHandler(this.TablesComboBox_SelectedIndexChanged);
             // 
             // splitContainer2
             // 
@@ -627,19 +640,6 @@
             0});
             this.sellerRow.ValueChanged += new System.EventHandler(this.Search_initate);
             // 
-            // TablesComboBox
-            // 
-            this.TablesComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TablesComboBox.FormattingEnabled = true;
-            this.TablesComboBox.ItemHeight = 23;
-            this.TablesComboBox.Location = new System.Drawing.Point(496, 40);
-            this.TablesComboBox.Margin = new System.Windows.Forms.Padding(5);
-            this.TablesComboBox.Name = "TablesComboBox";
-            this.TablesComboBox.Size = new System.Drawing.Size(178, 29);
-            this.TablesComboBox.TabIndex = 3;
-            this.TablesComboBox.UseSelectable = true;
-            this.TablesComboBox.SelectedIndexChanged += new System.EventHandler(this.TablesComboBox_SelectedIndexChanged);
-            // 
             // openFileDialog
             // 
             this.openFileDialog.DefaultExt = "xlsx";
@@ -779,6 +779,16 @@
             this.metroLabel1.UseCustomBackColor = true;
             this.metroLabel1.UseCustomForeColor = true;
             // 
+            // metroLink1
+            // 
+            this.metroLink1.Image = global::BNSS.Application.Properties.Resources.MenuIcon;
+            this.metroLink1.Location = new System.Drawing.Point(594, 4);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.Size = new System.Drawing.Size(27, 20);
+            this.metroLink1.TabIndex = 4;
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.MenuClick);
+            // 
             // HeaderPanel
             // 
             this.HeaderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -830,6 +840,19 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(179, 40);
             this.flowLayoutPanel2.TabIndex = 6;
+            // 
+            // IELink
+            // 
+            this.IELink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.IELink.Image = global::BNSS.Application.Properties.Resources.Import;
+            this.IELink.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.IELink.ImageSize = 35;
+            this.IELink.Location = new System.Drawing.Point(3, 3);
+            this.IELink.Name = "IELink";
+            this.IELink.Size = new System.Drawing.Size(35, 35);
+            this.IELink.TabIndex = 6;
+            this.IELink.UseCustomBackColor = true;
+            this.IELink.UseSelectable = true;
             // 
             // SettingsLink
             // 
@@ -906,29 +929,6 @@
             this.Close.TabIndex = 2;
             this.Close.UseCustomBackColor = true;
             this.Close.UseSelectable = true;
-            // 
-            // IELink
-            // 
-            this.IELink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.IELink.Image = global::BNSS.Application.Properties.Resources.Import;
-            this.IELink.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.IELink.ImageSize = 35;
-            this.IELink.Location = new System.Drawing.Point(3, 3);
-            this.IELink.Name = "IELink";
-            this.IELink.Size = new System.Drawing.Size(35, 35);
-            this.IELink.TabIndex = 6;
-            this.IELink.UseCustomBackColor = true;
-            this.IELink.UseSelectable = true;
-            // 
-            // metroLink1
-            // 
-            this.metroLink1.Image = global::BNSS.Application.Properties.Resources.MenuIcon;
-            this.metroLink1.Location = new System.Drawing.Point(594, 4);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.Size = new System.Drawing.Size(27, 20);
-            this.metroLink1.TabIndex = 4;
-            this.metroLink1.UseSelectable = true;
-            this.metroLink1.Click += new System.EventHandler(this.MenuClick);
             // 
             // DashBoard
             // 

@@ -18,7 +18,7 @@ namespace BNSS.Application.Forms
     public partial class DashBoard : MetroFramework.Forms.MetroForm
     {
 
-        
+
         private double _buyingTotal;
         private double _sellingTotal;
 
@@ -26,6 +26,7 @@ namespace BNSS.Application.Forms
 
         //SearchResults
         private List<ItemGroup> ItemsB { get; set; }
+
         private List<CustomerGroup> CustomersGroupB { get; set; }
         private List<ItemGroup> ItemsS { get; set; }
         private List<CustomerGroup> CustomersGroupS { get; set; }
@@ -35,11 +36,14 @@ namespace BNSS.Application.Forms
         #endregion
 
 
-        public DashBoard()
+      
+
+
+    public DashBoard()
         {
             InitializeComponent();
 
-
+        
 
             StaticVariables.SpreadSheet = new SpreadSheet();
 

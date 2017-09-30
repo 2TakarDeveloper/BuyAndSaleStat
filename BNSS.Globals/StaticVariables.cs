@@ -8,5 +8,6 @@ namespace BNSS.Globals
         public static SpreadSheet SpreadSheet { get; set; }
         public static readonly string LocalDatapath = AppDomain.CurrentDomain.BaseDirectory + @"\memory.json";
         public static readonly string LocalSettingsPath = AppDomain.CurrentDomain.BaseDirectory + @"\settings.json";
+    
     }
 }
