@@ -272,7 +272,7 @@
             // 
             this.startDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startDateTime.Location = new System.Drawing.Point(53, 3);
-            this.startDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.startDateTime.MinimumSize = new System.Drawing.Size(4, 29);
             this.startDateTime.Name = "startDateTime";
             this.startDateTime.Size = new System.Drawing.Size(200, 29);
             this.startDateTime.TabIndex = 8;
@@ -297,7 +297,7 @@
             // 
             this.EndDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.EndDateTime.Location = new System.Drawing.Point(290, 3);
-            this.EndDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.EndDateTime.MinimumSize = new System.Drawing.Size(4, 29);
             this.EndDateTime.Name = "EndDateTime";
             this.EndDateTime.Size = new System.Drawing.Size(200, 29);
             this.EndDateTime.TabIndex = 9;

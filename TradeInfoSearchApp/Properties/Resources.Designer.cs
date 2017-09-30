@@ -103,6 +103,16 @@ namespace BNSS.Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Data_Export {
+            get {
+                object obj = ResourceManager.GetObject("Data-Export", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Data_Find {
             get {
                 object obj = ResourceManager.GetObject("Data-Find", resourceCulture);
@@ -116,6 +126,36 @@ namespace BNSS.Application.Properties {
         internal static System.Drawing.Bitmap Dialog_Box_About {
             get {
                 object obj = ResourceManager.GetObject("Dialog-Box-About", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Export {
+            get {
+                object obj = ResourceManager.GetObject("Export", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Export1 {
+            get {
+                object obj = ResourceManager.GetObject("Export1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Export2 {
+            get {
+                object obj = ResourceManager.GetObject("Export2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
