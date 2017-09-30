@@ -202,6 +202,10 @@
     <Content Include="BuyAndSale.ico" />
     <Content Include="Iynque-Ios7-Style-Stocks.ico" />
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Data-Export.png" />
+    <None Include="Resources\Export2.png" />
+    <None Include="Resources\Export1.png" />
+    <None Include="Resources\Export.png" />
     <None Include="Resources\Upload - 02.png" />
     <None Include="Resources\Settings-01.png" />
     <None Include="Resources\Search_011.png" />

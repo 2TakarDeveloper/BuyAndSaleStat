@@ -42,18 +42,18 @@
             this.TableColorShower2 = new MetroFramework.Controls.MetroTile();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ClearMemoryButton = new MetroFramework.Controls.MetroTile();
-            this.ExportMemoryButton = new MetroFramework.Controls.MetroTile();
-            this.ImportMemoryButton = new MetroFramework.Controls.MetroTile();
+            this.DatabaseTab = new MetroFramework.Controls.MetroTabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.BuyerGrid = new MetroFramework.Controls.MetroGrid();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.SellerGrid = new MetroFramework.Controls.MetroGrid();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.DatabaseTab = new MetroFramework.Controls.MetroTabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.BuyerGrid = new MetroFramework.Controls.MetroGrid();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.SellerGrid = new MetroFramework.Controls.MetroGrid();
+            this.ClearMemoryButton = new MetroFramework.Controls.MetroTile();
+            this.ExportMemoryButton = new MetroFramework.Controls.MetroTile();
+            this.ImportMemoryButton = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -75,8 +75,8 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
-            this.metroTabControl1.Size = new System.Drawing.Size(760, 364);
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(775, 361);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
             // 
@@ -94,7 +94,7 @@
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Padding = new System.Windows.Forms.Padding(5);
-            this.metroTabPage1.Size = new System.Drawing.Size(560, 308);
+            this.metroTabPage1.Size = new System.Drawing.Size(767, 319);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Interface";
             this.metroTabPage1.UseCustomForeColor = true;
@@ -153,7 +153,7 @@
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
             this.metroTabPage2.Padding = new System.Windows.Forms.Padding(5);
-            this.metroTabPage2.Size = new System.Drawing.Size(560, 308);
+            this.metroTabPage2.Size = new System.Drawing.Size(767, 319);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Memory";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -162,7 +162,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Tan;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Controls.Add(this.ClearMemoryButton);
             this.flowLayoutPanel1.Controls.Add(this.ExportMemoryButton);
@@ -172,63 +172,8 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(550, 298);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(757, 309);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // ClearMemoryButton
-            // 
-            this.ClearMemoryButton.ActiveControl = null;
-            this.ClearMemoryButton.BackColor = System.Drawing.Color.Sienna;
-            this.ClearMemoryButton.Location = new System.Drawing.Point(13, 13);
-            this.ClearMemoryButton.Name = "ClearMemoryButton";
-            this.ClearMemoryButton.Size = new System.Drawing.Size(148, 105);
-            this.ClearMemoryButton.TabIndex = 0;
-            this.ClearMemoryButton.Text = "Clear Memory";
-            this.ClearMemoryButton.UseCustomBackColor = true;
-            this.ClearMemoryButton.UseSelectable = true;
-            this.ClearMemoryButton.Click += new System.EventHandler(this.ClearMemoryButton_Click);
-            // 
-            // ExportMemoryButton
-            // 
-            this.ExportMemoryButton.ActiveControl = null;
-            this.ExportMemoryButton.BackColor = System.Drawing.Color.SeaGreen;
-            this.ExportMemoryButton.Location = new System.Drawing.Point(167, 13);
-            this.ExportMemoryButton.Name = "ExportMemoryButton";
-            this.ExportMemoryButton.Size = new System.Drawing.Size(148, 105);
-            this.ExportMemoryButton.TabIndex = 1;
-            this.ExportMemoryButton.Text = "Export Memory";
-            this.ExportMemoryButton.UseCustomBackColor = true;
-            this.ExportMemoryButton.UseSelectable = true;
-            this.ExportMemoryButton.Click += new System.EventHandler(this.ExportMemoryButton_Click);
-            // 
-            // ImportMemoryButton
-            // 
-            this.ImportMemoryButton.ActiveControl = null;
-            this.ImportMemoryButton.BackColor = System.Drawing.Color.Olive;
-            this.ImportMemoryButton.Location = new System.Drawing.Point(321, 13);
-            this.ImportMemoryButton.Name = "ImportMemoryButton";
-            this.ImportMemoryButton.Size = new System.Drawing.Size(148, 105);
-            this.ImportMemoryButton.TabIndex = 2;
-            this.ImportMemoryButton.Text = "Import Memory";
-            this.ImportMemoryButton.UseCustomBackColor = true;
-            this.ImportMemoryButton.UseSelectable = true;
-            this.ImportMemoryButton.Click += new System.EventHandler(this.ImportMemoryButton_Click);
-            // 
-            // colorDialog1
-            // 
-            this.colorDialog1.AnyColor = true;
-            this.colorDialog1.ShowHelp = true;
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.DefaultExt = "json";
-            this.saveFileDialog1.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.DefaultExt = "json";
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
             // 
             // DatabaseTab
             // 
@@ -239,7 +184,7 @@
             this.DatabaseTab.Location = new System.Drawing.Point(4, 38);
             this.DatabaseTab.Name = "DatabaseTab";
             this.DatabaseTab.Padding = new System.Windows.Forms.Padding(2);
-            this.DatabaseTab.Size = new System.Drawing.Size(752, 322);
+            this.DatabaseTab.Size = new System.Drawing.Size(767, 319);
             this.DatabaseTab.TabIndex = 2;
             this.DatabaseTab.Text = "Database";
             this.DatabaseTab.VerticalScrollbarBarColor = true;
@@ -263,21 +208,9 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Thistle;
             this.splitContainer1.Panel2.Controls.Add(this.SellerGrid);
             this.splitContainer1.Panel2.Controls.Add(this.metroButton2);
-            this.splitContainer1.Size = new System.Drawing.Size(748, 318);
-            this.splitContainer1.SplitterDistance = 374;
+            this.splitContainer1.Size = new System.Drawing.Size(763, 315);
+            this.splitContainer1.SplitterDistance = 381;
             this.splitContainer1.TabIndex = 2;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.metroButton1.Location = new System.Drawing.Point(312, 0);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(62, 318);
-            this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "Delete";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.DeleteBuyerSheetButton_Click);
             // 
             // BuyerGrid
             // 
@@ -321,21 +254,24 @@
             this.BuyerGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.BuyerGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.BuyerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BuyerGrid.Size = new System.Drawing.Size(312, 318);
+            this.BuyerGrid.Size = new System.Drawing.Size(319, 315);
             this.BuyerGrid.TabIndex = 2;
             this.BuyerGrid.SelectionChanged += new System.EventHandler(this.BuyerGrid_SelectionChanged);
             // 
-            // metroButton2
+            // metroButton1
             // 
-            this.metroButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.metroButton2.Location = new System.Drawing.Point(308, 0);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(62, 318);
-            this.metroButton2.TabIndex = 2;
-            this.metroButton2.Text = "Delete";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.DeleteSellerSheetButton_Click);
+            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.metroButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.metroButton1.Location = new System.Drawing.Point(319, 0);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(62, 315);
+            this.metroButton1.TabIndex = 1;
+            this.metroButton1.Text = "Delete";
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseCustomForeColor = true;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.DeleteBuyerSheetButton_Click);
             // 
             // SellerGrid
             // 
@@ -379,17 +315,102 @@
             this.SellerGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.SellerGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.SellerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SellerGrid.Size = new System.Drawing.Size(308, 318);
+            this.SellerGrid.Size = new System.Drawing.Size(316, 315);
             this.SellerGrid.TabIndex = 3;
             this.SellerGrid.SelectionChanged += new System.EventHandler(this.SellerGrid_SelectionChanged);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.metroButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroButton2.ForeColor = System.Drawing.Color.White;
+            this.metroButton2.Location = new System.Drawing.Point(316, 0);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(62, 315);
+            this.metroButton2.TabIndex = 2;
+            this.metroButton2.Text = "Delete";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseCustomForeColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.DeleteSellerSheetButton_Click);
+            // 
+            // colorDialog1
+            // 
+            this.colorDialog1.AnyColor = true;
+            this.colorDialog1.ShowHelp = true;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "json";
+            this.saveFileDialog1.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "json";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
+            // 
+            // ClearMemoryButton
+            // 
+            this.ClearMemoryButton.ActiveControl = null;
+            this.ClearMemoryButton.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.ClearMemoryButton.Location = new System.Drawing.Point(13, 13);
+            this.ClearMemoryButton.Name = "ClearMemoryButton";
+            this.ClearMemoryButton.Size = new System.Drawing.Size(148, 105);
+            this.ClearMemoryButton.TabIndex = 0;
+            this.ClearMemoryButton.Text = "Clear Memory";
+            this.ClearMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Paper;
+            this.ClearMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ClearMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.ClearMemoryButton.UseCustomBackColor = true;
+            this.ClearMemoryButton.UseSelectable = true;
+            this.ClearMemoryButton.UseTileImage = true;
+            this.ClearMemoryButton.Click += new System.EventHandler(this.ClearMemoryButton_Click);
+            // 
+            // ExportMemoryButton
+            // 
+            this.ExportMemoryButton.ActiveControl = null;
+            this.ExportMemoryButton.BackColor = System.Drawing.Color.MediumPurple;
+            this.ExportMemoryButton.Location = new System.Drawing.Point(167, 13);
+            this.ExportMemoryButton.Name = "ExportMemoryButton";
+            this.ExportMemoryButton.Size = new System.Drawing.Size(148, 105);
+            this.ExportMemoryButton.TabIndex = 1;
+            this.ExportMemoryButton.Text = "Export Memory";
+            this.ExportMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Data_Export;
+            this.ExportMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ExportMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.ExportMemoryButton.UseCustomBackColor = true;
+            this.ExportMemoryButton.UseSelectable = true;
+            this.ExportMemoryButton.UseTileImage = true;
+            this.ExportMemoryButton.Click += new System.EventHandler(this.ExportMemoryButton_Click);
+            // 
+            // ImportMemoryButton
+            // 
+            this.ImportMemoryButton.ActiveControl = null;
+            this.ImportMemoryButton.BackColor = System.Drawing.Color.Orange;
+            this.ImportMemoryButton.ForeColor = System.Drawing.Color.White;
+            this.ImportMemoryButton.Location = new System.Drawing.Point(321, 13);
+            this.ImportMemoryButton.Name = "ImportMemoryButton";
+            this.ImportMemoryButton.Size = new System.Drawing.Size(148, 105);
+            this.ImportMemoryButton.TabIndex = 2;
+            this.ImportMemoryButton.Text = "Import Memory";
+            this.ImportMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Import;
+            this.ImportMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ImportMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.ImportMemoryButton.UseCustomBackColor = true;
+            this.ImportMemoryButton.UseCustomForeColor = true;
+            this.ImportMemoryButton.UseSelectable = true;
+            this.ImportMemoryButton.UseTileImage = true;
+            this.ImportMemoryButton.Click += new System.EventHandler(this.ImportMemoryButton_Click);
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 444);
+            this.ClientSize = new System.Drawing.Size(815, 441);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "Settings";
+            this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "Settings";
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
