@@ -88,7 +88,7 @@ namespace BNSS.Application.Forms
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            Valid = GetMail(LicenceBox.Text);
+           // Valid = GetMail(LicenceBox.Text);
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

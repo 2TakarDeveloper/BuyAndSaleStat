@@ -384,10 +384,7 @@ namespace BNSS.Application.Forms
             }
         }
 
-        private void MenuClick(object sender, EventArgs e)
-        {
-            metroContextMenu1.Show(metroLink1.PointToScreen(metroLink1.Location));
-        }
+      
 
         private void LoadNewFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -434,6 +431,38 @@ namespace BNSS.Application.Forms
                     break;
 
             }
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void Maximize_Click(object sender, EventArgs e)
+        {
+            //normalises window
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.CenterToScreen();
+            }
+
+            //maximises window
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.CenterToScreen();
+            }
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void SettingsLink_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

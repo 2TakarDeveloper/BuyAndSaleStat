@@ -28,72 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LicenceBox = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.ValidateButton = new MetroFramework.Controls.MetroButton();
-            this.CancleButton = new MetroFramework.Controls.MetroButton();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LicenceBox
-            // 
-            // 
-            // 
-            // 
-            this.LicenceBox.CustomButton.Image = null;
-            this.LicenceBox.CustomButton.Location = new System.Drawing.Point(294, 1);
-            this.LicenceBox.CustomButton.Name = "";
-            this.LicenceBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.LicenceBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.LicenceBox.CustomButton.TabIndex = 1;
-            this.LicenceBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.LicenceBox.CustomButton.UseSelectable = true;
-            this.LicenceBox.CustomButton.Visible = false;
-            this.LicenceBox.Lines = new string[0];
-            this.LicenceBox.Location = new System.Drawing.Point(103, 85);
-            this.LicenceBox.MaxLength = 32767;
-            this.LicenceBox.Name = "LicenceBox";
-            this.LicenceBox.PasswordChar = '\0';
-            this.LicenceBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.LicenceBox.SelectedText = "";
-            this.LicenceBox.SelectionLength = 0;
-            this.LicenceBox.SelectionStart = 0;
-            this.LicenceBox.ShortcutsEnabled = true;
-            this.LicenceBox.Size = new System.Drawing.Size(316, 23);
-            this.LicenceBox.TabIndex = 0;
-            this.LicenceBox.UseSelectable = true;
-            this.LicenceBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.LicenceBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(60, 85);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(29, 19);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Key";
-            // 
-            // ValidateButton
-            // 
-            this.ValidateButton.Location = new System.Drawing.Point(282, 202);
-            this.ValidateButton.Name = "ValidateButton";
-            this.ValidateButton.Size = new System.Drawing.Size(96, 23);
-            this.ValidateButton.TabIndex = 2;
-            this.ValidateButton.Text = "Validate";
-            this.ValidateButton.UseSelectable = true;
-            this.ValidateButton.Click += new System.EventHandler(this.ValidateButton_Click);
-            // 
-            // CancleButton
-            // 
-            this.CancleButton.Location = new System.Drawing.Point(397, 202);
-            this.CancleButton.Name = "CancleButton";
-            this.CancleButton.Size = new System.Drawing.Size(96, 23);
-            this.CancleButton.TabIndex = 5;
-            this.CancleButton.Text = "Cancle";
-            this.CancleButton.UseSelectable = true;
-            this.CancleButton.Click += new System.EventHandler(this.CancleButton_Click);
             // 
             // backgroundWorker
             // 
@@ -104,41 +45,95 @@
             // 
             // metroProgressBar1
             // 
-            this.metroProgressBar1.Location = new System.Drawing.Point(103, 130);
+            this.metroProgressBar1.Location = new System.Drawing.Point(3, 87);
             this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(316, 10);
+            this.metroProgressBar1.Size = new System.Drawing.Size(400, 10);
             this.metroProgressBar1.TabIndex = 6;
             this.metroProgressBar1.Visible = false;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.Controls.Add(this.metroProgressBar1);
+            this.metroPanel2.Controls.Add(this.metroButton1);
+            this.metroPanel2.Controls.Add(this.metroTextBox1);
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(50, 92);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(408, 100);
+            this.metroPanel2.TabIndex = 7;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroButton1.Location = new System.Drawing.Point(274, 61);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(132, 23);
+            this.metroButton1.TabIndex = 3;
+            this.metroButton1.Text = "Submit Key";
+            this.metroButton1.UseSelectable = true;
+            // 
+            // metroTextBox1
+            // 
+            this.metroTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(378, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(6, 32);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.PromptText = "Enter Product key here";
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(400, 23);
+            this.metroTextBox1.TabIndex = 2;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMark = "Enter Product key here";
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // LicenceDialague
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 259);
-            this.Controls.Add(this.metroProgressBar1);
-            this.Controls.Add(this.CancleButton);
-            this.Controls.Add(this.ValidateButton);
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.LicenceBox);
+            this.ClientSize = new System.Drawing.Size(509, 256);
+            this.Controls.Add(this.metroPanel2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LicenceDialague";
+            this.Resizable = false;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.Yellow;
             this.Text = "Enter your Licence";
+            this.metroPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTextBox LicenceBox;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton ValidateButton;
-        private MetroFramework.Controls.MetroButton CancleButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
     }
 }
