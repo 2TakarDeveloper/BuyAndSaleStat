@@ -47,14 +47,15 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.SearchBox = new System.Windows.Forms.ComboBox();
             this.itemBox = new System.Windows.Forms.ComboBox();
-            this.GroupByChecker = new MetroFramework.Controls.MetroCheckBox();
-            this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
-            this.GroupBox = new System.Windows.Forms.ComboBox();
+            this.TablesComboBox = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.startDateLable = new MetroFramework.Controls.MetroLabel();
             this.startDateTime = new MetroFramework.Controls.MetroDateTime();
             this.EndDateLable = new MetroFramework.Controls.MetroLabel();
             this.EndDateTime = new MetroFramework.Controls.MetroDateTime();
+            this.GroupByChecker = new MetroFramework.Controls.MetroCheckBox();
+            this.SummaryCheck = new MetroFramework.Controls.MetroCheckBox();
+            this.GroupBox = new System.Windows.Forms.ComboBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.BuyingGrid = new MetroFramework.Controls.MetroGrid();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -76,7 +77,6 @@
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadNewFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,12 +89,10 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.IELink = new MetroFramework.Controls.MetroLink();
             this.SettingsLink = new MetroFramework.Controls.MetroLink();
-            this.HomeLink = new MetroFramework.Controls.MetroLink();
             this.AboutLink = new MetroFramework.Controls.MetroLink();
             this.minimizeBtn = new MetroFramework.Controls.MetroLink();
             this.Maximize = new MetroFramework.Controls.MetroLink();
-            this.Close = new MetroFramework.Controls.MetroLink();
-            this.TablesComboBox = new System.Windows.Forms.ComboBox();
+            this.CloseLink = new MetroFramework.Controls.MetroLink();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -233,47 +231,14 @@
             this.itemBox.TabIndex = 20;
             this.itemBox.SelectedIndexChanged += new System.EventHandler(this.Search_initate);
             // 
-            // GroupByChecker
+            // TablesComboBox
             // 
-            this.GroupByChecker.AutoSize = true;
-            this.GroupByChecker.Location = new System.Drawing.Point(496, 8);
-            this.GroupByChecker.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.GroupByChecker.Name = "GroupByChecker";
-            this.GroupByChecker.Size = new System.Drawing.Size(72, 15);
-            this.GroupByChecker.TabIndex = 16;
-            this.GroupByChecker.Text = "Group By";
-            this.GroupByChecker.UseCustomBackColor = true;
-            this.GroupByChecker.UseSelectable = true;
-            this.GroupByChecker.CheckedChanged += new System.EventHandler(this.GroupByChecker_CheckedChanged);
-            // 
-            // SummaryCheck
-            // 
-            this.SummaryCheck.AutoSize = true;
-            this.SummaryCheck.Location = new System.Drawing.Point(574, 8);
-            this.SummaryCheck.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-            this.SummaryCheck.Name = "SummaryCheck";
-            this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
-            this.SummaryCheck.TabIndex = 22;
-            this.SummaryCheck.Text = "Summary";
-            this.SummaryCheck.UseCustomBackColor = true;
-            this.SummaryCheck.UseSelectable = true;
-            this.SummaryCheck.Visible = false;
-            this.SummaryCheck.CheckedChanged += new System.EventHandler(this.Search_initate);
-            // 
-            // GroupBox
-            // 
-            this.GroupBox.FormattingEnabled = true;
-            this.GroupBox.Items.AddRange(new object[] {
-            "Customer",
-            "Item"});
-            this.GroupBox.Location = new System.Drawing.Point(654, 5);
-            this.GroupBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.GroupBox.Name = "GroupBox";
-            this.GroupBox.Size = new System.Drawing.Size(121, 21);
-            this.GroupBox.TabIndex = 17;
-            this.GroupBox.Text = "Customer";
-            this.GroupBox.Visible = false;
-            this.GroupBox.SelectedIndexChanged += new System.EventHandler(this.GroupBox_SelectedIndexChanged);
+            this.TablesComboBox.FormattingEnabled = true;
+            this.TablesComboBox.Location = new System.Drawing.Point(507, 3);
+            this.TablesComboBox.Name = "TablesComboBox";
+            this.TablesComboBox.Size = new System.Drawing.Size(158, 21);
+            this.TablesComboBox.TabIndex = 22;
+            this.TablesComboBox.SelectedIndexChanged += new System.EventHandler(this.TablesComboBox_SelectedIndexChanged);
             // 
             // flowLayoutPanel4
             // 
@@ -338,6 +303,48 @@
             this.EndDateTime.TabIndex = 9;
             this.EndDateTime.Value = new System.DateTime(2017, 6, 7, 0, 0, 0, 0);
             this.EndDateTime.ValueChanged += new System.EventHandler(this.Search_initate);
+            // 
+            // GroupByChecker
+            // 
+            this.GroupByChecker.AutoSize = true;
+            this.GroupByChecker.Location = new System.Drawing.Point(496, 8);
+            this.GroupByChecker.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.GroupByChecker.Name = "GroupByChecker";
+            this.GroupByChecker.Size = new System.Drawing.Size(72, 15);
+            this.GroupByChecker.TabIndex = 16;
+            this.GroupByChecker.Text = "Group By";
+            this.GroupByChecker.UseCustomBackColor = true;
+            this.GroupByChecker.UseSelectable = true;
+            this.GroupByChecker.CheckedChanged += new System.EventHandler(this.GroupByChecker_CheckedChanged);
+            // 
+            // SummaryCheck
+            // 
+            this.SummaryCheck.AutoSize = true;
+            this.SummaryCheck.Location = new System.Drawing.Point(574, 8);
+            this.SummaryCheck.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+            this.SummaryCheck.Name = "SummaryCheck";
+            this.SummaryCheck.Size = new System.Drawing.Size(74, 15);
+            this.SummaryCheck.TabIndex = 22;
+            this.SummaryCheck.Text = "Summary";
+            this.SummaryCheck.UseCustomBackColor = true;
+            this.SummaryCheck.UseSelectable = true;
+            this.SummaryCheck.Visible = false;
+            this.SummaryCheck.CheckedChanged += new System.EventHandler(this.Search_initate);
+            // 
+            // GroupBox
+            // 
+            this.GroupBox.FormattingEnabled = true;
+            this.GroupBox.Items.AddRange(new object[] {
+            "Customer",
+            "Item"});
+            this.GroupBox.Location = new System.Drawing.Point(654, 5);
+            this.GroupBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.GroupBox.Name = "GroupBox";
+            this.GroupBox.Size = new System.Drawing.Size(121, 21);
+            this.GroupBox.TabIndex = 17;
+            this.GroupBox.Text = "Customer";
+            this.GroupBox.Visible = false;
+            this.GroupBox.SelectedIndexChanged += new System.EventHandler(this.GroupBox_SelectedIndexChanged);
             // 
             // splitContainer2
             // 
@@ -676,39 +683,27 @@
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadNewFileToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // loadNewFileToolStripMenuItem
-            // 
-            this.loadNewFileToolStripMenuItem.Name = "loadNewFileToolStripMenuItem";
-            this.loadNewFileToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.loadNewFileToolStripMenuItem.Text = "Load New File";
-            this.loadNewFileToolStripMenuItem.Click += new System.EventHandler(this.LoadNewFileToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // metroProgressBar1
             // 
@@ -774,7 +769,7 @@
             this.HeaderPanel.Controls.Add(this.flowLayoutPanel2);
             this.HeaderPanel.Controls.Add(this.minimizeBtn);
             this.HeaderPanel.Controls.Add(this.Maximize);
-            this.HeaderPanel.Controls.Add(this.Close);
+            this.HeaderPanel.Controls.Add(this.CloseLink);
             this.HeaderPanel.HorizontalScrollbarBarColor = true;
             this.HeaderPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.HeaderPanel.HorizontalScrollbarSize = 10;
@@ -798,9 +793,9 @@
             this.PanelName.ForeColor = System.Drawing.Color.White;
             this.PanelName.Location = new System.Drawing.Point(383, 13);
             this.PanelName.Name = "PanelName";
-            this.PanelName.Size = new System.Drawing.Size(118, 25);
+            this.PanelName.Size = new System.Drawing.Size(164, 25);
             this.PanelName.TabIndex = 7;
-            this.PanelName.Text = "metroLabel2";
+            this.PanelName.Text = "Buy And Sale Stat";
             this.PanelName.UseCustomBackColor = true;
             this.PanelName.UseCustomForeColor = true;
             this.PanelName.UseMnemonic = false;
@@ -810,7 +805,6 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.IELink);
             this.flowLayoutPanel2.Controls.Add(this.SettingsLink);
-            this.flowLayoutPanel2.Controls.Add(this.HomeLink);
             this.flowLayoutPanel2.Controls.Add(this.AboutLink);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -829,6 +823,7 @@
             this.IELink.TabIndex = 6;
             this.IELink.UseCustomBackColor = true;
             this.IELink.UseSelectable = true;
+            this.IELink.Click += new System.EventHandler(this.IELink_Click);
             // 
             // SettingsLink
             // 
@@ -844,31 +839,19 @@
             this.SettingsLink.UseSelectable = true;
             this.SettingsLink.Click += new System.EventHandler(this.SettingsLink_Click);
             // 
-            // HomeLink
-            // 
-            this.HomeLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.HomeLink.Image = global::BNSS.Application.Properties.Resources.House_07;
-            this.HomeLink.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.HomeLink.ImageSize = 35;
-            this.HomeLink.Location = new System.Drawing.Point(85, 3);
-            this.HomeLink.Name = "HomeLink";
-            this.HomeLink.Size = new System.Drawing.Size(35, 35);
-            this.HomeLink.TabIndex = 8;
-            this.HomeLink.UseCustomBackColor = true;
-            this.HomeLink.UseSelectable = true;
-            // 
             // AboutLink
             // 
             this.AboutLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AboutLink.Image = global::BNSS.Application.Properties.Resources.Circle_Info___01;
             this.AboutLink.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.AboutLink.ImageSize = 35;
-            this.AboutLink.Location = new System.Drawing.Point(126, 3);
+            this.AboutLink.Location = new System.Drawing.Point(85, 3);
             this.AboutLink.Name = "AboutLink";
             this.AboutLink.Size = new System.Drawing.Size(35, 35);
             this.AboutLink.TabIndex = 9;
             this.AboutLink.UseCustomBackColor = true;
             this.AboutLink.UseSelectable = true;
+            this.AboutLink.Click += new System.EventHandler(this.AboutLink_Click);
             // 
             // minimizeBtn
             // 
@@ -897,26 +880,18 @@
             this.Maximize.UseSelectable = true;
             this.Maximize.Click += new System.EventHandler(this.Maximize_Click);
             // 
-            // Close
+            // CloseLink
             // 
-            this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Close.Image = global::BNSS.Application.Properties.Resources.Circle_Close___01;
-            this.Close.ImageSize = 35;
-            this.Close.Location = new System.Drawing.Point(863, 3);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(35, 35);
-            this.Close.TabIndex = 2;
-            this.Close.UseCustomBackColor = true;
-            this.Close.UseSelectable = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
-            // TablesComboBox
-            // 
-            this.TablesComboBox.FormattingEnabled = true;
-            this.TablesComboBox.Location = new System.Drawing.Point(507, 3);
-            this.TablesComboBox.Name = "TablesComboBox";
-            this.TablesComboBox.Size = new System.Drawing.Size(158, 21);
-            this.TablesComboBox.TabIndex = 22;
+            this.CloseLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloseLink.Image = global::BNSS.Application.Properties.Resources.Circle_Close___01;
+            this.CloseLink.ImageSize = 35;
+            this.CloseLink.Location = new System.Drawing.Point(863, 3);
+            this.CloseLink.Name = "CloseLink";
+            this.CloseLink.Size = new System.Drawing.Size(35, 35);
+            this.CloseLink.TabIndex = 2;
+            this.CloseLink.UseCustomBackColor = true;
+            this.CloseLink.UseSelectable = true;
+            this.CloseLink.Click += new System.EventHandler(this.Close_Click);
             // 
             // DashBoard
             // 
@@ -998,7 +973,6 @@
         private MetroFramework.Controls.MetroLabel SellerrsTotalLable;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadNewFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
@@ -1017,11 +991,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private MetroFramework.Controls.MetroLink IELink;
         private MetroFramework.Controls.MetroLink SettingsLink;
-        private MetroFramework.Controls.MetroLink HomeLink;
         private MetroFramework.Controls.MetroLink AboutLink;
         private MetroFramework.Controls.MetroLink minimizeBtn;
         private MetroFramework.Controls.MetroLink Maximize;
-        private MetroFramework.Controls.MetroLink Close;
+        private MetroFramework.Controls.MetroLink CloseLink;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.ComboBox TablesComboBox;

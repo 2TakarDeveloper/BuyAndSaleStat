@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class.cs" />
     <Compile Include="Encryption.cs" />
     <Compile Include="LoadData.cs" />
     <Compile Include="ModifyData.cs" />

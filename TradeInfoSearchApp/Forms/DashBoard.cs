@@ -48,9 +48,9 @@ namespace BNSS.Application.Forms
             StaticVariables.SpreadSheet = new SpreadSheet();
 
             Local.LoadData.LoadSettings();
-            //CheckLicence();
+            CheckLicence();
             EndDateTime.Value = DateTime.Now;
-            LoadLocalData();
+            //LoadLocalData();
 
 
         }
@@ -379,36 +379,7 @@ namespace BNSS.Application.Forms
 
 
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Settings settings = new Settings();
-            if (settings.ShowDialog() == DialogResult.OK)
-            {
-                LoadLocalData();
-            }
-        }
 
-      
-
-        private void LoadNewFileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog.ShowDialog() != DialogResult.OK) return;
-            statusTextLabel.Visible = true;
-            metroProgressBar1.Visible = true;
-            backgroundWorker.RunWorkerAsync();
-        }
-
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
-        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AboutBox aboutBox = new AboutBox();
-            aboutBox.ShowDialog();
-
-        }
 
         private void GroupByChecker_CheckedChanged(object sender, EventArgs e)
         {
@@ -419,9 +390,19 @@ namespace BNSS.Application.Forms
                 SearchBox.Visible = true;
                 itemBox.Visible = true;
             }
+            else
+            {
+                SwitchSearchBoxGroupBy();
+            }
         }
 
         private void GroupBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SwitchSearchBoxGroupBy();
+        }
+
+
+        private void SwitchSearchBoxGroupBy()
         {
             switch (GroupBox.Text)
             {
@@ -437,9 +418,10 @@ namespace BNSS.Application.Forms
             }
         }
 
+
         private void Close_Click(object sender, EventArgs e)
         {
-          
+            System.Windows.Forms.Application.Exit();
         }
 
         private void Maximize_Click(object sender, EventArgs e)
@@ -466,7 +448,25 @@ namespace BNSS.Application.Forms
 
         private void SettingsLink_Click(object sender, EventArgs e)
         {
-            
+            Settings settings = new Settings();
+            if (settings.ShowDialog() == DialogResult.OK)
+            {
+                LoadLocalData();
+            }
+        }
+
+        private void IELink_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() != DialogResult.OK) return;
+            statusTextLabel.Visible = true;
+            metroProgressBar1.Visible = true;
+            backgroundWorker.RunWorkerAsync();
+        }
+
+        private void AboutLink_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.ShowDialog();
         }
     }
 }
