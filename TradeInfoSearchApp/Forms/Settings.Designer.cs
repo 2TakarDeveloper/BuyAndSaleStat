@@ -42,6 +42,9 @@
             this.TableColorShower2 = new MetroFramework.Controls.MetroTile();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ClearMemoryButton = new MetroFramework.Controls.MetroTile();
+            this.ExportMemoryButton = new MetroFramework.Controls.MetroTile();
+            this.ImportMemoryButton = new MetroFramework.Controls.MetroTile();
             this.DatabaseTab = new MetroFramework.Controls.MetroTabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.BuyerGrid = new MetroFramework.Controls.MetroGrid();
@@ -51,9 +54,6 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.ClearMemoryButton = new MetroFramework.Controls.MetroTile();
-            this.ExportMemoryButton = new MetroFramework.Controls.MetroTile();
-            this.ImportMemoryButton = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -75,7 +75,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(775, 361);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -175,6 +175,59 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(757, 309);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
+            // ClearMemoryButton
+            // 
+            this.ClearMemoryButton.ActiveControl = null;
+            this.ClearMemoryButton.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.ClearMemoryButton.Location = new System.Drawing.Point(13, 13);
+            this.ClearMemoryButton.Name = "ClearMemoryButton";
+            this.ClearMemoryButton.Size = new System.Drawing.Size(148, 105);
+            this.ClearMemoryButton.TabIndex = 0;
+            this.ClearMemoryButton.Text = "Clear Memory";
+            this.ClearMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Paper;
+            this.ClearMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ClearMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.ClearMemoryButton.UseCustomBackColor = true;
+            this.ClearMemoryButton.UseSelectable = true;
+            this.ClearMemoryButton.UseTileImage = true;
+            this.ClearMemoryButton.Click += new System.EventHandler(this.ClearMemoryButton_Click);
+            // 
+            // ExportMemoryButton
+            // 
+            this.ExportMemoryButton.ActiveControl = null;
+            this.ExportMemoryButton.BackColor = System.Drawing.Color.MediumPurple;
+            this.ExportMemoryButton.Location = new System.Drawing.Point(167, 13);
+            this.ExportMemoryButton.Name = "ExportMemoryButton";
+            this.ExportMemoryButton.Size = new System.Drawing.Size(148, 105);
+            this.ExportMemoryButton.TabIndex = 1;
+            this.ExportMemoryButton.Text = "Export Memory";
+            this.ExportMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Data_Export;
+            this.ExportMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ExportMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.ExportMemoryButton.UseCustomBackColor = true;
+            this.ExportMemoryButton.UseSelectable = true;
+            this.ExportMemoryButton.UseTileImage = true;
+            this.ExportMemoryButton.Click += new System.EventHandler(this.ExportMemoryButton_Click);
+            // 
+            // ImportMemoryButton
+            // 
+            this.ImportMemoryButton.ActiveControl = null;
+            this.ImportMemoryButton.BackColor = System.Drawing.Color.Orange;
+            this.ImportMemoryButton.ForeColor = System.Drawing.Color.White;
+            this.ImportMemoryButton.Location = new System.Drawing.Point(321, 13);
+            this.ImportMemoryButton.Name = "ImportMemoryButton";
+            this.ImportMemoryButton.Size = new System.Drawing.Size(148, 105);
+            this.ImportMemoryButton.TabIndex = 2;
+            this.ImportMemoryButton.Text = "Import Memory";
+            this.ImportMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Import;
+            this.ImportMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ImportMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.ImportMemoryButton.UseCustomBackColor = true;
+            this.ImportMemoryButton.UseCustomForeColor = true;
+            this.ImportMemoryButton.UseSelectable = true;
+            this.ImportMemoryButton.UseTileImage = true;
+            this.ImportMemoryButton.Click += new System.EventHandler(this.ImportMemoryButton_Click);
+            // 
             // DatabaseTab
             // 
             this.DatabaseTab.Controls.Add(this.splitContainer1);
@@ -260,7 +313,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.metroButton1.BackColor = System.Drawing.Color.Firebrick;
             this.metroButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.metroButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.metroButton1.Location = new System.Drawing.Point(319, 0);
@@ -321,7 +374,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.metroButton2.BackColor = System.Drawing.Color.Firebrick;
             this.metroButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.metroButton2.ForeColor = System.Drawing.Color.White;
             this.metroButton2.Location = new System.Drawing.Point(316, 0);
@@ -349,59 +402,6 @@
             this.openFileDialog1.DefaultExt = "json";
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Json files (*.json)|*.json|All files (*.*)|*.*";
-            // 
-            // ClearMemoryButton
-            // 
-            this.ClearMemoryButton.ActiveControl = null;
-            this.ClearMemoryButton.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClearMemoryButton.Location = new System.Drawing.Point(13, 13);
-            this.ClearMemoryButton.Name = "ClearMemoryButton";
-            this.ClearMemoryButton.Size = new System.Drawing.Size(148, 105);
-            this.ClearMemoryButton.TabIndex = 0;
-            this.ClearMemoryButton.Text = "Clear Memory";
-            this.ClearMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Paper;
-            this.ClearMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ClearMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.ClearMemoryButton.UseCustomBackColor = true;
-            this.ClearMemoryButton.UseSelectable = true;
-            this.ClearMemoryButton.UseTileImage = true;
-            this.ClearMemoryButton.Click += new System.EventHandler(this.ClearMemoryButton_Click);
-            // 
-            // ExportMemoryButton
-            // 
-            this.ExportMemoryButton.ActiveControl = null;
-            this.ExportMemoryButton.BackColor = System.Drawing.Color.MediumPurple;
-            this.ExportMemoryButton.Location = new System.Drawing.Point(167, 13);
-            this.ExportMemoryButton.Name = "ExportMemoryButton";
-            this.ExportMemoryButton.Size = new System.Drawing.Size(148, 105);
-            this.ExportMemoryButton.TabIndex = 1;
-            this.ExportMemoryButton.Text = "Export Memory";
-            this.ExportMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Data_Export;
-            this.ExportMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ExportMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.ExportMemoryButton.UseCustomBackColor = true;
-            this.ExportMemoryButton.UseSelectable = true;
-            this.ExportMemoryButton.UseTileImage = true;
-            this.ExportMemoryButton.Click += new System.EventHandler(this.ExportMemoryButton_Click);
-            // 
-            // ImportMemoryButton
-            // 
-            this.ImportMemoryButton.ActiveControl = null;
-            this.ImportMemoryButton.BackColor = System.Drawing.Color.Orange;
-            this.ImportMemoryButton.ForeColor = System.Drawing.Color.White;
-            this.ImportMemoryButton.Location = new System.Drawing.Point(321, 13);
-            this.ImportMemoryButton.Name = "ImportMemoryButton";
-            this.ImportMemoryButton.Size = new System.Drawing.Size(148, 105);
-            this.ImportMemoryButton.TabIndex = 2;
-            this.ImportMemoryButton.Text = "Import Memory";
-            this.ImportMemoryButton.TileImage = global::BNSS.Application.Properties.Resources.Import;
-            this.ImportMemoryButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ImportMemoryButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.ImportMemoryButton.UseCustomBackColor = true;
-            this.ImportMemoryButton.UseCustomForeColor = true;
-            this.ImportMemoryButton.UseSelectable = true;
-            this.ImportMemoryButton.UseTileImage = true;
-            this.ImportMemoryButton.Click += new System.EventHandler(this.ImportMemoryButton_Click);
             // 
             // Settings
             // 
