@@ -267,6 +267,8 @@
             // 
             // BuyerGrid
             // 
+            this.BuyerGrid.AllowUserToAddRows = false;
+            this.BuyerGrid.AllowUserToDeleteRows = false;
             this.BuyerGrid.AllowUserToResizeRows = false;
             this.BuyerGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.BuyerGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -296,6 +298,7 @@
             this.BuyerGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BuyerGrid.Location = new System.Drawing.Point(0, 0);
             this.BuyerGrid.Name = "BuyerGrid";
+            this.BuyerGrid.ReadOnly = true;
             this.BuyerGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -328,6 +331,8 @@
             // 
             // SellerGrid
             // 
+            this.SellerGrid.AllowUserToAddRows = false;
+            this.SellerGrid.AllowUserToDeleteRows = false;
             this.SellerGrid.AllowUserToResizeRows = false;
             this.SellerGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SellerGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -357,6 +362,7 @@
             this.SellerGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.SellerGrid.Location = new System.Drawing.Point(0, 0);
             this.SellerGrid.Name = "SellerGrid";
+            this.SellerGrid.ReadOnly = true;
             this.SellerGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));

@@ -118,7 +118,7 @@ namespace BNSS.Application.Forms
 
                 BuyingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
                 BuyingGrid.Columns[0].DefaultCellStyle.Format = "M";
-                BuyingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+                BuyingGrid.Columns[3].DefaultCellStyle.Format = "N0";
 
             }
 
@@ -128,7 +128,7 @@ namespace BNSS.Application.Forms
                 SellingGrid.DataSource = sellersSheet.SellersList;
                 SellingGrid.RowsDefaultCellStyle.ForeColor = UserSettings.RowColor1;
                 SellingGrid.Columns[0].DefaultCellStyle.Format = "M";
-                SellingGrid.Columns[3].DefaultCellStyle.Format = "N2";
+                SellingGrid.Columns[3].DefaultCellStyle.Format = "N0";
 
             }
 
@@ -196,15 +196,21 @@ namespace BNSS.Application.Forms
                             ItemsS = SellerSearch.GroupByCustomerName(SearchBox.Text, startDateTime.Value,
                                 EndDateTime.Value, StaticVariables.SpreadSheet.SellerSheets, (int)sellerRow.Value);
 
-
+                            
                             if (!summary)
                             {
                                 BuyingGrid.DataSource = ItemsB;
                                 SellingGrid.DataSource = ItemsS;
+                                BuyersExport.Visible = true;
+                                sellersExport.Visible = true;
+                                Order.Visible = false;
                             }
                             else
                             {
-                                BuyingGrid.DataSource= CompanySummary.CustomerSummary(ItemsB, ItemsS);
+                                BuyersExport.Visible = false;
+                                sellersExport.Visible = false;
+                                Order.Visible = true;
+                                BuyingGrid.DataSource= CompanySummary.CustomerSummary(ItemsB, ItemsS,Order.Checked);
                             }
 
                             
@@ -225,10 +231,16 @@ namespace BNSS.Application.Forms
                             {
                                 BuyingGrid.DataSource = CustomersGroupB;
                                 SellingGrid.DataSource = CustomersGroupS;
+                                BuyersExport.Visible = true;
+                                sellersExport.Visible = true;
+                                Order.Visible = false;
                             }
                             else
                             {
-                                BuyingGrid.DataSource = CompanySummary.ItemSummary(CustomersGroupB, CustomersGroupS);
+                                BuyersExport.Visible = false;
+                                sellersExport.Visible = false;
+                                Order.Visible = true;
+                                BuyingGrid.DataSource = CompanySummary.ItemSummary(CustomersGroupB, CustomersGroupS,Order.Checked);
                             }
 
                             break;
@@ -389,11 +401,19 @@ namespace BNSS.Application.Forms
             {
                 SearchBox.Visible = true;
                 itemBox.Visible = true;
+                Order.Visible = false;
             }
             else
             {
                 SwitchSearchBoxGroupBy();
+                if (SummaryCheck.Checked)
+                {
+                    Order.Visible = true;
+                }
             }
+
+           
+
         }
 
         private void GroupBox_SelectedIndexChanged(object sender, EventArgs e)
