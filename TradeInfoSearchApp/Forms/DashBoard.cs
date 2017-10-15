@@ -36,23 +36,14 @@ namespace BNSS.Application.Forms
         #endregion
 
 
-      
-
-
-    public DashBoard()
+        public DashBoard()
         {
             InitializeComponent();
-
-        
-
             StaticVariables.SpreadSheet = new SpreadSheet();
-
             Local.LoadData.LoadSettings();
             CheckLicence();
             EndDateTime.Value = DateTime.Now;
             //LoadLocalData();
-
-
         }
 
 
@@ -80,9 +71,6 @@ namespace BNSS.Application.Forms
 
         void LoadData()
         {
-
-
-
 
             TablesComboBox.Items.Clear();
             foreach (BuyerSheet sheet in StaticVariables.SpreadSheet.BuyerSheets)
@@ -145,7 +133,8 @@ namespace BNSS.Application.Forms
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            ExcelParser.ExcelReader(openFileDialog.FileName);
+            ExcelParser.ExcelReader(openFileDialog.FileName,backgroundWorker);
+            
         }
 
         private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)

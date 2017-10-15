@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.IO;
 using System.Text.RegularExpressions;
 using BNSS.Entity;
@@ -6,20 +7,21 @@ using ExcelDataReader;
 
 namespace BNSS.Parser
 {
-    public class ExcelParser
+    public static class ExcelParser
     {
         //This Function Parses Specific Excel Data into The Static Spreadsheet Class in ENTITY
-        public static void ExcelReader(string path)
+        public static void ExcelReader(string path,BackgroundWorker bw)
         {
             string filePath = path;
             using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = ExcelReaderFactory.CreateOpenXmlReader(stream))
                 {
+                    int counter = 0;
                     do
                     {
                         reader.Read();
-
+                        bw.ReportProgress(counter++ * 100/reader.ResultsCount);
                         if (Regex.IsMatch(reader.Name, "[BB]")) //buyer
                         {
                             var buyerSheet = new BuyerSheet { SheetName = reader.Name };
