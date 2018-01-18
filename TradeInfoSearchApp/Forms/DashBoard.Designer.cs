@@ -492,7 +492,13 @@
             // 
             this.buyerRow.Dock = System.Windows.Forms.DockStyle.Right;
             this.buyerRow.Location = new System.Drawing.Point(297, 0);
+            this.buyerRow.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.buyerRow.Name = "buyerRow";
+            this.buyerRow.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.buyerRow.Size = new System.Drawing.Size(120, 20);
             this.buyerRow.TabIndex = 4;
             this.buyerRow.Value = new decimal(new int[] {
@@ -616,7 +622,13 @@
             // 
             this.sellerRow.Dock = System.Windows.Forms.DockStyle.Right;
             this.sellerRow.Location = new System.Drawing.Point(319, 0);
+            this.sellerRow.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.sellerRow.Name = "sellerRow";
+            this.sellerRow.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sellerRow.Size = new System.Drawing.Size(120, 20);
             this.sellerRow.TabIndex = 4;
             this.sellerRow.Value = new decimal(new int[] {
